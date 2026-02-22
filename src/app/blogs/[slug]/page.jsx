@@ -2,7 +2,7 @@ import CommentSection from "@/components/CommentSection";
 
 async function getPost(slug) {
   const res = await fetch(
-    `https://shriramagro.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
+    `https://cms.shriramagro.com/wp-json/wp/v2/posts?slug=${slug}&_embed`,
     { cache: "no-store" }
   );
   const data = await res.json();

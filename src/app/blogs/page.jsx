@@ -1,13 +1,13 @@
 import Link from "next/link";
 
 async function getCategories() {
-  const res = await fetch("https://shriramagro.com/wp-json/wp/v2/categories", { cache: "no-store" });
+  const res = await fetch("https://cms.shriramagro.com/wp-json/wp/v2/categories", { cache: "no-store" });
   return res.json();
 }
 
 async function getPostsByCategory(categoryId) {
   const res = await fetch(
-    `https://shriramagro.com/wp-json/wp/v2/posts?_embed&categories=${categoryId}`,
+    `https://cms.shriramagro.com/wp-json/wp/v2/posts?_embed&categories=${categoryId}`,
     { cache: "no-store" }
   );
   return res.json();
