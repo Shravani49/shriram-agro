@@ -234,7 +234,7 @@ export default function Home() {
           }}
         />
 
-        <div className="relative z-10 flex items-center justify-between px-10 pt-10 pb-2">
+        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between px-6 sm:px-10 pt-10 pb-2 gap-4">
           <div className="hero-badge fade-up delay-1">
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#A7C983", display: "inline-block" }} />
             <span
@@ -258,15 +258,17 @@ export default function Home() {
         </div>
 
         <div
-          className="relative z-10"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "48px",
-            padding: "40px 56px 64px",
-            alignItems: "center",
-            minHeight: 680,
-          }}
+          className="
+            grid 
+            grid-cols-1 
+            lg:grid-cols-2 
+            gap-10 
+            px-6 
+            sm:px-10 
+            lg:px-16 
+            py-16 
+            items-center
+"
         >
           <div style={{ display: "flex", flexDirection: "column" }}>
             <p
@@ -354,13 +356,10 @@ export default function Home() {
           </div>
 
           <div
-  className="fade-up delay-3"
-  style={{ 
-    position: "relative", 
-    height: 620,
-    marginTop: "-350px"   // 👈 moves image section upward
-  }}
+  
+  className="fade-up delay-3 relative w-full h-[400px] sm:h-[500px] lg:h-[620px]"
 >
+
             <div
               style={{
                 position: "absolute",
@@ -473,11 +472,11 @@ export default function Home() {
 
 {/* ================= WHAT WE DO ================= */}
 
-<section className="bg-[#E5D9B6] py-10 overflow-hidden">
+
 
           {/* ================= WHAT WE DO ================= */}
       <section className="bg-[#E5D9B6] py-10 overflow-hidden">
-        <div className="px-28 py-6">
+        <div className="px-6 sm:px-10 lg:px-20">
 
           {/* Header */}
           <div className="max-w-xl mb-20">
@@ -664,9 +663,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-  </section>    
+     
 {/* ================= WHY WASTE MANAGEMENT ================= */}
-<section className="py-28 px-28 bg-[#F1F3E0]">
+<section className="py-28 px-6 sm:px-10 lg:px-20 bg-[#F1F3E0]">
   <div className="container-page">
 
     {/* Header */}
@@ -698,7 +697,7 @@ export default function Home() {
     <div className="grid lg:grid-cols-2 gap-16 items-center">
 
       {/* Left Image */}
-      <div className="relative w-full h-[700px] rounded-3xl overflow-hidden shadow-xl">
+      <div className="relative w-full h-[380px] sm:h-[520px] lg:h-[700px] rounded-3xl overflow-hidden shadow-xl">
         <img
           src="/images/composting.png"
           alt="Food waste composting process"
@@ -775,7 +774,7 @@ export default function Home() {
 
 {/* ================= OUR IMPACT ================= */}
 <section className="w-full bg-[#ffffff] py-28">
-  <div className="container-page mx-auto px-28">
+  <div className="container-page mx-auto px-6 sm:px-10 lg:px-20">
     
     <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
       
@@ -810,7 +809,7 @@ Our work directly contributes to circular economy practices, sustainable resourc
 
         {/* STATS */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="grid grid-cols-3 w-full px-12 text-white text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full px-12 text-white text-center">
 
                         <div>
               <h3 className="text-[50px] text-white font-bold mb-2">

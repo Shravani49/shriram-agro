@@ -8,19 +8,21 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
-    margin: 0;
-    padding: 0;
-    background-color: #FAFAF7; /* off-white */
-    color: #2E2E2E; /* charcoal text */
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-      "Noto Color Emoji";
-    line-height: 1.6;
-  }
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAF7;
+  color: #2E2E2E;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
   h1, h2, h3, h4, h5, h6 {
     font-family: Manrope, Inter, system-ui, sans-serif;
@@ -37,4 +39,20 @@
 /* -------------------------
    UTILITIES
 -------------------------- */
+/* -------------------------
+   MOBILE SAFETY RULES
+-------------------------- */
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}

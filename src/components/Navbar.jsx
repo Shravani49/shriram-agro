@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -15,206 +17,98 @@ export default function Navbar() {
   ];
 
   return (
-    <>
-      <style>{`
-        .nav-link {
-          position: relative;
-          font-family: 'Georgia', serif;
-          font-size: 1.15rem; /* increased */
-          font-weight: 600;
-          color: #3a3a2e;
-          text-decoration: none;
-          padding: 8px 0;
-          letter-spacing: 0.02em;
-          transition: color 0.2s ease;
-        }
-        .nav-link::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background: #5a8432;
-          border-radius: 2px;
-          transition: width 0.25s ease;
-        }
-        .nav-link:hover {
-          color: #1F3D2B;
-        }
-        .nav-link:hover::after {
-          width: 100%;
-        }
-        .nav-link.active {
-          color: #1F3D2B;
-          font-weight: 700;
-        }
-        .nav-link.active::after {
-          width: 100%;
-          background: #5a8432;
-        }
+    <header className="w-full bg-[#f4f7ee] border-b border-[#d4e0bc] sticky top-0 z-50">
+      
+      {/* NAV CONTAINER */}
+      <div className="flex items-center justify-between px-6 lg:px-12 py-4">
 
-        .btn-founder {
-          font-family: 'Georgia', serif;
-          font-size: 1.05rem; /* increased */
-          font-weight: 600;
-          color: #1a1400;
-          background: #f2c201;
-          padding: 14px 28px; /* bigger */
-          border-radius: 10px;
-          text-decoration: none;
-          cursor: pointer;
-          letter-spacing: 0.02em;
-          transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-          box-shadow: 0 3px 0px #c49a00, 0 6px 18px rgba(242,194,1,0.25);
-          white-space: nowrap;
-          display: inline-block;
-        }
-        .btn-founder:hover {
-          background: #fad429;
-          box-shadow: 0 5px 0px #c49a00, 0 8px 22px rgba(242,194,1,0.35);
-          transform: translateY(-2px);
-        }
+        {/* LOGO */}
+        <Link href="/" className="flex items-center gap-3">
+          <img
+            src="/images/logo.jpeg"
+            alt="Shri Ram Agro Industries"
+            className="w-12 h-12 lg:w-16 lg:h-16 rounded-full object-cover border-2 border-[#8aad5e]"
+          />
+          <span className="hidden sm:block font-semibold text-lg lg:text-xl text-[#1F3D2B]">
+            Shri Ram Agro Industries
+          </span>
+        </Link>
 
-        .btn-consult {
-          font-family: 'Georgia', serif;
-          font-size: 1.05rem; /* increased */
-          font-weight: 600;
-          color: #f0f5e8;
-          background: #253d18;
-          padding: 14px 28px; /* bigger */
-          border-radius: 10px;
-          text-decoration: none;
-          cursor: pointer;
-          letter-spacing: 0.02em;
-          transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-          box-shadow: 0 3px 0px #111e09, 0 6px 20px rgba(37,61,24,0.3);
-          white-space: nowrap;
-          display: inline-block;
-        }
-        .btn-consult:hover {
-          background: #1a2e10;
-          box-shadow: 0 5px 0px #111e09, 0 10px 24px rgba(37,61,24,0.4);
-          transform: translateY(-2px);
-        }
-      `}</style>
-
-      <header
-        style={{
-          width: "100%",
-          background: "#f4f7ee",
-          borderBottom: "1.5px solid #d4e0bc",
-          position: "sticky",
-          top: 0,
-          zIndex: 50,
-        }}
-      >
-        <div
-  style={{
-    width: "100%",
-    maxWidth: "100%",
-    margin: "0 auto",
-    padding: "0 28px",   // brings logo/name close to left & buttons to right
-    height: "110px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-  }}
->
-
-          {/* LEFT — Logo + Brand Name */}
-          <Link
-            href="/"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "6px", /* increased */
-              textDecoration: "none",
-              flexShrink: 0,
-            }}
-          >
-            <div
-              style={{
-                width: "82px", /* bigger logo */
-                height: "82px",
-                borderRadius: "50%",
-                overflow: "hidden",
-                border: "2px solid #8aad5e",
-                flexShrink: 0,
-              }}
+        {/* DESKTOP MENU */}
+        <nav className="hidden lg:flex items-center gap-10">
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`font-medium text-[#3a3a2e] hover:text-[#1F3D2B] ${
+                pathname === href ? "text-[#1F3D2B] font-semibold" : ""
+              }`}
             >
-              <img
-                src="/images/logo.jpeg"
-                alt="Shri Ram Agro Industries"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-              <span
-                style={{
-                  fontFamily: "'Georgia', serif",
-                  fontWeight: "700",
-                  fontSize: "1.4rem", /* bigger brand name */
-                  color: "#1F3D2B",
-                  letterSpacing: "0.02em",
-                  lineHeight: 1.2,
-                }}
-              >
-                Shri Ram Agro Industries
-              </span>
-              <span
-                style={{
-                  fontFamily: "'Georgia', serif",
-                  fontSize: "0.8rem", /* slightly bigger */
-                  color: "#6a8c4a",
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
-                  fontWeight: "500",
-                }}
-              >
-                Est. 2005 · FCO Registered
-              </span>
-            </div>
+              {label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* DESKTOP BUTTONS */}
+        <div className="hidden lg:flex items-center gap-4">
+          <Link
+            href="/founder"
+            className="bg-[#f2c201] text-[#1a1400] px-4 py-2 rounded-lg font-medium hover:bg-[#fad429] transition"
+          >
+            About Founder
+          </Link>
+          <Link
+            href="/contact"
+            className="bg-[#253d18] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#1a2e10] transition"
+          >
+            Consultancy
+          </Link>
+        </div>
+
+        {/* HAMBURGER BUTTON */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="lg:hidden text-[#1F3D2B]"
+        >
+          {isOpen ? (
+            <span className="text-2xl">✕</span>
+          ) : (
+            <span className="text-2xl">☰</span>
+          )}
+        </button>
+      </div>
+
+      {/* MOBILE MENU */}
+      {isOpen && (
+        <div className="lg:hidden bg-[#f4f7ee] border-t border-[#d4e0bc] px-6 pb-6 space-y-4">
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setIsOpen(false)}
+              className="block text-[#1F3D2B] font-medium py-2"
+            >
+              {label}
+            </Link>
+          ))}
+
+          <Link
+            href="/founder"
+            onClick={() => setIsOpen(false)}
+            className="block bg-[#f2c201] text-[#1a1400] px-4 py-2 rounded-lg text-center font-medium"
+          >
+            About Founder
           </Link>
 
-          {/* CENTER — Nav Links */}
-          <nav
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "48px", /* increased spacing */
-            }}
+          <Link
+            href="/contact"
+            onClick={() => setIsOpen(false)}
+            className="block bg-[#253d18] text-white px-4 py-2 rounded-lg text-center font-medium"
           >
-            {navLinks.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`nav-link${pathname === href ? " active" : ""}`}
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* RIGHT — CTA Buttons */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "18px", /* more spacing */
-              flexShrink: 0,
-            }}
-          >
-            <Link href="/founder" className="btn-founder">
-              About the Founder
-            </Link>
-            <Link href="/contact" className="btn-consult">
-              Request Consultancy
-            </Link>
-          </div>
-
+            Consultancy
+          </Link>
         </div>
-      </header>
-    </>
+      )}
+    </header>
   );
 }

@@ -18,12 +18,15 @@ const inter = Inter({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="font-body bg-offwhite">
-        <ScrollToTop />
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body className="font-body bg-offwhite overflow-x-hidden">
+    <ScrollToTop />
+    <Navbar />
+    {children}
+    <Footer />
+  </body>
+</html>
   )
 }

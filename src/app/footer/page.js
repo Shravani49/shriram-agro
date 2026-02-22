@@ -7,7 +7,7 @@ export default function Footer() {
 <footer className="bg-[#124125] text-white">
       
       {/* Main Footer Content */}
-      <div className="px-28 py-16">
+      <div className="px-6 sm:px-10 lg:px-28 py-14 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
           {/* Column 1 - About */}
@@ -18,17 +18,17 @@ export default function Footer() {
                 alt="Shri Ram Agro Industries"
                 className="w-16 h-16 rounded-full object-cover"
               />
-              <h3 className="text-xl text-white font-bold">Shri Ram Agro Industries</h3>
+              <h3 className="text-base sm:text-lg text-white font-bold">Shri Ram Agro Industries</h3>
             </div>
-            <p className="text-white/100 leading-relaxed text-[20px]">
+            <p className="text-white/90 leading-relaxed text-base sm:text-lg">
               Transforming food and organic waste into nutrient-rich compost and organic fertilizers through sustainable waste management solutions.
             </p>
           </div>
 
           {/* Column 2 - Quick Links */}
-          <div className="text-xl font-bold">
+          <div>
             <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
-            <ul className="space-y-3 text-xl font-medium">
+            <ul className="space-y-3 text-base sm:text-lg font-medium">
   <li>
     <Link href="/" className="text-white/80 hover:text-[#F2C94C] transition-colors">
       Home
@@ -59,7 +59,7 @@ export default function Footer() {
           {/* Column 3 - Services */}
           <div>
             <h4 className="text-xl font-semibold text-white mb-6">Our Services</h4>
-            <ul className="space-y-3 text-xl" >
+            <ul className="space-y-3 text-base sm:text-lg">
               <li className="text-white/80 ">Waste Management Systems</li>
               <li className="text-white/80 ">Bio-Processing Solutions</li>
               <li className="text-white/80 ">Organic Fertilizer Production</li>
@@ -105,15 +105,15 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="px-28 py-6 flex flex-col md:flex-row justify-center items-center gap-4">
+        <div className="px-6 sm:px-10 lg:px-28 py-6 flex flex-col md:flex-row justify-center items-center gap-4 text-center md:text-left">
           <p className="text-white/100 text-lg">
             © 2026 Shri Ram Agro Industries. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-white/60 hover:text-[#F2C94C] transition-colors duration-200 text-lg">
+            <a href="#" className="text-white/60 hover:text-[#F2C94C] transition-colors duration-200 text-sm sm:text-base">
               Privacy Policy
             </a>
-            <a href="#" className="text-white/60 hover:text-[#F2C94C] transition-colors duration-200 text-lg">
+            <a href="#" className="text-white/60 hover:text-[#F2C94C] transition-colors duration-200 text-sm sm:text-base">
               Terms of Service
             </a>
           </div>
