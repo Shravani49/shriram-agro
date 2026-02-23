@@ -122,7 +122,7 @@ export default function Home() {
           gap: 10px;
           background: #1F3D2B;
           color: #F5EFE6;
-          padding: 16px 36px;
+          padding: 12px 28px;
           border-radius: 999px;
           font-size: 16px;
           font-weight: 500;
@@ -144,7 +144,7 @@ export default function Home() {
           gap: 8px;
           background: transparent;
           color: #1F3D2B;
-          padding: 16px 28px;
+          padding: 12px 22px;
           border-radius: 999px;
           font-size: 16px;
           font-weight: 500;
@@ -234,18 +234,10 @@ export default function Home() {
           }}
         />
 
-        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between px-6 sm:px-10 pt-10 pb-2 gap-4">
+        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between px-6 sm:px-10 pt-8 pb-2 gap-4">
           <div className="hero-badge fade-up delay-1">
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#A7C983", display: "inline-block" }} />
-            <span
-              style={{
-                fontSize: 25,
-                fontWeight: 950,
-                letterSpacing: "0.12em",   // slightly tighter = bolder feel
-                color: "#1F3D2B",         // deeper contrast
-                textTransform: "uppercase",
-              }}
-            >
+            <span className="text-lg sm:text-xl font-extrabold tracking-wider text-[#1F3D2B] uppercase">
               Shri Ram Agro Industries
             </span>
           </div>
@@ -473,7 +465,7 @@ export default function Home() {
         <div className="px-6 sm:px-10 lg:px-20">
 
           {/* Header */}
-          <div className="max-w-xl mb-20">
+          <div className="max-w-xl mb-12 sm:mb-16">
             <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F3D2B] mb-4 leading-tight">
               What We Do
             </h2>
@@ -495,7 +487,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
 
               {/* Card 1 */}
-              <div className="group bg-[#7d5835] rounded-2xl px-8 py-10 
+              <div className="group bg-[#7d5835] rounded-2xl px-6 py-8 sm:px-8 sm:py-10
                               text-center text-white
                               shadow-md
                               transition-all duration-300 ease-in-out
@@ -511,11 +503,11 @@ export default function Home() {
                   />
                 </div>
 
-                <h3 className="text-[20px] font-bold text-white mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
                   End-to-End Wet Waste Processing & Composting Solutions
                 </h3>
 
-                <p className="text-[18px] text-white/90 leading-relaxed text-left">
+                <p className="text-base sm:text-lg text-white/90 leading-relaxed text-left">
                  We provide end-to-end solutions for the management and processing of municipal solid (wet) waste, transforming it into government-approved, high-quality, and safe-to-use compost fertilizer.
 <br /> <br />
   <span className="font-bold">Key Features:</span>  
@@ -534,7 +526,7 @@ export default function Home() {
               </div>
 
               {/* Card 2 */}
-              <div className="group bg-[#7d5835] rounded-2xl px-8 py-10 
+              <div className="group bg-[#7d5835] rounded-2xl px-6 py-8 sm:px-8 sm:py-10 
                               text-center text-white
                               shadow-md
                               transition-all duration-300 ease-in-out
@@ -550,12 +542,12 @@ export default function Home() {
                   />
                 </div>
 
-                <h3 className="text-[20px] font-bold text-white mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
                   Advanced Biogas & Digestate Treatment Solutions
                 </h3>
                 <br/>
 
-                <p className="text-[18px] text-white/90 leading-relaxed text-left">
+                <p className="text-base sm:text-lg text-white/90 leading-relaxed text-left">
                  Our science-driven treatment systems ensure the efficient processing of complex waste streams such as biogas and digestate, converting them into high-quality, commercial-grade Fermented Organic Manure (FOM) and Liquid Fermented Organic Manure (LFOM).
 <br /> <br />
   <span className="font-bold">Key Features:</span>  
@@ -573,7 +565,7 @@ export default function Home() {
                 </p>
               </div>
               {/* Card 3 */}
-              <div className="group bg-[#7d5835] rounded-2xl px-8 py-10 
+              <div className="group bg-[#7d5835] rounded-2xl px-6 py-8 sm:px-8 sm:py-10 
                               text-center text-white
                               shadow-md
                               transition-all duration-300 ease-in-out
@@ -589,12 +581,12 @@ export default function Home() {
                   />
                 </div>
 
-                <h3 className="text-[20px] font-bold text-white mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
                   Sustainable Organic Waste to Soil Solutions
                 </h3>
                 <br/>
 
-                <p className="text-[18px] text-white/90 leading-relaxed text-left">
+                <p className="text-base sm:text-lg text-white/90 leading-relaxed text-left">
                  We convert food waste, cattle waste, and agricultural residues into high-quality organic inputs that restore soil vitality, improve soil structure, and enhance crop productivity.
 <br /> <br /> <br/>
   <span className="font-bold">Key Features:</span>  
@@ -614,7 +606,7 @@ export default function Home() {
               </div>
 
               {/* Card 4 */}
-              <div className="group bg-[#7d5835] rounded-2xl px-8 py-10 
+              <div className="group bg-[#7d5835] rounded-2xl px-6 py-8 sm:px-8 sm:py-10 
                               text-center text-white
                               shadow-md
                               transition-all duration-300 ease-in-out
@@ -630,11 +622,11 @@ export default function Home() {
                   />
                 </div>
 
-                <h3 className="text-[20px] font-bold text-white mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
                   Regenerative Agriculture & Consultancy
                 </h3>
 
-                <p className="text-[18px] text-white/90 leading-relaxed text-left">
+                <p className="text-base sm:text-lg text-white/90 leading-relaxed text-left">
                 Beyond waste conversion, we actively support farmers, municipalities, and organizations in developing sustainable and regenerative systems that promote long-term environmental, agricultural, and economic resilience. <br/>
   <br/>
   <span className="font-bold">Key Features:</span>  
@@ -659,7 +651,7 @@ export default function Home() {
       </section>
      
 {/* ================= WHY WASTE MANAGEMENT ================= */}
-<section className="py-16 sm:py-20 lg:py-28 px-6 sm:px-10 lg:px-20 bg-[#F1F3E0]">
+<section className="py-12 sm:py-16 lg:py-24 px-6 sm:px-10 lg:px-20 bg-[#F1F3E0]">
   <div className="container-page">
 
     {/* Header */}
@@ -674,7 +666,7 @@ export default function Home() {
         Why Waste Management Matters
       </h2>
       <p 
-  className="text-[18px] text-[#2E2E2E]"
+  className="text-base sm:text-lg text-[#2E2E2E]"
   style={{
     fontFamily: "'DM Sans', sans-serif",
     lineHeight: 1.7,
@@ -688,7 +680,7 @@ export default function Home() {
     </div>
 
     {/* Image + Cards Layout */}
-    <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
 
       {/* Left Image */}
       <div className="relative w-full h-[380px] sm:h-[520px] lg:h-[700px] rounded-3xl overflow-hidden shadow-xl">
@@ -705,12 +697,12 @@ export default function Home() {
         {/* Card 1 */}
         <div className="bg-[#a7c983] p-6 rounded-2xl shadow-lg 
                         hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-<h3 className="text-[25px] font-bold text-[#000000] mb-3">
+<h3 className="text-xl sm:text-2xl font-bold text-[#000000] mb-3">
 
             The Importance of Composting
           </h3>
           <p 
-  className="text-[17px] text-[#2E2E2E]"
+  className="text-base text-[#2E2E2E]"
   style={{
     fontFamily: "'DM Sans', sans-serif",
     lineHeight: 1.7
@@ -725,10 +717,10 @@ export default function Home() {
         {/* Card 2 */}
         <div className="bg-[#a7c983] p-6 rounded-2xl shadow-lg 
                         hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-          <h3 className="text-[25px] font-bold text-[#000000] mb-3">
+          <h3 className="text-xl sm:text-2xl font-bold text-[#000000] mb-3">
             Reducing Food Waste
           </h3>
-          <p className="text-[17px] text-[#000000] leading-relaxed">
+          <p className="text-base text-[#000000] leading-relaxed">
             Converting food waste into organic fertilizer reduces greenhouse emissions,
             lowers landfill burden, and supports sustainable value creation for cities,
             industries, and farmers.
@@ -738,10 +730,10 @@ export default function Home() {
         {/* Card 3 */}
         <div className="bg-[#a7c983] p-6 rounded-2xl shadow-lg 
                         hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-          <h3 className="text-[25px] font-bold text-[#000000] mb-3">
+          <h3 className="text-xl sm:text-2xl font-bold text-[#000000] mb-3">
             Benefits to Soil Health
           </h3>
-          <p className="text-[17px] text-[#000000] leading-relaxed">
+          <p className="text-base text-[#000000] leading-relaxed">
             Organic compost improves soil structure, enhances moisture retention,
             restores organic carbon, and supports long-term crop productivity without
             degrading the ecosystem.
@@ -751,10 +743,10 @@ export default function Home() {
         {/* Card 4 */}
         <div className="bg-[#a7c983] p-6 rounded-2xl shadow-lg 
                         hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-          <h3 className="text-[25px] font-bold text-[#000000] mb-3">
+          <h3 className="text-xl sm:text-2xl font-bold text-[#000000] mb-3">
             Enhancing Soil Biodiversity
           </h3>
-          <p className="text-[17px] text-[#000000] leading-relaxed">
+          <p className="text-base text-[#000000] leading-relaxed">
             Healthy soil is a living ecosystem. Compost stimulates microbial activity,
             strengthens plant immunity, and contributes to regenerative agriculture systems.
           </p>
@@ -767,10 +759,10 @@ export default function Home() {
 
 
 {/* ================= OUR IMPACT ================= */}
-<section className="w-full bg-[#ffffff] py-16 sm:py-20 lg:py-28">
+<section className="w-full bg-[#ffffff] py-12 sm:py-16 lg:py-24">
   <div className="container-page mx-auto px-6 sm:px-10 lg:px-20">
     
-    <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
+    <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
       
       {/* LEFT CONTENT */}
       <div className="max-w-md">
@@ -809,7 +801,7 @@ Our work directly contributes to circular economy practices, sustainable resourc
               <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2">
                 150,000+
               </h3>
-              <p className="text-[18px] opacity-90">
+              <p className="text-base sm:text-lg opacity-90">
                 Tons waste processed
               </p>
             </div>
@@ -818,8 +810,8 @@ Our work directly contributes to circular economy practices, sustainable resourc
               <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2">
                 35+
               </h3>
-              <p className="text-[18px] opacity-90">
-                Satisfied National and International Clients 
+              <p className="text-base sm:text-lg opacity-90">
+                Satisfied National and International Clients
               </p>
             </div>
             
@@ -827,7 +819,7 @@ Our work directly contributes to circular economy practices, sustainable resourc
               <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2">
                 28,000+
               </h3>
-              <p className="text-[18px] opacity-90">
+              <p className="text-base sm:text-lg opacity-90">
                 Acres restored
               </p>
             </div>
