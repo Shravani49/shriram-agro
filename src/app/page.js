@@ -122,9 +122,9 @@ export default function Home() {
           gap: 10px;
           background: #1F3D2B;
           color: #F5EFE6;
-          padding: 12px 28px;
+          padding: 10px 22px;
+          font-size: 14px;      
           border-radius: 999px;
-          font-size: 16px;
           font-weight: 500;
           letter-spacing: 0.02em;
           transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
@@ -144,9 +144,9 @@ export default function Home() {
           gap: 8px;
           background: transparent;
           color: #1F3D2B;
-          padding: 12px 22px;
+          padding: 10px 18px;
+          font-size: 14px;
           border-radius: 999px;
-          font-size: 16px;
           font-weight: 500;
           border: 1.5px solid rgba(31,61,43,0.35);
           transition: border-color 0.25s, background 0.25s, transform 0.2s;
@@ -180,6 +180,14 @@ export default function Home() {
           box-shadow: 0 8px 32px rgba(31,61,43,0.14);
         }
 
+        /* Mobile stat cards - smaller padding & font */
+        @media (max-width: 640px) {
+          .stat-card {
+            padding: 10px 14px;
+            border-radius: 14px;
+          }
+        }
+
         .vertical-label {
           writing-mode: vertical-rl;
           text-orientation: mixed;
@@ -208,6 +216,93 @@ export default function Home() {
           border-bottom: 1px solid rgba(31,61,43,0.12);
           background: rgba(31,61,43,0.04);
         }
+
+        /* ===== HERO MAIN GRID ===== */
+
+        /* MOBILE: single column, items ordered naturally */
+        .hero-main-grid {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "subtitle"
+            "heading"
+            "image"
+            "para"
+            "stats"
+            "buttons";
+        }
+        .hero-subtitle  { grid-area: subtitle; }
+        .hero-heading   { grid-area: heading; }
+        .hero-image-panel { grid-area: image; }
+        .hero-para      { grid-area: para; }
+        .hero-stats     { grid-area: stats; }
+        .hero-buttons   { grid-area: buttons; }
+
+        /* DESKTOP (≥768px): 2-column layout */
+        @media (min-width: 768px) {
+          .hero-main-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+              "subtitle  image"
+              "heading   image"
+              "para      image"
+              "stats     image"
+              "buttons   image";
+            gap: 1rem 2.5rem;
+            align-items: start;
+          }
+          .hero-image-panel {
+            grid-row: 1 / 6;
+            height: 480px !important;
+          }
+        }
+        @media (min-width: 1024px) {
+          .hero-image-panel {
+            height: 560px !important;
+          }
+        }
+
+        /* ===== ANDROID / MOBILE RESPONSIVE FIXES ===== */
+
+        @media (max-width: 767px) {
+          .hero-image-panel {
+            height: 320px !important;
+            margin: 4px 0;
+          }
+          /* Stat cards: keep inside image, compact */
+          .hero-image-panel .stat-card {
+            padding: 9px 12px !important;
+            border-radius: 12px !important;
+            min-width: unset !important;
+          }
+          .hero-vertical-label {
+            display: none !important;
+          }
+        }
+
+        /* Stats row: always stay in a row */
+        .hero-stats-row {
+          flex-wrap: nowrap !important;
+        }
+        @media (max-width: 480px) {
+          .hero-stats-row {
+            gap: 16px !important;
+          }
+          .hero-stats-row .stat-value {
+            font-size: 1.4rem !important;
+          }
+        }
+
+        /* Buttons: stack on very small screens */
+        @media (max-width: 380px) {
+          .hero-btn-row {
+            flex-direction: column !important;
+            gap: 12px !important;
+          }
+          .btn-primary, .btn-secondary {
+            width: 100%;
+            justify-content: center;
+          }
+        }
       `}</style>
 
       <section
@@ -234,195 +329,108 @@ export default function Home() {
           }}
         />
 
-        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between px-6 sm:px-10 pt-8 pb-2 gap-4">
+        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between px-4 sm:px-10 pt-6 sm:pt-8 pb-2 gap-4">
           <div className="hero-badge fade-up delay-1">
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#A7C983", display: "inline-block" }} />
-            <span className="text-lg sm:text-xl font-extrabold tracking-wider text-[#1F3D2B] uppercase">
+            <span className="text-base sm:text-xl font-extrabold tracking-wider text-[#1F3D2B] uppercase">
               Shri Ram Agro Industries
-            </span>
-          </div>
-
-          <div className="fade-up delay-1" style={{ textAlign: "right" }}>
-            <span style={{ fontSize: 11, color: "rgba(31,61,43,0.55)", letterSpacing: "0.12em", textTransform: "uppercase" }}>
-              Est. 2005 · Registered FCO
             </span>
           </div>
         </div>
 
         <div
-          className="
-            grid 
-            grid-cols-1 
-            lg:grid-cols-2 
-            gap-10 
-            px-6 
-            sm:px-10 
-            lg:px-16 
-            py-16 
-            items-center
-"
+          className="hero-main-grid px-4 sm:px-10 lg:px-16 py-10 sm:py-16"
+          style={{ display: "grid", gap: "1.5rem", alignItems: "center" }}
         >
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <p
-              className="fade-up delay-2"
-              style={{
-                fontSize: 20,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                color: "#7d5835",
-                fontWeight: 600,
-                marginBottom: 10,
-              }}
-            >
-              Organic Waste → Premium Inputs
-            </p>
 
-            <h1
-                className="fade-up delay-3 text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6"
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  color: "#1F3D2B",
-                  letterSpacing: "-0.01em",
-                }}
-              >
-              Turning Waste
-              <br />
-              <em style={{ color: "#5C7A3A", fontStyle: "italic" }}>Into Wealth</em>
-              <br />
-            
-            </h1>
+          {/* 
+            DESKTOP: left col = subtitle+heading+para+stats+buttons (via .hero-left-col)
+                     right col = image panel (via .hero-image-panel, grid-column: 2)
+            MOBILE: single column, ordered: subtitle(1)→heading(2)→image(3)→para(4)→stats(5)→buttons(6)
+          */}
 
-            <p
-              className="fade-up delay-3 text-base sm:text-lg leading-relaxed text-[#2E2E2E] max-w-2xl mb-8"
-            >
-              We specialize in providing end-to-end solutions for the management and processing of municipal solid waste, industrial food waste, sugar factory waste, agricultural and dairy waste, cattle waste, and biogas digestate. <br/> <br/>
+          {/* Subtitle */}
+          <p className="fade-up delay-2 hero-subtitle text-sm font-semibold text-[#7d5835] tracking-wide" style={{ margin: 0 }}>
+            Organic Waste → Premium Inputs
+          </p>
 
-                Our core expertise lies in transforming these diverse waste streams into high-quality, safe-to-use, and FCO-approved organic inputs, including <strong style={{ fontWeight: 500, color: "#1F3D2B" }}> Phosphate-Rich Organic Manure (PROM), City Compost, Fermented Organic Manure (FOM), and Liquid Fermented Organic Manure (LFOM). </strong><br/><br/>
+          {/* Heading */}
+          <h1
+            className="fade-up delay-3 hero-heading font-bold leading-tight"
+            style={{ fontFamily: "'Playfair Display', serif", color: "#1F3D2B", letterSpacing: "-0.01em", fontSize: "clamp(2rem, 8vw, 3.75rem)", margin: 0 }}
+          >
+            Turning Waste<br />
+            <em style={{ color: "#5C7A3A", fontStyle: "italic" }}>Into Wealth</em>
+          </h1>
 
-                In addition, we offer comprehensive consultancy services for the <strong style={{ fontWeight: 500, color: "#1F3D2B" }}> planning, design, and setup of organic fertilizer production projects </strong> — enabling sustainable, compliant, and commercially viable operations. <br/><br/> 
-            </p>
-
-            <div
-              className="fade-up delay-4"
-              style={{ display: "flex", gap: 40, marginBottom: 48 }}
-            >
-              {[
-                { value: "10,000+", label: "MT Processed/Year" },
-                { value: "5+", label: "Waste Streams" },
-                { value: "FCO", label: "Approved Inputs" },
-              ].map((s) => (
-               <div key={s.label}>
-                  <div
-                    className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1F3D2B]"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                  >
-                    {s.value}
-                  </div>
-
-                  <div
-                    className="text-sm sm:text-base text-[#1F3D2B]/60 mt-1"
-                  >
-                    {s.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="fade-up delay-5" style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <Link href="/services" className="btn-primary">
-                View Our Services
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
-              <Link href="/contact" className="btn-secondary">
-                Request Consultancy
-              </Link>
-            </div>
-          </div>
-
-          <div
-  
-  className="fade-up delay-3 relative w-full h-[400px] sm:h-[500px] lg:h-[620px]"
->
-
-            <div
-              style={{
-                position: "absolute",
-                top: 0, left: "5%",
-                width: "88%", height: "88%",
-                borderRadius: "28px 28px 120px 28px",
-                overflow: "hidden",
-                boxShadow: "0 24px 80px rgba(31,61,43,0.25), 0 4px 16px rgba(0,0,0,0.10)",
-              }}
-            >
-              <img
-                src="/images/hero.png"
-                alt="Composting facility"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
+          {/* IMAGE PANEL */}
+          <div className="hero-image-panel fade-up delay-3 relative" style={{ width: "100%", height: 340 }}>
+            {/* Main image */}
+            <div style={{ position: "absolute", top: 0, left: "5%", width: "88%", height: "88%", borderRadius: "28px 28px 120px 28px", overflow: "hidden", boxShadow: "0 24px 80px rgba(31,61,43,0.25), 0 4px 16px rgba(0,0,0,0.10)" }}>
+              <img src="/images/hero.png" alt="Composting facility" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               <div className="img-overlay" />
             </div>
-
-            <div
-              style={{
-                position: "absolute",
-                bottom: 0, right: 0,
-                width: "42%", height: "38%",
-                borderRadius: "20px 80px 20px 20px",
-                overflow: "hidden",
-                boxShadow: "0 12px 40px rgba(31,61,43,0.2)",
-                border: "3px solid rgba(245,239,230,0.8)",
-              }}
-            >
-              <img
-  src="/images/new.png"
-  alt="Organic manure"
-  style={{
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    transform: "scale(0.85)",   // zooms OUT image
-    filter: "saturate(1.15)"
-  }}
-/>
+            {/* Small overlay image */}
+            <div style={{ position: "absolute", bottom: 0, right: 0, width: "42%", height: "38%", borderRadius: "20px 80px 20px 20px", overflow: "hidden", boxShadow: "0 12px 40px rgba(31,61,43,0.2)", border: "3px solid rgba(245,239,230,0.8)" }}>
+              <img src="/images/new.png" alt="Organic manure" style={{ width: "100%", height: "100%", objectFit: "cover", transform: "scale(0.85)", filter: "saturate(1.15)" }} />
             </div>
-
-            <div
-              className="stat-card"
-              style={{ top: 24, left: -28, minWidth: 170 }}
-            >
-              <div style={{ fontSize: 11, letterSpacing: "0.12em", color: "rgba(31,61,43,0.55)", textTransform: "uppercase", marginBottom: 6 }}>
-                Waste Transformed
-              </div>
-              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 30, fontWeight: 700, color: "#1F3D2B", lineHeight: 1 }}>
-                100%
-              </div>
-              <div style={{ fontSize: 12, color: "#5C7A3A", marginTop: 4 }}>FCO-certified output</div>
+            {/* Waste Transformed card */}
+            <div className="stat-card" style={{ top: 16, left: 10, minWidth: 130, padding: "10px 13px", borderRadius: 14 }}>
+              <div style={{ fontSize: 9, letterSpacing: "0.12em", color: "rgba(31,61,43,0.55)", textTransform: "uppercase", marginBottom: 4 }}>Waste Transformed</div>
+              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: "#1F3D2B", lineHeight: 1 }}>100%</div>
+              <div style={{ fontSize: 10, color: "#5C7A3A", marginTop: 3 }}>FCO/ NPOP certified output</div>
+              
             </div>
-
-            <div
-              className="stat-card"
-              style={{ bottom: 50, left: -20, minWidth: 190 }}
-            >
-              <div style={{ fontSize: 11, letterSpacing: "0.12em", color: "rgba(31,61,43,0.55)", textTransform: "uppercase", marginBottom: 6 }}>
-                Our Services
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                {["PROM", "City Compost", "FOM", "LFOM"].map((item) => (
-                  <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "#1F3D2B", fontWeight: 500 }}>
-                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#A7C983", flexShrink: 0 }} />
+            {/* Our Services card */}
+            <div className="stat-card" style={{ bottom: 36, left: 10, minWidth: 120, padding: "10px 13px", borderRadius: 14 }}>
+              <div style={{ fontSize: 9, letterSpacing: "0.12em", color: "rgba(31,61,43,0.55)", textTransform: "uppercase", marginBottom: 4 }}>Our Services</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+                {["PROM", "City Compost", "Poject Setup"].map((item) => (
+                  <div key={item} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, color: "#1F3D2B", fontWeight: 500 }}>
+                    <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#A7C983", flexShrink: 0 }} />
                     {item}
                   </div>
                 ))}
               </div>
             </div>
-
-            <div
-              style={{ position: "absolute", right: -24, top: "50%", transform: "translateY(-50%)" }}
-            >
+            {/* Vertical label — desktop only */}
+            <div className="hero-vertical-label" style={{ position: "absolute", right: -24, top: "50%", transform: "translateY(-50%)" }}>
               <span className="vertical-label">Sustainable · Compliant · Circular</span>
             </div>
+          </div>
+
+          {/* Paragraph */}
+          <p className="fade-up delay-3 hero-para text-sm sm:text-base leading-relaxed text-[#2E2E2E] max-w-xl" style={{ margin: 0 }}>
+
+
+            We provide end-to-end solutions for processing <strong style={{ fontWeight: 500, color: "#1F3D2B" }}> municipal, industrial, agricultural, dairy, and biogas </strong> waste into high-quality, FCO-approved organic inputs such as <strong style={{ fontWeight: 500, color: "#1F3D2B" }}>PROM, City Compost, FOM, and LFOM.</strong>
+
+We also offer expert consultancy for  <strong style={{ fontWeight: 500, color: "#1F3D2B" }}> planning, designing, and establishing sustainable organic fertilizer production systems </strong> that are compliant, efficient, and commercially viable.
+          </p>
+
+          {/* Stats */}
+          <div className="fade-up delay-4 hero-stats hero-stats-row" style={{ display: "flex", gap: 24, flexWrap: "nowrap", margin: 0 }}>
+            {[
+              { value: "1,00,000+", label: "MT Processed/Year" },
+              { value: "5+", label: "Waste Streams" },
+              { value: "FCO", label: "Approved Inputs" },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="stat-value font-bold text-[#1F3D2B]" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.4rem, 5vw, 2.5rem)" }}>{s.value}</div>
+                <div className="text-xs text-[#1F3D2B]/80 mt-1">{s.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Buttons */}
+          <div className="fade-up delay-5 hero-buttons hero-btn-row" style={{ display: "flex", gap: 16, flexWrap: "wrap", margin: 0 }}>
+            <Link href="/services" className="btn-primary">
+              View Our Services
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+            <Link href="/contact" className="btn-secondary">Request Consultancy</Link>
           </div>
         </div>
 
@@ -456,386 +464,293 @@ export default function Home() {
         </div>
       </section>
 
-{/* ================= WHAT WE DO ================= */}
-
-
-
-          {/* ================= WHAT WE DO ================= */}
+      {/* ================= WHAT WE DO ================= */}
+     
       <section className="bg-[#E5D9B6] py-10 overflow-hidden">
-        <div className="px-6 sm:px-10 lg:px-20">
+        <div className="px-4 sm:px-10 lg:px-20">
 
           {/* Header */}
-          <div className="max-w-xl mb-12 sm:mb-16">
+          <div className="max-w-xl mb-10 sm:mb-16">
             <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F3D2B] mb-4 leading-tight">
               What We Do
             </h2>
-          <p className="body-text text-base sm:text-lg leading-relaxed text-[#2E2E2E]  mb-12 animate-fade-in">
-
-             Transforming Food and Organic Waste into Organic fertilizers that Restore Soil and Empower Farmers
+            <p className="body-text text-base sm:text-lg leading-relaxed text-[#2E2E2E] mb-8 sm:mb-12 animate-fade-in">
+              Transforming Food and Organic Waste into Organic fertilizers that Restore Soil and Empower Farmers
             </p>
           </div>
 
           <div className="relative">
 
-            {/* Image Panel */}
-            <div
-              className="absolute right-0 -top-64 w-[50%] h-[550px] bg-cover bg-center rounded-3xl hidden lg:block"
-              style={{ backgroundImage: "url('/images/whatWeDo.png')" }}
-            />
-
             {/* Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
 
               {/* Card 1 */}
-              <div className="group bg-[#7d5835] rounded-2xl px-6 py-8 sm:px-8 sm:py-10
-                              text-center text-white
-                              shadow-md
+              <div className="group bg-[#7d5835] rounded-xl px-3 sm:px-4 py-4
+                              text-center text-white shadow-md
                               transition-all duration-300 ease-in-out
-                              hover:-translate-y-3 
-                              hover:shadow-2xl 
-                              hover:bg-[#5c422b]">
-
-                <div className="mb-6 flex justify-center">
-                  <img
-                    src="/icons/waste.png"
-                    alt=""
-                    className="h-16 w-16 transition-transform duration-300 group-hover:scale-110"
-                  />
+                              hover:-translate-y-3 hover:shadow-2xl hover:bg-[#5c422b]">
+                <div className="mb-3 flex justify-center">
+                  <img src="/icons/waste.png" alt="" className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" />
                 </div>
-
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
+                <h3 className="text-lg sm:text-base font-bold text-white mb-2">
                   End-to-End Wet Waste Processing & Composting Solutions
                 </h3>
-
-                <p className="text-base sm:text-lg text-white/90 leading-relaxed text-left">
-                 We provide end-to-end solutions for the management and processing of municipal solid (wet) waste, transforming it into government-approved, high-quality, and safe-to-use compost fertilizer.
-<br /> <br />
-  <span className="font-bold">Key Features:</span>  
- <br />
-
-1. Advanced deodorization system ensuring effective odor control. <br />
-
-2. Environmentally sustainable processes aligned with government waste management guidelines. <br />
-
-3. Optimized operations requiring minimal resource utilization. <br />
-
-4. Proven, cost-effective technology with successful field applications. <br />
-
-5. Production of stable, mature, and nutrient-rich compost that enhances soil health and fertility. <br/>
+                <p className="text-sm sm:text-sm text-white/90 leading-relaxed text-left">
+                  We provide end-to-end solutions for the management and processing of municipal solid (wet) waste, transforming it into government-approved, high-quality, and safe-to-use compost fertilizer.
+                  <br /><br />
+                  <span className="font-bold">Key Features:</span><br />
+                  1. Advanced deodorization system ensuring effective odor control.<br />
+                  2. Environmentally sustainable processes aligned with government waste management guidelines.<br />
+                  3. Optimized operations requiring minimal resource utilization.<br />
+                  4. Proven, cost-effective technology with successful field applications.<br />
+                  5. Production of stable, mature, and nutrient-rich compost that enhances soil health and fertility.<br />
                 </p>
               </div>
 
               {/* Card 2 */}
-              <div className="group bg-[#7d5835] rounded-2xl px-6 py-8 sm:px-8 sm:py-10 
-                              text-center text-white
-                              shadow-md
+              <div className="group bg-[#7d5835] rounded-xl px-3 sm:px-4 py-4
+                              text-center text-white shadow-md
                               transition-all duration-300 ease-in-out
-                              hover:-translate-y-3 
-                              hover:shadow-2xl 
-                              hover:bg-[#5c422b]">
-
-                <div className="mb-6 flex justify-center">
-                  <img
-                    src="/icons/agro.png"
-                    alt=""
-                    className="h-16 w-16 transition-transform duration-300 group-hover:scale-110"
-                  />
+                              hover:-translate-y-3 hover:shadow-2xl hover:bg-[#5c422b]">
+                <div className="mb-3 flex justify-center">
+                  <img src="/icons/agro.png" alt="" className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" />
                 </div>
-
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
+                <h3 className="text-lg sm:text-base font-bold text-white mb-2">
                   Advanced Biogas & Digestate Treatment Solutions
                 </h3>
-                <br/>
-
-                <p className="text-base sm:text-lg text-white/90 leading-relaxed text-left">
-                 Our science-driven treatment systems ensure the efficient processing of complex waste streams such as biogas and digestate, converting them into high-quality, commercial-grade Fermented Organic Manure (FOM) and Liquid Fermented Organic Manure (LFOM).
-<br /> <br />
-  <span className="font-bold">Key Features:</span>  
- <br />
-
-1. Comprehensive end-to-end turnkey project execution — from Detailed Project Report (DPR) preparation to final product handover. <br />
-
-2. Professional waste audit and assessment services.<br />
-
-3. Practical, implementation-focused solutions tailored to on-ground requirements.<br />
-
-4. Research-driven product development and formulation.<br />
-
-5. Production of FCO-approved, market-ready organic products. <br />
+                <p className="text-sm sm:text-sm text-white/90 leading-relaxed text-left">
+                  Our science-driven treatment systems ensure the efficient processing of complex waste streams such as biogas and digestate, converting them into high-quality, commercial-grade Fermented Organic Manure (FOM) and Liquid Fermented Organic Manure (LFOM).
+                  <br /><br />
+                  <span className="font-bold">Key Features:</span><br />
+                  1. Comprehensive end-to-end turnkey project execution — from DPR preparation to final product handover.<br />
+                  2. Professional waste audit and assessment services.<br />
+                  3. Practical, implementation-focused solutions tailored to on-ground requirements.<br />
+                  4. Research-driven product development and formulation.<br />
+                  5. Production of FCO-approved, market-ready organic products.<br />
                 </p>
               </div>
+
               {/* Card 3 */}
-              <div className="group bg-[#7d5835] rounded-2xl px-6 py-8 sm:px-8 sm:py-10 
-                              text-center text-white
-                              shadow-md
+              <div className="group bg-[#7d5835] rounded-xl px-3 sm:px-4 py-4
+                              text-center text-white shadow-md
                               transition-all duration-300 ease-in-out
-                              hover:-translate-y-3 
-                              hover:shadow-2xl 
-                              hover:bg-[#5c422b]">
-
-                <div className="mb-6 flex justify-center">
-                  <img
-                    src="/icons/production.png"
-                    alt=""
-                    className="h-16 w-16 transition-transform duration-300 group-hover:scale-110"
-                  />
+                              hover:-translate-y-3 hover:shadow-2xl hover:bg-[#5c422b]">
+                <div className="mb-3 flex justify-center">
+                  <img src="/icons/production.png" alt="" className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" />
                 </div>
-
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
+                <h3 className="text-lg sm:text-base font-bold text-white mb-2">
                   Sustainable Organic Waste to Soil Solutions
                 </h3>
-                <br/>
-
-                <p className="text-base sm:text-lg text-white/90 leading-relaxed text-left">
-                 We convert food waste, cattle waste, and agricultural residues into high-quality organic inputs that restore soil vitality, improve soil structure, and enhance crop productivity.
-<br /> <br /> <br/>
-  <span className="font-bold">Key Features:</span>  
- <br />
-
-1. Microbial-based organic fertilizers for enhanced nutrient availability and soil health. <br />
-
-2. Nutrient-rich compost and Phosphate-Rich Organic Manure (PROM). <br />
-
-3. Granular organic fertilizers for ease of application and uniform nutrient distribution. <br />
-
-4. Production of FCO-approved, market-ready organic products. <br />
-
-5. Sustainable processing methods that promote circular economy practices and long-term soil regeneration. <br/>
-
+                <p className="text-sm sm:text-sm text-white/90 leading-relaxed text-left">
+                  We convert food waste, cattle waste, and agricultural residues into high-quality organic inputs that restore soil vitality, improve soil structure, and enhance crop productivity.
+                  <br /><br />
+                  <span className="font-bold">Key Features:</span><br />
+                  1. Microbial-based organic fertilizers for enhanced nutrient availability and soil health.<br />
+                  2. Nutrient-rich compost and Phosphate-Rich Organic Manure (PROM).<br />
+                  3. Granular organic fertilizers for ease of application and uniform nutrient distribution.<br />
+                  4. Production of FCO-approved, market-ready organic products.<br />
+                  5. Sustainable processing methods that promote circular economy practices and long-term soil regeneration.<br />
                 </p>
               </div>
 
               {/* Card 4 */}
-              <div className="group bg-[#7d5835] rounded-2xl px-6 py-8 sm:px-8 sm:py-10 
-                              text-center text-white
-                              shadow-md
+              <div className="group bg-[#7d5835] rounded-xl px-3 sm:px-4 py-4
+                              text-center text-white shadow-md
                               transition-all duration-300 ease-in-out
-                              hover:-translate-y-3 
-                              hover:shadow-2xl 
-                              hover:bg-[#5c422b]">
-
-                <div className="mb-6 flex justify-center">
-                  <img
-                    src="/icons/soil.png"
-                    alt=""
-                    className="h-16 w-16 transition-transform duration-300 group-hover:scale-110"
-                  />
+                              hover:-translate-y-3 hover:shadow-2xl hover:bg-[#5c422b]">
+                <div className="mb-3 flex justify-center">
+                  <img src="/icons/soil.png" alt="" className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" />
                 </div>
-
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
+                <h3 className="text-lg sm:text-base font-bold text-white mb-2">
                   Regenerative Agriculture & Consultancy
                 </h3>
-
-                <p className="text-base sm:text-lg text-white/90 leading-relaxed text-left">
-                Beyond waste conversion, we actively support farmers, municipalities, and organizations in developing sustainable and regenerative systems that promote long-term environmental, agricultural, and economic resilience. <br/>
-  <br/>
-  <span className="font-bold">Key Features:</span>  
- <br />
-1. Comprehensive waste audits and feasibility reports in accordance with international quality standards. <br/>
-
-2. Structured training and consultancy programs for farmers, municipal staff, CSR initiatives, and startups. <br/>
-
-3. End-to-end project setup and infrastructure planning support. <br/>
-
-4. Technical advisory for regulatory compliance, policy alignment, and FCO certification processes. <br/>
-
-5. Ongoing monitoring, performance optimization, and post-implementation support to ensure long-term project sustainability and operational efficiency. <br/>
-
+                <p className="text-sm sm:text-sm text-white/90 leading-relaxed text-left">
+                  Beyond waste conversion, we actively support farmers, municipalities, and organizations in developing sustainable and regenerative systems that promote long-term environmental, agricultural, and economic resilience.<br />
+                  <br />
+                  <span className="font-bold">Key Features:</span><br />
+                  1. Comprehensive waste audits and feasibility reports in accordance with international quality standards.<br />
+                  2. Structured training and consultancy programs for farmers, municipal staff, CSR initiatives, and startups.<br />
+                  3. End-to-end project setup and infrastructure planning support.<br />
+                  4. Technical advisory for regulatory compliance, policy alignment, and FCO certification processes.<br />
+                  5. Ongoing monitoring, performance optimization, and post-implementation support to ensure long-term project sustainability and operational efficiency.<br />
                 </p>
               </div>
-
 
             </div>
           </div>
         </div>
       </section>
-     
-{/* ================= WHY WASTE MANAGEMENT ================= */}
-<section className="py-12 sm:py-16 lg:py-24 px-6 sm:px-10 lg:px-20 bg-[#F1F3E0]">
-  <div className="container-page">
 
-    {/* Header */}
-    <div className="text-center max-w-3xl mx-auto mb-20">
-      <h2 
-  className="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#1F3D2B] mb-6"
-  style={{
-    fontFamily: "'Playfair Display', serif",
-    letterSpacing: "-0.01em"
-  }}
->
-        Why Waste Management Matters
-      </h2>
-      <p 
-  className="text-base sm:text-lg text-[#2E2E2E]"
-  style={{
-    fontFamily: "'DM Sans', sans-serif",
-    lineHeight: 1.7,
-    fontWeight: 400
-  }}
->
-        Transforming food waste into organic fertilizer builds a circular
-        economy, restores soil health, and supports regenerative agriculture
-        for a sustainable future.
-      </p>
-    </div>
 
-    {/* Image + Cards Layout */}
-    <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
+      {/* ================= WHY WASTE MANAGEMENT ================= */}
+      <section className="py-10 sm:py-16 lg:py-24 px-4 sm:px-10 lg:px-20 bg-[#F1F3E0]">
+        <div className="container-page">
 
-      {/* Left Image */}
-      <div className="relative w-full h-[380px] sm:h-[520px] lg:h-[700px] rounded-3xl overflow-hidden shadow-xl">
-        <img
-          src="/images/composting.png"
-          alt="Food waste composting process"
-          className="w-full h-full object-cover object-center"
-        />
-      </div>
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-20">
+            <h2
+              className="font-bold text-[#1F3D2B] mb-6"
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                letterSpacing: "-0.01em",
+                fontSize: "clamp(1.6rem, 5vw, 3rem)",
+              }}
+            >
+              Why Waste Management Matters
+            </h2>
+            <p
+              className="text-base sm:text-lg text-[#2E2E2E]"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                lineHeight: 1.7,
+                fontWeight: 400
+              }}
+            >
+              Transforming food waste into organic fertilizer builds a circular
+              economy, restores soil health, and supports regenerative agriculture
+              for a sustainable future.
+            </p>
+          </div>
 
-      {/* RIGHT SIDE CONTENT */}
-      <div className="space-y-8">
+          {/* Image + Cards Layout */}
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 items-center">
 
-        {/* Card 1 */}
-        <div className="bg-[#a7c983] p-6 rounded-2xl shadow-lg 
-                        hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-<h3 className="text-xl sm:text-2xl font-bold text-[#000000] mb-3">
+            {/* Left Image */}
+            <div className="relative w-full h-[220px] sm:h-[320px] lg:h-[520px] rounded-3xl overflow-hidden shadow-xl">
+              <img
+                src="/images/composting.png"
+                alt="Food waste composting process"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
 
-            The Importance of Composting
-          </h3>
-          <p 
-  className="text-base text-[#2E2E2E]"
-  style={{
-    fontFamily: "'DM Sans', sans-serif",
-    lineHeight: 1.7
-  }}
->
-            Composting converts organic and food waste into nutrient-rich fertilizer
-            through natural biological processes. Instead of generating methane in
-            landfills, waste becomes a productive agricultural resource.
-          </p>
+            {/* RIGHT SIDE CONTENT */}
+            <div className="space-y-5 sm:space-y-8">
+
+              <div className="bg-[#a7c983] p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <h3 className="text-m sm:text-2xl font-bold text-[#000000] mb-3">
+                  The Importance of Composting
+                </h3>
+                <p className="text-sm sm:text-base text-[#2E2E2E]" style={{ fontFamily: "'DM Sans', sans-serif", lineHeight: 1.7 }}>
+                  Composting converts organic and food waste into nutrient-rich fertilizer
+                  through natural biological processes. Instead of generating methane in
+                  landfills, waste becomes a productive agricultural resource.
+                </p>
+              </div>
+
+              <div className="bg-[#a7c983] p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <h3 className="text-m sm:text-2xl font-bold text-[#000000] mb-3">
+                  Reducing Food Waste
+                </h3>
+                <p className="text-sm sm:text-base text-[#000000] leading-relaxed">
+                  Converting food waste into organic fertilizer reduces greenhouse emissions,
+                  lowers landfill burden, and supports sustainable value creation for cities,
+                  industries, and farmers.
+                </p>
+              </div>
+
+              <div className="bg-[#a7c983] p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <h3 className="text-m sm:text-2xl font-bold text-[#000000] mb-3">
+                  Benefits to Soil Health
+                </h3>
+                <p className="text-sm sm:text-base text-[#000000] leading-relaxed">
+                  Organic compost improves soil structure, enhances moisture retention,
+                  restores organic carbon, and supports long-term crop productivity without
+                  degrading the ecosystem.
+                </p>
+              </div>
+
+              <div className="bg-[#a7c983] p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <h3 className="text-m sm:text-2xl font-bold text-[#000000] mb-3">
+                  Enhancing Soil Biodiversity
+                </h3>
+                <p className="text-sm sm:text-base text-[#000000] leading-relaxed">
+                  Healthy soil is a living ecosystem. Compost stimulates microbial activity,
+                  strengthens plant immunity, and contributes to regenerative agriculture systems.
+                </p>
+              </div>
+
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Card 2 */}
-        <div className="bg-[#a7c983] p-6 rounded-2xl shadow-lg 
-                        hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-          <h3 className="text-xl sm:text-2xl font-bold text-[#000000] mb-3">
-            Reducing Food Waste
-          </h3>
-          <p className="text-base text-[#000000] leading-relaxed">
-            Converting food waste into organic fertilizer reduces greenhouse emissions,
-            lowers landfill burden, and supports sustainable value creation for cities,
-            industries, and farmers.
-          </p>
-        </div>
+      {/* ================= OUR IMPACT ================= */}
+      <section className="w-full bg-[#ffffff] py-10 sm:py-16 lg:py-24">
+        <div className="container-page mx-auto px-4 sm:px-10 lg:px-20">
 
-        {/* Card 3 */}
-        <div className="bg-[#a7c983] p-6 rounded-2xl shadow-lg 
-                        hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-          <h3 className="text-xl sm:text-2xl font-bold text-[#000000] mb-3">
-            Benefits to Soil Health
-          </h3>
-          <p className="text-base text-[#000000] leading-relaxed">
-            Organic compost improves soil structure, enhances moisture retention,
-            restores organic carbon, and supports long-term crop productivity without
-            degrading the ecosystem.
-          </p>
-        </div>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
 
-        {/* Card 4 */}
-        <div className="bg-[#a7c983] p-6 rounded-2xl shadow-lg 
-                        hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-          <h3 className="text-xl sm:text-2xl font-bold text-[#000000] mb-3">
-            Enhancing Soil Biodiversity
-          </h3>
-          <p className="text-base text-[#000000] leading-relaxed">
-            Healthy soil is a living ecosystem. Compost stimulates microbial activity,
-            strengthens plant immunity, and contributes to regenerative agriculture systems.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-{/* ================= OUR IMPACT ================= */}
-<section className="w-full bg-[#ffffff] py-12 sm:py-16 lg:py-24">
-  <div className="container-page mx-auto px-6 sm:px-10 lg:px-20">
-    
-    <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-      
-      {/* LEFT CONTENT */}
-      <div className="max-w-md">
-        <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#1F3D2B] mb-6">
-          Our Impact
-        </h2>
-
-        <p className="body-text text-base sm:text-lg leading-relaxed text-[#2E2E2E]">
-          
-          We transform waste into measurable environmental value.
-Through integrated waste management systems and regenerative agricultural solutions, we reduce landfill dependency, restore soil vitality, and promote climate-resilient farming models. <br/><br/>
-
-Our work directly contributes to circular economy practices, sustainable resource utilization, and long-term ecological balance across municipalities, industries, and farming communities. <br/>
-        </p>
-      </div>
-
-
-      {/* RIGHT IMAGE CARD */}
-      <div className="relative w-full lg:w-[60%] h-[300px] rounded-3xl overflow-hidden">
-
-        {/* Background Image */}
-        <img
-          src="/images/impact.png"
-          alt="Impact Background"
-          className="w-full h-full object-cover"
-        />
-
-        {/* Overlay for better readability */}
-        <div className="absolute inset-0 bg-black/30"></div>
-
-        {/* STATS */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full px-12 text-white text-center">
-
-                        <div>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2">
-                150,000+
-              </h3>
-              <p className="text-base sm:text-lg opacity-90">
-                Tons waste processed
+            {/* LEFT CONTENT */}
+            <div className="max-w-md w-full">
+              <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#1F3D2B] mb-5 sm:mb-6">
+                Our Impact
+              </h2>
+              <p className="body-text text-base xs:text-lg leading-relaxed text-[#2E2E2E]">
+                We transform waste into measurable environmental value.
+                Through integrated waste management systems and regenerative agricultural solutions, we reduce landfill dependency, restore soil vitality, and promote climate-resilient farming models.<br /><br />
+                Our work directly contributes to circular economy practices, sustainable resource utilization, and long-term ecological balance across municipalities, industries, and farming communities.<br />
               </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2">
-                35+
-              </h3>
-              <p className="text-base sm:text-lg opacity-90">
-                Satisfied National and International Clients
-              </p>
+            {/* RIGHT IMAGE CARD */}
+            <div className="relative w-full lg:w-[60%] rounded-3xl overflow-hidden" style={{ minHeight: 220 }}>
+
+              {/* Background Image */}
+              <img
+                src="/images/impact.png"
+                alt="Impact Background"
+                className="w-full h-full object-cover"
+                style={{ minHeight: 220 }}
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/30"></div>
+
+              {/* STATS */}
+              <div className="absolute inset-0 flex items-center justify-center py-8">
+                <div
+                  className="impact-stats-grid w-full px-6 sm:px-12 text-white text-center"
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(3, 1fr)",
+                    gap: "16px",
+                  }}
+                >
+                  <div>
+                    <h3 className="font-bold text-white mb-2" style={{ fontSize: "clamp(1rem, 3vw, 1.8rem)" }}>
+                      150,000+
+                    </h3>
+                    <p className="text-xs sm:text-base opacity-100">
+                      Tons waste processed
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-white mb-2" style={{ fontSize: "clamp(1rem, 3vw, 1.8rem)" }}>
+                      35+
+                    </h3>
+                    <p className="text-xs sm:text-base opacity-100">
+                      Satisfied National and International Clients
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-white mb-2" style={{ fontSize: "clamp(1rem, 3vw, 1.8rem)" }}>
+                      28,000+
+                    </h3>
+                    <p className="text-xs sm:text-base opacity-100">
+                      Acres restored
+                    </p>
+                  </div>
+                </div>
+              </div>
+
             </div>
-            
-            <div className="text-white">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2">
-                28,000+
-              </h3>
-              <p className="text-base sm:text-lg opacity-90">
-                Acres restored
-              </p>
-            </div>
-
-
-
-            
 
           </div>
         </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
 
     </main>
   );

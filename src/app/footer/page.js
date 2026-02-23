@@ -18,9 +18,9 @@ export default function Footer() {
                 alt="Shri Ram Agro Industries"
                 className="w-16 h-16 rounded-full object-cover"
               />
-              <h3 className="text-base sm:text-lg text-white font-bold">Shri Ram Agro Industries</h3>
+              <h3 className="text-lg sm:text-base text-white font-bold">Shri Ram Agro Industries</h3>
             </div>
-            <p className="text-white/90 leading-relaxed text-base sm:text-lg">
+            <p className="text-sm sm:text-base text-white/80">
               Transforming food and organic waste into nutrient-rich compost and organic fertilizers through sustainable waste management solutions.
             </p>
           </div>
@@ -30,26 +30,26 @@ export default function Footer() {
             <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
             <ul className="space-y-3 text-base sm:text-lg font-medium">
   <li>
-    <Link href="/" className="text-white/80 hover:text-[#F2C94C] transition-colors">
+    <Link href="/" className="text-white/80 text-sm hover:text-[#F2C94C] transition-colors">
       Home
     </Link>
   </li>
 
   <li>
-    <Link href="/about" className="text-white/80 hover:text-[#F2C94C] transition-colors">
+    <Link href="/about" className="text-white/80 text-sm hover:text-[#F2C94C] transition-colors">
       About Us
     </Link>
   </li>
 
   <li>
-    <Link href="/services" className="text-white/80 hover:text-[#F2C94C] transition-colors">
+    <Link href="/services" className="text-white/80 text-sm hover:text-[#F2C94C] transition-colors">
       Services
     </Link>
   </li>
 
 
   <li>
-    <Link href="/blogs" className="text-white/80 hover:text-[#F2C94C] transition-colors">
+    <Link href="/blogs" className="text-white/80 text-sm hover:text-[#F2C94C] transition-colors">
       Blog
     </Link>
   </li>
@@ -58,7 +58,7 @@ export default function Footer() {
 
           {/* Column 3 - Services */}
           <div>
-            <h4 className="text-xl font-semibold text-white mb-6">Our Services</h4>
+            <h4 className="text-lg font-semibold text-white mb-6">Our Services</h4>
             <ul className="space-y-3 text-base sm:text-lg">
               <li className="text-white/80 ">Waste Management Systems</li>
               <li className="text-white/80 ">Bio-Processing Solutions</li>
@@ -85,8 +85,8 @@ export default function Footer() {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
-                <a href="mailto:info@shriramagro.com" className="text-white/80 hover:text-[#F2C94C] transition-colors duration-200 text-base sm:text-lg">
-                  info@shriramagro.com
+                <a href="mailto:rahulppadwal@gmail.com" className="text-white/80 hover:text-[#F2C94C] transition-colors duration-200 text-base sm:text-lg">
+                  rahulppadwal@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
