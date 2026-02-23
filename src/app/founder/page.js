@@ -99,7 +99,9 @@ export default function FounderPage() {
       <style>{`
 
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+
 .founder-linkedin {
   position: fixed;
   top: 120px;
@@ -769,7 +771,7 @@ export default function FounderPage() {
         }
         .media-card-num {
           font-size: 24px;
-          color: #1C3829;   /* same elegant dark green as headings */
+          color: #1C3829;
           font-weight: 600;
           font-family: 'Playfair Display', serif;
         }
@@ -800,6 +802,7 @@ export default function FounderPage() {
           padding: 88px 40px;
         }
 
+        /* ── TABLET (≤860px) ── */
         @media (max-width: 860px) {
           .hero { flex-direction: column; min-height: auto; }
           .hero-left { padding: 56px 24px; }
@@ -812,16 +815,190 @@ export default function FounderPage() {
           .media-grid { grid-template-columns: 1fr; }
           .art-card { grid-template-columns: 1fr; }
           .res-card { padding: 28px 24px; }
+          .sh-tag { font-size: 22px !important; letter-spacing: 2px !important; }
         }
+
+        /* ── MOBILE / ANDROID (≤560px) ── */
         @media (max-width: 560px) {
-          .pos-grid, .prod-grid, .edu-grid { grid-template-columns: 1fr; }
+          /* LinkedIn button — smaller, lower so it doesn't overlap content */
+          .founder-linkedin {
+            top: auto !important;
+            bottom: 24px !important;
+            right: 16px !important;
+            width: 46px !important;
+            height: 46px !important;
+          }
+
+          /* HERO */
+          .hero { flex-direction: column; min-height: auto; }
+          .hero-left {
+            padding: 44px 20px 40px !important;
+          }
+          .tag {
+            font-size: 13px !important;
+            letter-spacing: 2px !important;
+            margin-bottom: 16px !important;
+          }
+          .hero-name {
+            font-size: 32px !important;
+            margin-bottom: 12px !important;
+          }
+          .hero-role {
+            font-size: 16px !important;
+            margin-bottom: 24px !important;
+          }
+          .hero-bio {
+            font-size: 16px !important;
+            line-height: 1.7 !important;
+            margin-bottom: 32px !important;
+          }
+          .hero-stats {
+            gap: 24px !important;
+            padding-top: 24px !important;
+            flex-wrap: wrap !important;
+          }
+          .stat-n { font-size: 36px !important; }
+          .stat-l { font-size: 13px !important; letter-spacing: 1px !important; }
+
+          /* Show full image on mobile — let height be auto so nothing is cropped */
+          .hero-right {
+            width: 100% !important;
+            height: auto !important;
+            background: #1C3829;
+          }
+          .hero-right img {
+            width: 100% !important;
+            height: auto !important;
+            object-fit: contain !important;
+            object-position: center center !important;
+            display: block !important;
+            filter: brightness(0.9) saturate(0.85) !important;
+          }
+          /* Hide the left-to-right fade gradient on mobile (not needed when stacked) */
+          .hero-fade {
+            background: linear-gradient(to bottom, #1C3829 0%, transparent 15%) !important;
+          }
+          .hero-badge {
+            font-size: 12px !important;
+            padding: 8px 12px !important;
+            bottom: 12px !important;
+            right: 12px !important;
+          }
+
+          /* SHARED SECTION LAYOUT */
+          .wrap { padding: 44px 16px !important; }
+          .pub-wrap { padding: 44px 16px !important; }
+          .sh { margin-bottom: 28px !important; gap: 10px !important; }
+          .sh-tag {
+            font-size: 14px !important;
+            letter-spacing: 2px !important;
+            white-space: normal !important;
+          }
+          .sec-t { font-size: 26px !important; margin-bottom: 24px !important; }
+          .sec-sub { font-size: 14px !important; margin-top: -16px !important; margin-bottom: 24px !important; }
+
+          /* POSITIONS */
+          .pos-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .pos-card { padding: 24px 18px !important; }
+          .pos-org { font-size: 16px !important; letter-spacing: 1.5px !important; }
+          .pos-role { font-size: 18px !important; }
+          .pos-desc { font-size: 15px !important; line-height: 1.6 !important; }
+
+          /* PRODUCTS */
+          .prod-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
+          .prod-card { padding: 20px 18px !important; border-radius: 12px !important; }
+          .prod-abbr { font-size: 14px !important; }
+          .prod-name { font-size: 18px !important; }
+          .prod-desc { font-size: 14px !important; }
+
+          /* EDUCATION */
+          .edu-grid { grid-template-columns: 1fr !important; gap: 8px !important; }
+          .edu-card { padding: 14px 14px !important; gap: 10px !important; }
+          .edu-e { font-size: 20px !important; }
+          .edu-t { font-size: 15px !important; }
+
+          /* PUBLICATIONS */
+          .pub-eyebrow-label { font-size: 13px !important; letter-spacing: 0.12em !important; }
+          .pub-section-title { font-size: 26px !important; margin-bottom: 28px !important; }
+
+          /* Research paper title */
+          .pub-wrap > h3 {
+            font-size: 18px !important;
+            margin-bottom: 24px !important;
+          }
+
+          /* Media grid — single column */
+          .media-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+          .media-card { padding: 20px 18px !important; gap: 10px !important; }
+          .media-card-num { font-size: 18px !important; }
+          .media-card-title { font-size: 17px !important; }
+          .media-card-cta { font-size: 14px !important; }
+
+          /* Article cards */
+          .art-card {
+            grid-template-columns: 1fr !important;
+            padding: 22px 0 !important;
+            gap: 14px !important;
+          }
+          .art-card-source { font-size: 14px !important; letter-spacing: 0.08em !important; }
+          .art-card-num { font-size: 20px !important; }
+          .art-card-title { font-size: 18px !important; }
+          .art-card-desc { font-size: 14px !important; }
+          .art-cta { font-size: 14px !important; }
+
+          /* Author badge */
+          .author-badge {
+            font-size: 14px !important;
+            padding: 10px 16px !important;
+            margin-bottom: 28px !important;
+            flex-wrap: nowrap !important;
+            display: flex !important;
+            align-items: flex-start !important;
+            gap: 8px !important;
+            width: 100% !important;
+            border-radius: 14px !important;
+          }
+          .author-badge span {
+            flex: 1 !important;
+            line-height: 1.5 !important;
+          }
+          .author-badge svg {
+            flex-shrink: 0 !important;
+            margin-top: 3px !important;
+          }
+
+          /* Res card */
+          .res-card { padding: 20px 16px !important; }
+
+          /* Footer */
+          .foot {
+            padding: 20px 16px !important;
+            flex-direction: column !important;
+            gap: 6px !important;
+            text-align: center !important;
+          }
+          .foot-n { font-size: 14px !important; }
+          .foot-m { font-size: 10px !important; }
+        }
+
+        /* ── VERY SMALL ANDROID (≤360px) ── */
+        @media (max-width: 360px) {
+          .hero-left { padding: 36px 14px 32px !important; }
+          .hero-name { font-size: 27px !important; }
+          .wrap { padding: 36px 14px !important; }
+          .pub-wrap { padding: 36px 14px !important; }
+          .pub-section-title { font-size: 22px !important; }
+          .sec-t { font-size: 22px !important; }
+          .hero-right { height: auto !important; }
         }
       `}</style>
 
       {/* HERO */}
       <section className="hero">
         <div className="hero-left">
-          <p className="tag a1">Founder & CEO · Shri Ram Agro Industries</p>
+          <p className="tag a1">Founder & CEO · Adjunct Research Scientist (AICAD)</p>
           <h1 className="hero-name a2">Adv. Rahul<br />Prataprao Padwal</h1>
           <p className="hero-role sans a2">Sustainability Leader · Research Scientist · Organic Fertilizer Innovator</p>
           <div className="gold-bar a3" />
@@ -834,7 +1011,7 @@ export default function FounderPage() {
               <div className="stat-l">Years</div>
             </div>
             <div>
-              <div className="stat-n">6</div>
+              <div className="stat-n">6+</div>
               <div className="stat-l">Products</div>
             </div>
             <div>
@@ -1092,11 +1269,7 @@ export default function FounderPage() {
         </div>
       </div>
 
-      {/* FOOTER */}
-      <div className="foot">
-        <div className="foot-n">Adv. Rahul Prataprao Padwal</div>
-        <div className="foot-m sans">Shri Ram Agro Industries · Est. 2003</div>
-      </div>
+      
     </div>
   );
 }

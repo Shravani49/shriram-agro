@@ -225,101 +225,115 @@ export default function ServicesPage() {
         .service-card:hover {
           transform: translateY(-8px);
         }
+
+        /* Mobile-specific overrides */
+        @media (max-width: 640px) {
+          .animate-float {
+            animation: none;
+          }
+          .hero-blob-1 {
+            width: 200px !important;
+            height: 200px !important;
+            top: 10px !important;
+            right: -40px !important;
+          }
+          .hero-blob-2 {
+            width: 150px !important;
+            height: 150px !important;
+            bottom: 10px !important;
+            left: -30px !important;
+          }
+          .hero-blob-3 {
+            display: none;
+          }
+        }
       `}} />
 
-      {/* Hero Section - Organic & Sophisticated */}
+      {/* Hero Section */}
       <section className="relative flex items-center justify-center overflow-hidden grain">
-        {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#d1e5b6] via-[#87a382] to-[#d2cfcf]"></div>
         
-        {/* Decorative Organic Shapes */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#7d5835]/10 organic-blob animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#E5D9B6]/30 organic-blob animate-float" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-[#7d5835]/5 organic-blob animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="hero-blob-1 absolute top-20 right-20 w-96 h-96 bg-[#7d5835]/10 organic-blob animate-float"></div>
+        <div className="hero-blob-2 absolute bottom-20 left-20 w-80 h-80 bg-[#E5D9B6]/30 organic-blob animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="hero-blob-3 absolute top-1/2 left-1/3 w-64 h-64 bg-[#7d5835]/5 organic-blob animate-float" style={{animationDelay: '2s'}}></div>
         
-        {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 mb-8 bg-white/80 backdrop-blur-sm rounded-full border border-[#7d5835]/20 animate-fade-in">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-32 text-center">
+          <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 bg-white/80 backdrop-blur-sm rounded-full border border-[#7d5835]/20 animate-fade-in">
             <div className="w-2 h-2 rounded-full bg-[#5c3c1d] animate-pulse"></div>
-            <span className="text-xl font-bold tracking-widest uppercase text-[#402e1c] accent-text">22+ Years of Excellence</span>
+            <span className="text-sm sm:text-xl font-bold tracking-widest uppercase text-[#402e1c] accent-text">22+ Years of Excellence</span>
           </div>
           
-          <h1 className="text-7xl md:text-8xl font-bold mb-8 section-title text-[#100d08] leading-tight animate-fade-in" style={{animationDelay: '0.2s'}}>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 section-title text-[#100d08] leading-tight animate-fade-in" style={{animationDelay: '0.2s'}}>
             Transforming Waste<br />
             <span className="font-bold text-[#7d5835] italic">into Living Soil</span>
           </h1>
           
-          <p className="text-2xl font-semibold text-[#474303] max-w-3xl mx-auto mb-12 body-text leading-relaxed animate-fade-in" style={{animationDelay: '0.4s'}}>
+          <p className="text-base sm:text-xl md:text-2xl font-semibold text-[#474303] max-w-3xl mx-auto mb-8 sm:mb-12 body-text leading-relaxed animate-fade-in px-2" style={{animationDelay: '0.4s'}}>
             Science-backed integrated waste management and organic fertilizer solutions 
             that restore ecosystems and nourish the earth
           </p>
           
-          <div className="flex gap-6 justify-center flex-wrap animate-fade-in" style={{animationDelay: '0.6s'}}>
-          
+          <div className="flex gap-4 sm:gap-6 justify-center flex-wrap animate-fade-in" style={{animationDelay: '0.6s'}}>
             <Link
-  href="/contact"
-  className="px-10 py-5 bg-white/90 backdrop-blur-sm text-[#7d5835] rounded-full border-2 border-[#7d5835] hover:bg-[#7d5835] hover:text-white transition-all text-lg font-medium accent-text inline-block"
->
-  Get in Touch
-</Link>
-
+              href="/contact"
+              className="px-7 sm:px-10 py-4 sm:py-5 bg-white/90 backdrop-blur-sm text-[#7d5835] rounded-full border-2 border-[#7d5835] hover:bg-[#7d5835] hover:text-white transition-all text-base sm:text-lg font-medium accent-text inline-block"
+            >
+              Get in Touch
+            </Link>
           </div>
         </div>
-        
-
       </section>
 
-      {/* ─────────────────── OUR SERVICES — RIBBON HEADING ─────────────────── */}
-     {/* ─────────────────── OUR SERVICES — HEADING ─────────────────── */}
-<div className="bg-[#FDFBF7] py-20 flex flex-col items-center gap-0">
-  
-  {/* Eyebrow */}
-  <div className="flex items-center gap-4 mb-6">
-    <div className="w-12 h-px bg-[#7d5835] opacity-60" />
-    <span className="font-sans text-[16px] font-bold tracking-[6px] uppercase text-[#7d5835]">
-      What We Offer
-    </span>
-    <div className="w-12 h-px bg-[#7d5835] opacity-60" />
-  </div>
 
-  {/* Ruled headline */}
-  <div className="flex flex-col items-center w-full max-w-3xl px-6">
-    <div className="w-full h-px"
-      style={{ background: "linear-gradient(to right, transparent, #1F3D2B 20%, #1F3D2B 80%, transparent)" }} />
 
-    <h2 className="section-title text-[clamp(64px,8vw,96px)] font-light text-[#1F3D2B] tracking-tight leading-none px-12 py-4 whitespace-nowrap">
-      Our <em className="font-semibold not-italic text-[#7d5835]">Services</em>
-    </h2>
 
-    <div className="w-full h-px"
-      style={{ background: "linear-gradient(to right, transparent, #1F3D2B 20%, #1F3D2B 80%, transparent)" }} />
-  </div>
-
-</div>
-
-      {/* ─────────────────── SERVICE 01 – Waste Management ─────────────────── */}
-      <section className="bg-[#1F3D2B] py-24 px-6 md:px-10 overflow-hidden">
       
+
+      {/* OUR SERVICES HEADING */}
+      <div className="bg-[#FDFBF7] py-6 sm:py-20 flex flex-col items-center gap-0">
+        <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-6">
+          <div className="w-8 sm:w-12 h-px bg-[#7d5835] opacity-60" />
+          <span className="font-sans text-[13px] sm:text-[16px] font-bold tracking-[4px] sm:tracking-[6px] uppercase text-[#7d5835]">
+            What We Offer
+          </span>
+          <div className="w-8 sm:w-12 h-px bg-[#7d5835] opacity-60" />
+        </div>
+
+        <div className="flex flex-col items-center w-full max-w-3xl px-4 sm:px-6">
+          <div className="w-full h-px"
+            style={{ background: "linear-gradient(to right, transparent, #1F3D2B 20%, #1F3D2B 80%, transparent)" }} />
+
+          <h2 className="section-title text-[clamp(44px,10vw,96px)] font-light text-[#1F3D2B] tracking-tight leading-none px-6 sm:px-12 py-2 sm:py-4 whitespace-nowrap">
+            Our <em className="font-semibold not-italic text-[#7d5835]">Services</em>
+          </h2>
+
+          <div className="w-full h-px"
+            style={{ background: "linear-gradient(to right, transparent, #1F3D2B 20%, #1F3D2B 80%, transparent)" }} />
+        </div>
+      </div>
+
+      {/* SERVICE 01 – Waste Management */}
+      <section className="bg-[#1F3D2B] py-14 sm:py-24 px-4 sm:px-6 md:px-10 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-10 sm:gap-16 items-start">
 
             {/* Left */}
-            <div className="lg:w-[45%] space-y-8">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-[#a7c983] rounded-2xl flex items-center justify-center text-[#1F3D2B] shrink-0">
+            <div className="w-full lg:w-[45%] space-y-6 sm:space-y-8">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#a7c983] rounded-2xl flex items-center justify-center text-[#1F3D2B] shrink-0">
                   {services[0].icon}
                 </div>
                 <div>
-                  <p className="text-[#a7c983] text-sm font-semibold tracking-widest uppercase">{services[0].tag}</p>
-                  <p className="text-[#E5D9B6] text-4xl font-bold font-serif leading-none">{services[0].id}</p>
+                  <p className="text-[#a7c983] text-xs sm:text-sm font-semibold tracking-widest uppercase">{services[0].tag}</p>
+                  <p className="text-[#E5D9B6] text-3xl sm:text-4xl font-bold font-serif leading-none">{services[0].id}</p>
                 </div>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
                 {services[0].title}
               </h2>
 
-              <p className="text-white/80 text-lg leading-relaxed">
+              <p className="text-white/80 text-base sm:text-lg leading-relaxed">
                 {services[0].intro}
               </p>
 
@@ -327,19 +341,19 @@ export default function ServicesPage() {
                 {services[0].items.map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-[#a7c983] shrink-0" />
-                    <span className="text-white/100 text-3xl text-[16px]">{item}</span>
+                    <span className="text-white/100 text-[15px] sm:text-[16px]">{item}</span>
                   </div>
                 ))}
               </div>
 
               <div className="border-l-4 border-[#a7c983] pl-5 py-1">
-                <p className="text-[#a7c983] text-[15px] italic">{services[0].footer}</p>
+                <p className="text-[#a7c983] text-[14px] sm:text-[15px] italic">{services[0].footer}</p>
               </div>
             </div>
 
-            {/* Right – image + highlight cards */}
-            <div className="lg:w-[55%] space-y-6">
-              <div className="w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl bg-[#163021]">
+            {/* Right */}
+            <div className="w-full lg:w-[55%] space-y-4 sm:space-y-6">
+              <div className="w-full h-[250px] sm:h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl bg-[#163021]">
                 <img 
                     src={services[0].img}
                     alt={services[0].title}
@@ -347,10 +361,10 @@ export default function ServicesPage() {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {["Environmental Compliance", "Odor Control", "Nutrient Recovery", "Zero-waste Ecosystems"].map((item) => (
                   <div key={item}
-                    className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white/90 text-[15px] font-medium hover:bg-[#a7c983]/20 transition-colors duration-200">
+                    className="bg-white/5 border border-white/10 rounded-2xl px-3 sm:px-5 py-3 sm:py-4 text-white/90 text-[13px] sm:text-[15px] font-medium hover:bg-[#a7c983]/20 transition-colors duration-200">
                     <span className="text-[#a7c983] mr-2">✓</span>{item}
                   </div>
                 ))}
@@ -361,99 +375,98 @@ export default function ServicesPage() {
         </div>
       </section>
 
-  {/* ─────────────────── SERVICE 02 – Fertilizer Production ─────────────────── */}
-<section className="bg-[#E5D9B6] py-24 px-6 md:px-16">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex flex-col lg:flex-row-reverse gap-16 items-start">
+      {/* SERVICE 02 – Fertilizer Production */}
+      <section className="bg-[#E5D9B6] py-14 sm:py-24 px-4 sm:px-6 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row-reverse gap-10 sm:gap-16 items-start">
 
-      {/* Right label + content */}
-      <div className="lg:w-[75%] space-y-8">
-        <div className="flex items-center gap-4">
-          <div className="w-16 h-16 bg-[#7d5835] rounded-2xl flex items-center justify-center text-white shrink-0">
-            {services[1].icon}
-          </div>
-          <div>
-            <p className="text-[#7d5835] text-sm font-semibold tracking-widest uppercase">{services[1].tag}</p>
-            <p className="text-[#7d5835]/40 text-4xl font-bold font-serif leading-none">{services[1].id}</p>
-          </div>
-        </div>
+            {/* Right label + content */}
+            <div className="w-full lg:w-[75%] space-y-6 sm:space-y-8">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#7d5835] rounded-2xl flex items-center justify-center text-white shrink-0">
+                  {services[1].icon}
+                </div>
+                <div>
+                  <p className="text-[#7d5835] text-xs sm:text-sm font-semibold tracking-widest uppercase">{services[1].tag}</p>
+                  <p className="text-[#7d5835]/40 text-3xl sm:text-4xl font-bold font-serif leading-none">{services[1].id}</p>
+                </div>
+              </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-[#152f1f] leading-tight">
-          {services[1].title}
-        </h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#152f1f] leading-tight">
+                {services[1].title}
+              </h2>
 
-        <p className="text-[#000000] text-xl leading-relaxed font-semibold">
-          {services[1].intro}
-        </p>
+              <p className="text-[#000000] text-base sm:text-xl leading-relaxed font-semibold">
+                {services[1].intro}
+              </p>
 
-        <div className="border-l-4 border-[#7d5835] pl-5 py-1">
-          <p className="text-[#412000] text-[15px] italic font-bold">
-            {services[1].footer}
-          </p>
-        </div>
+              <div className="border-l-4 border-[#7d5835] pl-5 py-1">
+                <p className="text-[#412000] text-[14px] sm:text-[15px] italic font-bold">
+                  {services[1].footer}
+                </p>
+              </div>
 
-        {/* ✅ GREEN BOX MOVED HERE (RIGHT SIDE) */}
-        <div className="bg-[#1F3D2B] rounded-2xl px-6 py-4 flex items-center gap-4">
-          <div className="w-10 h-10 bg-[#a7c983] rounded-xl flex items-center justify-center shrink-0">
-            <svg className="w-5 h-5 text-[#1F3D2B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <p className="text-white text-[16px]">
-            All formulations develop optimized <strong>microbial CFU levels</strong> to enhance
-            soil structure, nutrient availability, and long-term soil fertility.
-          </p>
-        </div>
-      </div>
-
-      {/* Left – product cards grid */}
-      <div className="lg:w-[45%] space-y-6">
-        <div className="w-full h-52 rounded-3xl overflow-hidden shadow-xl">
-          <img 
-              src={services[1].img}
-              alt={services[1].title}
-              className="w-full h-full object-cover" 
-          />
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {services[1].products.map((p) => (
-            <div key={p.name}
-              className="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[#7d5835]/10">
-              <p className="text-[#7d5835] font-bold text-[18px] mb-1">{p.name}</p>
-              <p className="text-[#2E2E2E] text-[16px] leading-snug">{p.desc}</p>
+              <div className="bg-[#1F3D2B] rounded-2xl px-4 sm:px-6 py-4 flex items-start sm:items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 bg-[#a7c983] rounded-xl flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-[#1F3D2B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <p className="text-white text-[14px] sm:text-[16px]">
+                  All formulations develop optimized <strong>microbial CFU levels</strong> to enhance
+                  soil structure, nutrient availability, and long-term soil fertility.
+                </p>
+              </div>
             </div>
-          ))}
+
+            {/* Left – product cards grid */}
+            <div className="w-full lg:w-[45%] space-y-4 sm:space-y-6">
+              <div className="w-full h-44 sm:h-52 rounded-3xl overflow-hidden shadow-xl">
+                <img 
+                    src={services[1].img}
+                    alt={services[1].title}
+                    className="w-full h-full object-cover" 
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                {services[1].products.map((p) => (
+                  <div key={p.name}
+                    className="bg-white rounded-2xl p-4 sm:p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[#7d5835]/10">
+                    <p className="text-[#7d5835] font-bold text-[15px] sm:text-[18px] mb-1">{p.name}</p>
+                    <p className="text-[#2E2E2E] text-[13px] sm:text-[16px] leading-snug">{p.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+      </section>
 
-    </div>
-  </div>
-</section>
-
-      {/* ─────────────────── SERVICE 03 – Turnkey ─────────────────── */}
-      <section className="bg-[#F1F3E0] py-24 px-6 md:px-16">
+      {/* SERVICE 03 – Turnkey */}
+      <section className="bg-[#F1F3E0] py-14 sm:py-24 px-4 sm:px-6 md:px-16">
         <div className="max-w-[1800px] mx-auto">
 
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 bg-[#1F3D2B] rounded-2xl flex items-center justify-center text-[#a7c983] shrink-0">
+          <div className="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#1F3D2B] rounded-2xl flex items-center justify-center text-[#a7c983] shrink-0">
               {services[2].icon}
             </div>
             <div>
-              <p className="text-[#1F3D2B] text-xl font-semibold tracking-widest uppercase">{services[2].tag}</p>
-              <p className="text-[#1F3D2B]/70 text-4xl font-bold font-serif leading-none">{services[2].id}</p>
+              <p className="text-[#1F3D2B] text-base sm:text-xl font-semibold tracking-widest uppercase">{services[2].tag}</p>
+              <p className="text-[#1F3D2B]/70 text-3xl sm:text-4xl font-bold font-serif leading-none">{services[2].id}</p>
             </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
-            <div className="lg:w-[40%] space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#1F3D2B] leading-tight">
+          <div className="flex flex-col lg:flex-row gap-10 sm:gap-16 items-start">
+            <div className="w-full lg:w-[40%] space-y-5 sm:space-y-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1F3D2B] leading-tight">
                 {services[2].title}
               </h2>
-              <p className="text-[#2E2E2E] text-lg leading-relaxed">{services[2].intro}</p>
+              <p className="text-[#2E2E2E] text-base sm:text-lg leading-relaxed">{services[2].intro}</p>
 
-              <div className="w-full h-66 rounded-3xl overflow-hidden shadow-xl">
+              <div className="w-full h-52 sm:h-66 rounded-3xl overflow-hidden shadow-xl">
                 <img 
                   src={services[2].img}
                   alt={services[2].title}
@@ -463,70 +476,67 @@ export default function ServicesPage() {
             </div>
 
             {/* Phase cards */}
-            <div className="lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="w-full lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
               {services[2].steps.map((step, i) => (
                 <div key={step.phase}
-                  className="bg-white rounded-3xl p-7 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[#a7c983]/30">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="w-8 h-8 rounded-full bg-[#1F3D2B] text-white text-s font-bold flex items-center justify-center">
+                  className="bg-white rounded-3xl p-4 sm:p-7 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-[#a7c983]/30">
+                  <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                    <span className="w-8 h-8 rounded-full bg-[#1F3D2B] text-white text-s font-bold flex items-center justify-center shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-[#1F3D2B] font-bold text-xl tracking-wide uppercase">{step.phase}</span>
+                    <span className="text-[#1F3D2B] font-bold text-lg sm:text-xl tracking-wide uppercase">{step.phase}</span>
                   </div>
 
-                  
                   <div className="space-y-2">
                     {step.items.map((item) => (
                       <div key={item} className="flex items-start gap-2">
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#a7c983] shrink-0" />
-                        <span className="text-[#2E2E2E] text-[18px] leading-snug">{item}</span>
+                        <span className="text-[#2E2E2E] text-[15px] sm:text-[18px] leading-snug">{item}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
-
-            
-
           </div>
-          <div className="mt-10 border-l-4 border-[#1F3D2B] pl-5 py-1">
-  <p className="text-[#1F3D2B] text-[17px] italic font-bold">
-    {services[2].footer}
-  </p>
-</div>
+
+          <div className="mt-8 sm:mt-10 border-l-4 border-[#1F3D2B] pl-5 py-1">
+            <p className="text-[#1F3D2B] text-[15px] sm:text-[17px] italic font-bold">
+              {services[2].footer}
+            </p>
+          </div>
 
         </div>
       </section>
 
-      {/* ─────────────────── SERVICE 04 – Consultancy ─────────────────── */}
-      <section className="bg-[#7d5835] py-24 px-6 md:px-16">
+      {/* SERVICE 04 – Consultancy */}
+      <section className="bg-[#7d5835] py-14 sm:py-24 px-4 sm:px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-10 sm:gap-16 items-start">
 
-            <div className="lg:w-[45%] space-y-8">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-[#c2a44a] rounded-2xl flex items-center justify-center text-[#7d5835] shrink-0">
+            <div className="w-full lg:w-[45%] space-y-6 sm:space-y-8">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#c2a44a] rounded-2xl flex items-center justify-center text-[#7d5835] shrink-0">
                   {services[3].icon}
                 </div>
                 <div>
-                  <p className="text-[#E5D9B6] text-sm font-semibold tracking-widest uppercase">{services[3].tag}</p>
-                  <p className="text-[#E5D9B6]/30 text-4xl font-bold font-serif leading-none">{services[3].id}</p>
+                  <p className="text-[#E5D9B6] text-xs sm:text-sm font-semibold tracking-widest uppercase">{services[3].tag}</p>
+                  <p className="text-[#E5D9B6]/30 text-3xl sm:text-4xl font-bold font-serif leading-none">{services[3].id}</p>
                 </div>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
                 {services[3].title}
               </h2>
-              <p className="text-white/100 text-lg leading-relaxed">{services[3].intro}</p>
+              <p className="text-white/100 text-base sm:text-lg leading-relaxed">{services[3].intro}</p>
 
               {/* Client types */}
               <div>
-                <p className="text-[#E5D9B6] text-lg font-semibold tracking-widest uppercase mb-3">Who We Serve</p>
+                <p className="text-[#E5D9B6] text-base sm:text-lg font-semibold tracking-widest uppercase mb-3">Who We Serve</p>
                 <div className="flex flex-wrap gap-2">
                   {services[3].clients.map((c) => (
                     <span key={c}
-                      className="px-4 py-2 border border-white/20 text-white text-m rounded-full hover:bg-white/10 transition-colors duration-200">
+                      className="px-3 sm:px-4 py-1.5 sm:py-2 border border-white/20 text-white text-sm sm:text-m rounded-full hover:bg-white/10 transition-colors duration-200">
                       {c}
                     </span>
                   ))}
@@ -534,33 +544,29 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <div className="lg:w-[55%] space-y-6">
-              <div className="w-full h-70 rounded-3xl overflow-hidden shadow-xl">
+            <div className="w-full lg:w-[55%] space-y-4 sm:space-y-6">
+              <div className="w-full h-52 sm:h-70 rounded-3xl overflow-hidden shadow-xl">
                 <img src="/images/core4.png" alt="Consultancy Services"
                   className="w-full h-full object-cover" />
               </div>
 
-
               <div>
-                <p className="text-[#E5D9B6] text-sm font-semibold tracking-widest uppercase mb-4">Advisory Services</p>
-                <div className="space-y-3">
+                <p className="text-[#E5D9B6] text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 sm:mb-4">Advisory Services</p>
+                <div className="space-y-2 sm:space-y-3">
                   {services[3].advisory.map((a) => (
-  <div key={a}
-    className="flex items-center gap-3 bg-[#E5D9B6] border border-[#7d5835]/20 rounded-2xl px-5 py-3 hover:bg-[#d8caa3] transition-colors duration-200">
-    
-    <span className="text-[#7d5835] font-bold text-lg">→</span>
-    
-    <span className="text-black text-[15px] font-medium">
-      {a}
-    </span>
-  </div>
-))}
-
+                    <div key={a}
+                      className="flex items-center gap-3 bg-[#E5D9B6] border border-[#7d5835]/20 rounded-2xl px-4 sm:px-5 py-3 hover:bg-[#d8caa3] transition-colors duration-200">
+                      <span className="text-[#7d5835] font-bold text-lg shrink-0">→</span>
+                      <span className="text-black text-[13px] sm:text-[15px] font-medium">
+                        {a}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
               <div className="border-l-4 border-[#E5D9B6] pl-5 py-1">
-                <p className="text-[#f8f8f8] text-[15px] italic font-bold">{services[3].footer}</p>
+                <p className="text-[#f8f8f8] text-[14px] sm:text-[15px] italic font-bold">{services[3].footer}</p>
               </div>
             </div>
 
@@ -568,59 +574,59 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ─────────────────── SERVICE 05 – Research ─────────────────── */}
-      <section className="bg-white py-24 px-6 md:px-16">
+      {/* SERVICE 05 – Research */}
+      <section className="bg-white py-14 sm:py-24 px-4 sm:px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row-reverse gap-16 items-start">
+          <div className="flex flex-col lg:flex-row-reverse gap-10 sm:gap-16 items-start">
 
-            <div className="lg:w-[45%] space-y-8">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-[#1F3D2B] rounded-2xl flex items-center justify-center text-[#a7c983] shrink-0">
+            <div className="w-full lg:w-[45%] space-y-6 sm:space-y-8">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#1F3D2B] rounded-2xl flex items-center justify-center text-[#a7c983] shrink-0">
                   {services[4].icon}
                 </div>
                 <div>
-                  <p className="text-[#1F3D2B] text-lg font-semibold tracking-widest uppercase">{services[4].tag}</p>
-                  <p className="text-[#1F3D2B]/80 text-4xl font-bold font-serif leading-none">{services[4].id}</p>
+                  <p className="text-[#1F3D2B] text-base sm:text-lg font-semibold tracking-widest uppercase">{services[4].tag}</p>
+                  <p className="text-[#1F3D2B]/80 text-3xl sm:text-4xl font-bold font-serif leading-none">{services[4].id}</p>
                 </div>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-[#1F3D2B] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1F3D2B] leading-tight">
                 {services[4].title}
               </h2>
-              <p className="text-[#2E2E2E] text-xl leading-relaxed">{services[4].intro}</p>
+              <p className="text-[#2E2E2E] text-base sm:text-xl leading-relaxed">{services[4].intro}</p>
 
               <div className="border-l-4 border-[#a7c983] pl-5 py-1">
-                <p className="text-[#1F3D2B] text-[18px] italic font-bold">{services[4].footer}</p>
+                <p className="text-[#1F3D2B] text-[15px] sm:text-[18px] italic font-bold">{services[4].footer}</p>
               </div>
 
               {/* AICAD badge */}
-              <div className="bg-[#F1F3E0] rounded-2xl px-6 py-5 flex items-center gap-4">
-                <div className="w-12 h-12 bg-[#1F3D2B] rounded-xl flex items-center justify-center shrink-0 text-white font-bold text-sm">
+              <div className="bg-[#F1F3E0] rounded-2xl px-4 sm:px-6 py-4 sm:py-5 flex items-center gap-3 sm:gap-4">
+                <div className="w-12 h-12 bg-[#1F3D2B] rounded-xl flex items-center justify-center shrink-0 text-white font-bold text-sm leading-tight text-center">
                   AI<br />CAD
                 </div>
                 <div>
-                  <p className="font-bold text-[#1F3D2B] text-[17px]">AICAD Nairobi</p>
-                  <p className="text-[#2E2E2E] text-[15px]">International research collaboration & academic engagement</p>
+                  <p className="font-bold text-[#1F3D2B] text-[15px] sm:text-[17px]">AICAD Nairobi</p>
+                  <p className="text-[#2E2E2E] text-[13px] sm:text-[15px]">International research collaboration & academic engagement</p>
                 </div>
               </div>
             </div>
 
-            <div className="lg:w-[55%] space-y-6">
-              <div className="w-90 h-84 rounded-3xl overflow-hidden shadow-xl">
+            <div className="w-full lg:w-[55%] space-y-4 sm:space-y-6">
+              <div className="w-full rounded-3xl overflow-hidden shadow-xl">
                 <img src="/images/core5.png" alt="Research and Innovation"
-                  className="w-full h-80 object-cover" />
+                  className="w-full h-52 sm:h-80 object-cover" />
               </div>
 
               <div>
-                <p className="text-[#1F3D2B] text-sm font-semibold tracking-widest uppercase mb-4">Research Focus Areas</p>
+                <p className="text-[#1F3D2B] text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 sm:mb-4">Research Focus Areas</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {services[4].focusAreas.map((area, i) => (
                     <div key={area}
-                      className="bg-[#F1F3E0] rounded-2xl px-5 py-4 hover:bg-[#a7c983]/30 transition-colors duration-200 flex items-start gap-3 border border-[#a7c983]/20">
-                      <span className="w-6 h-6 rounded-full bg-[#1F3D2B] text-white text-m flex items-center justify-center shrink-0 mt-0.5 font-medium">
+                      className="bg-[#F1F3E0] rounded-2xl px-4 sm:px-5 py-3 sm:py-4 hover:bg-[#a7c983]/30 transition-colors duration-200 flex items-start gap-3 border border-[#a7c983]/20">
+                      <span className="w-6 h-6 rounded-full bg-[#1F3D2B] text-white text-xs flex items-center justify-center shrink-0 mt-0.5 font-medium">
                         {i + 1}
                       </span>
-                      <span className="text-[#2E2E2E] text-[16px] leading-snug">{area}</span>
+                      <span className="text-[#2E2E2E] text-[14px] sm:text-[16px] leading-snug">{area}</span>
                     </div>
                   ))}
                 </div>
@@ -631,18 +637,18 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ─────────────────── INDUSTRIES WE SERVE ─────────────────── */}
-      <section className="bg-[#E5D9B6] py-24 overflow-hidden">
+      {/* INDUSTRIES WE SERVE */}
+      <section className="bg-[#E5D9B6] py-14 sm:py-24 overflow-hidden">
 
         {/* Header */}
-        <div className="text-center mb-16 px-6">
+        <div className="text-center mb-10 sm:mb-16 px-4 sm:px-6">
           <div className="inline-block px-4 py-1.5 bg-[#7d5835]/10 rounded-full mb-4">
-            <span className="text-xl font-bold text-[#7d5835] tracking-widest uppercase">Sectors</span>
+            <span className="text-base sm:text-xl font-bold text-[#7d5835] tracking-widest uppercase">Sectors</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1F3D2B] leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1F3D2B] leading-tight">
             Industries We Serve
           </h2>
-          <p className="mt-4 text-[#2E2E2E] text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-[#2E2E2E] text-base sm:text-lg max-w-2xl mx-auto">
             Our solutions are trusted across a wide range of sectors, from civic bodies to global research institutions.
           </p>
         </div>
@@ -664,20 +670,18 @@ export default function ServicesPage() {
         `}</style>
 
         {/* Row 1 — left to right */}
-        <div className="relative overflow-hidden mb-5">
-          {/* Fade edges */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 z-10"
+        <div className="relative overflow-hidden mb-4 sm:mb-5">
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-32 z-10"
             style={{ background: "linear-gradient(to right, #E5D9B6, transparent)" }} />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 z-10"
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-32 z-10"
             style={{ background: "linear-gradient(to left, #E5D9B6, transparent)" }} />
 
           <div className="marquee-track">
-            {/* Duplicate the list twice so the loop is seamless */}
             {[...industries, ...industries].map((ind, i) => (
               <div key={i}
-                className="flex items-center gap-3 bg-white border border-[#7d5835]/10 rounded-full px-7 py-4 mx-3 shadow-sm whitespace-nowrap cursor-default hover:bg-[#1F3D2B] hover:border-[#1F3D2B] group transition-colors duration-300">
-                <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{ind.icon}</span>
-                <span className="text-[#1F3D2B] group-hover:text-white font-semibold text-[15px] transition-colors duration-300">
+                className="flex items-center gap-2 sm:gap-3 bg-white border border-[#7d5835]/10 rounded-full px-4 sm:px-7 py-3 sm:py-4 mx-2 sm:mx-3 shadow-sm whitespace-nowrap cursor-default hover:bg-[#1F3D2B] hover:border-[#1F3D2B] group transition-colors duration-300">
+                <span className="text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300">{ind.icon}</span>
+                <span className="text-[#1F3D2B] group-hover:text-white font-semibold text-[13px] sm:text-[15px] transition-colors duration-300">
                   {ind.name}
                 </span>
               </div>
@@ -687,17 +691,17 @@ export default function ServicesPage() {
 
         {/* Row 2 — right to left (reverse) */}
         <div className="relative overflow-hidden">
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 z-10"
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-32 z-10"
             style={{ background: "linear-gradient(to right, #E5D9B6, transparent)" }} />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 z-10"
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-32 z-10"
             style={{ background: "linear-gradient(to left, #E5D9B6, transparent)" }} />
 
           <div className="marquee-track" style={{ animationDirection: "reverse", animationDuration: "22s" }}>
             {[...industries, ...industries].map((ind, i) => (
               <div key={i}
-                className="flex items-center gap-3 bg-[#1F3D2B] border border-[#1F3D2B] rounded-full px-7 py-4 mx-3 shadow-sm whitespace-nowrap cursor-default hover:bg-white hover:border-[#7d5835]/20 group transition-colors duration-300">
-                <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{ind.icon}</span>
-                <span className="text-white group-hover:text-[#1F3D2B] font-semibold text-[15px] transition-colors duration-300">
+                className="flex items-center gap-2 sm:gap-3 bg-[#1F3D2B] border border-[#1F3D2B] rounded-full px-4 sm:px-7 py-3 sm:py-4 mx-2 sm:mx-3 shadow-sm whitespace-nowrap cursor-default hover:bg-white hover:border-[#7d5835]/20 group transition-colors duration-300">
+                <span className="text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300">{ind.icon}</span>
+                <span className="text-white group-hover:text-[#1F3D2B] font-semibold text-[13px] sm:text-[15px] transition-colors duration-300">
                   {ind.name}
                 </span>
               </div>
@@ -707,43 +711,43 @@ export default function ServicesPage() {
 
       </section>
 
-      {/* ─────────────────── CTA ─────────────────── */}
-      <section className="relative py-24 md:py-32 bg-white overflow-hidden">
+      {/* CTA */}
+      <section className="relative py-16 sm:py-24 md:py-32 bg-white overflow-hidden">
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#7d5835] rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#E5D9B6] rounded-full blur-3xl" />
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
-          <div className="inline-block px-4 py-1.5 bg-[#F1F3E0] rounded-full mb-6">
-            <span className="text-lg font-medium text-[#7d5835] tracking-widest uppercase">Let's Work Together</span>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <div className="inline-block px-4 py-1.5 bg-[#F1F3E0] rounded-full mb-5 sm:mb-6">
+            <span className="text-sm sm:text-lg font-medium text-[#7d5835] tracking-widest uppercase">Let's Work Together</span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-light text-[#2a2a2a] mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-light text-[#2a2a2a] mb-5 sm:mb-6 leading-tight">
             Ready to build a<br />
             <span className="italic font-serif text-[#7d5835]">sustainable waste ecosystem?</span>
           </h2>
 
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto">
             Partner with Shriram Agro Industries to design, implement, and manage scalable,
             science-backed solutions for your organization.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/contact">
-                <button className="px-10 py-4 bg-[#7d5835] text-white font-medium rounded-full hover:bg-[#6a4a2d] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                  Request Consultation
-                </button>
+            <Link href="/contact" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto px-8 sm:px-10 py-4 bg-[#7d5835] text-white font-medium rounded-full hover:bg-[#6a4a2d] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Request Consultation
+              </button>
             </Link>
 
             <a
-  href="https://drive.google.com/file/d/1SBCXuDW4N7U6aX97XxoPG0gUEIfUgpSw/view?usp=sharing"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="px-10 py-4 border-2 border-[#7d5835] text-[#7d5835] font-medium rounded-full hover:bg-[#7d5835] hover:text-white transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg inline-block active:scale-95"
->
-  Download Brochure
-</a>
+              href="https://drive.google.com/file/d/1SBCXuDW4N7U6aX97XxoPG0gUEIfUgpSw/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 border-2 border-[#7d5835] text-[#7d5835] font-medium rounded-full hover:bg-[#7d5835] hover:text-white transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg inline-block active:scale-95 text-center"
+            >
+              Download Brochure
+            </a>
           </div>
         </div>
       </section>
@@ -751,7 +755,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-
-
-
-

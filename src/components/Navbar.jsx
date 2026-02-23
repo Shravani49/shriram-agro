@@ -18,18 +18,96 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-[#f4f7ee] border-b border-[#d4e0bc] sticky top-0 z-50">
-      
+
+      <style>{`
+        /* Prevent horizontal overflow */
+        *, *::before, *::after { box-sizing: border-box; }
+
+        /* ── ANDROID (≤560px) ── */
+        @media (max-width: 560px) {
+
+          /* Tighter horizontal padding on small screens */
+          .nav-container {
+            padding-left: 14px !important;
+            padding-right: 14px !important;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+          }
+
+          /* Smaller logo image */
+          .nav-logo-img {
+            width: 38px !important;
+            height: 38px !important;
+          }
+
+          /* Show company name but smaller */
+          .nav-logo-text {
+            display: block !important;
+            font-size: 13px !important;
+            line-height: 1.3 !important;
+            max-width: 180px !important;
+          }
+
+          /* Hamburger — larger tap target */
+          .nav-hamburger {
+            padding: 6px !important;
+            min-width: 40px !important;
+            min-height: 40px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+          }
+
+          /* Mobile menu spacing */
+          .nav-mobile-menu {
+            padding-left: 14px !important;
+            padding-right: 14px !important;
+            padding-bottom: 16px !important;
+          }
+
+          /* Mobile nav links — bigger tap targets */
+          .nav-mobile-link {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            font-size: 15px !important;
+            min-height: 44px !important;
+            display: flex !important;
+            align-items: center !important;
+          }
+
+          /* Mobile CTA buttons */
+          .nav-mobile-btn {
+            padding-top: 12px !important;
+            padding-bottom: 12px !important;
+            font-size: 15px !important;
+            min-height: 44px !important;
+          }
+        }
+
+        /* ── VERY SMALL ANDROID (≤360px) ── */
+        @media (max-width: 360px) {
+          .nav-logo-text {
+            font-size: 12px !important;
+            max-width: 150px !important;
+          }
+          .nav-logo-img {
+            width: 34px !important;
+            height: 34px !important;
+          }
+        }
+      `}</style>
+
       {/* NAV CONTAINER */}
-      <div className="flex items-center justify-between px-6 lg:px-12 py-4">
+      <div className="nav-container flex items-center justify-between px-6 lg:px-12 py-4">
 
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-3">
           <img
             src="/images/logo.jpeg"
             alt="Shri Ram Agro Industries"
-            className="w-12 h-12 lg:w-16 lg:h-16 rounded-full object-cover border-2 border-[#8aad5e]"
+            className="nav-logo-img w-12 h-12 lg:w-16 lg:h-16 rounded-full object-cover border-2 border-[#8aad5e]"
           />
-          <span className="hidden sm:block font-semibold text-base sm:text-lg lg:text-xl text-[#1F3D2B]">
+          <span className="nav-logo-text hidden sm:block font-semibold text-base sm:text-xl lg:text-2xl text-[#1F3D2B]">
             Shri Ram Agro Industries
           </span>
         </Link>
@@ -70,7 +148,7 @@ export default function Navbar() {
         {/* HAMBURGER BUTTON */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-[#1F3D2B]"
+          className="nav-hamburger lg:hidden text-[#1F3D2B]"
         >
           {isOpen ? (
             <span className="text-2xl">✕</span>
@@ -82,13 +160,13 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {isOpen && (
-        <div className="lg:hidden bg-[#f4f7ee] border-t border-[#d4e0bc] px-6 pb-6 space-y-4">
+        <div className="nav-mobile-menu lg:hidden bg-[#f4f7ee] border-t border-[#d4e0bc] px-6 pb-6 space-y-4">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               onClick={() => setIsOpen(false)}
-              className="block text-[#1F3D2B] font-medium py-2"
+              className="nav-mobile-link block text-[#1F3D2B] font-medium py-2"
             >
               {label}
             </Link>
@@ -97,7 +175,7 @@ export default function Navbar() {
           <Link
             href="/founder"
             onClick={() => setIsOpen(false)}
-            className="block bg-[#f2c201] text-[#1a1400] px-4 py-2 rounded-lg text-center font-medium"
+            className="nav-mobile-btn block bg-[#f2c201] text-[#1a1400] px-4 py-2 rounded-lg text-center font-medium"
           >
             About Founder
           </Link>
@@ -105,7 +183,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setIsOpen(false)}
-            className="block bg-[#253d18] text-white px-4 py-2 rounded-lg text-center font-medium"
+            className="nav-mobile-btn block bg-[#253d18] text-white px-4 py-2 rounded-lg text-center font-medium"
           >
             Consultancy
           </Link>

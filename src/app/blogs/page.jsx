@@ -16,7 +16,6 @@ async function getPostsByCategory(categoryId) {
 export default async function BlogsPage() {
   const categories = await getCategories();
 
-    // ✅ ADD THIS BLOCK HERE
   const manualMeta = {
   "challenges-in-manufacturing-organic-fertilizers": {
     date: "1 August 2024",
@@ -68,8 +67,6 @@ export default async function BlogsPage() {
   }
 };
 
-
-  // 👇 ADD THIS BLOCK HERE
   const preferredOrder = [
     "Organic Fertilizers",
     "Soil Health",
@@ -131,7 +128,6 @@ export default async function BlogsPage() {
           background: var(--ink);
         }
 
-        /* Animated botanical SVG background */
         .hero-canvas {
           position: absolute;
           inset: 0;
@@ -159,7 +155,6 @@ export default async function BlogsPage() {
           );
         }
 
-        /* Big decorative leaf */
         .hero-leaf-deco {
           position: absolute;
           right: -70px;
@@ -185,7 +180,6 @@ export default async function BlogsPage() {
           animation: slowSpin 80s linear infinite reverse;
         }
 
-        /* Grain overlay */
         .hero-grain {
           position: absolute;
           inset: 0;
@@ -304,7 +298,6 @@ export default async function BlogsPage() {
           margin-top: 5px;
         }
 
-        /* Scroll indicator */
         .hero-scroll {
           position: absolute;
           bottom: 10vh;
@@ -477,8 +470,6 @@ export default async function BlogsPage() {
             margin-bottom: 40px;
         }
 
-       
-
         /* ─────────────────────────────────────────
            REMAINING GRID
         ───────────────────────────────────────── */
@@ -516,7 +507,7 @@ export default async function BlogsPage() {
             0 0 0 1px rgba(45,90,27,0.12);
         }
 
-        /* ── CINEMATIC CARD (featured / full img) ── */
+        /* ── CINEMATIC CARD ── */
         .card-cine {
           height: 100%;
           position: relative;
@@ -576,7 +567,7 @@ export default async function BlogsPage() {
           background: rgba(255,255,255,0.04);
         }
 
-        /* ── STANDARD CARD (img top + body below) ── */
+        /* ── STANDARD CARD ── */
         .card-std-img {
           height: 300px;
           overflow: hidden;
@@ -594,7 +585,7 @@ export default async function BlogsPage() {
           padding: 28px 30px 32px;
         }
 
-        /* ── Card Chip (tag) ── */
+        /* ── Card Chip ── */
         .chip {
           display: inline-flex;
           align-items: center;
@@ -732,8 +723,34 @@ export default async function BlogsPage() {
           color: var(--green-light);
         }
 
+        .card-meta-dark,
+        .card-meta-light {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 0.75rem;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          margin-top: 12px;
+        }
+
+        .card-meta-dark {
+          color: rgba(255,255,255,0.85);
+        }
+
+        .card-meta-light {
+          color: var(--ink-light);
+        }
+
+        .meta-dot {
+          width: 4px;
+          height: 4px;
+          background: currentColor;
+          border-radius: 50%;
+        }
+
         /* ─────────────────────────────────────────
-           RESPONSIVE
+           RESPONSIVE — DESKTOP / TABLET
         ───────────────────────────────────────── */
         @media (max-width: 1100px) {
           .feat-layout {
@@ -760,39 +777,173 @@ export default async function BlogsPage() {
           .posts-grid { grid-template-columns: 1fr; }
         }
 
+        /* ─────────────────────────────────────────
+           RESPONSIVE — ANDROID / MOBILE
+        ───────────────────────────────────────── */
         @media (max-width: 560px) {
-          .hero-content { padding: 0 6vw 8vh; }
-          .hero-title { font-size: clamp(2.8rem, 13vw, 4rem); }
-          .hero-scroll { display: none; }
-          .main { padding: 60px 5vw 80px; }
-          .feat-layout { grid-template-rows: 320px auto auto; }
+          /* Hero */
+          .hero {
+            min-height: unset;
+            padding-top: 70px;
+          }
+          .hero-content {
+            padding: 0 5vw 6vh;
+          }
+          .hero-pre {
+            margin-bottom: 1.2rem;
+            gap: 10px;
+          }
+          .hero-pre-line {
+            width: 28px;
+          }
+          .hero-pre-text {
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+          }
+          .hero-title {
+            font-size: clamp(2.6rem, 13vw, 3.5rem);
+            margin-bottom: 1rem;
+            line-height: 0.92;
+          }
+          .hero-bottom {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding-bottom: 1rem;
+          }
+          .hero-desc {
+            font-size: 0.95rem;
+            line-height: 1.55;
+          }
+          .hero-stats-row {
+            flex-direction: row;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+          }
+          .hero-stat {
+            text-align: left;
+            border-right: 1px solid rgba(255,255,255,0.3);
+            padding-right: 1.2rem;
+          }
+          .hero-stat:last-child {
+            border-right: none;
+            padding-right: 0;
+          }
+          .hero-stat-n {
+            font-size: 2rem;
+          }
+          .hero-stat-l {
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+          }
+          .hero-scroll {
+            display: none;
+          }
+          .hero-leaf-deco {
+            width: 300px;
+            height: 300px;
+            right: -80px;
+            top: -30px;
+          }
+          .hero-leaf-deco2 {
+            display: none;
+          }
+
+          /* Ticker */
+          .ticker {
+            padding: 10px 0;
+          }
+          .ticker-item {
+            font-size: 0.72rem;
+            padding: 0 24px;
+            gap: 14px;
+            letter-spacing: 0.14em;
+          }
+
+          /* Main content */
+          .main {
+            padding: 40px 5vw 60px;
+          }
+
+          /* Category block */
+          .cat-block {
+            margin-bottom: 52px;
+          }
+          .cat-head {
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            margin-bottom: 24px;
+          }
+          .cat-index {
+            font-size: 2.8rem;
+            min-width: 44px;
+          }
+          .cat-head-center {
+            padding-left: 14px;
+            gap: 2px;
+          }
+          .cat-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+          }
+          .cat-name {
+            font-size: clamp(1.4rem, 6vw, 2rem);
+          }
+          .cat-count-pill {
+            display: none;
+          }
+
+          /* Featured layout — single column on mobile */
+          .feat-layout {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 14px;
+            margin-bottom: 14px;
+          }
+          .feat-layout .card:first-child {
+            grid-column: 1;
+          }
+
+          /* Cinematic card height on mobile */
+          .card-cine {
+            height: 260px !important;
+          }
+          .card-cine-body {
+            padding: 20px 20px 24px;
+          }
+          .card-title-lg {
+            font-size: 1.2rem;
+          }
+
+          /* Standard card image */
+          .card-std-img {
+            height: 200px;
+          }
+          .card-std-body {
+            padding: 18px 20px 22px;
+          }
+          .card-title-md {
+            font-size: 1.05rem;
+          }
+
+          /* Posts grid — single column */
+          .posts-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+          }
+
+          /* Divider */
+          .cat-divider {
+            margin: 0 0 52px;
+          }
+          .cat-div-center {
+            padding: 0 16px;
+          }
+          .cat-div-text {
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+          }
         }
-
-        .card-meta-dark,
-.card-meta-light {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-top: 12px;
-}
-
-.card-meta-dark {
-  color: rgba(255,255,255,0.85);
-}
-
-.card-meta-light {
-  color: var(--ink-light);
-}
-
-.meta-dot {
-  width: 4px;
-  height: 4px;
-  background: currentColor;
-  border-radius: 50%;
-}
       `}</style>
 
       <div className="pg">
@@ -804,7 +955,6 @@ export default async function BlogsPage() {
             <div className="hero-lines" />
             <div className="hero-grain" />
 
-            {/* Decorative leaf SVG */}
             <svg className="hero-leaf-deco" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M100 10 C100 10 20 50 20 120 C20 160 55 190 100 190 C145 190 180 160 180 120 C180 50 100 10 100 10Z" fill="white"/>
               <line x1="100" y1="10" x2="100" y2="190" stroke="black" strokeWidth="2"/>
@@ -886,14 +1036,11 @@ export default async function BlogsPage() {
                     const isOrganic = cat.name === "Organic Fertilizers";
                     const isDoubleBig = isSustainable || isEnvironmental;
 
-                    
                     const hasFeat =
   (posts.length >= 3 &&
    !isSoilHealth &&
    !isOrganic &&
    !isDoubleBig);
-
-
 
               return (
                 <div key={cat.id}>
@@ -910,8 +1057,6 @@ export default async function BlogsPage() {
                         {posts.length} Article{posts.length !== 1 ? "s" : ""}
                       </span>
                     </div>
-
-                    
 
                     {/* ── Magazine layout (3+ posts) ── */}
                     {hasFeat ? (
@@ -933,7 +1078,6 @@ export default async function BlogsPage() {
             <h3
               className="card-title card-title-lg"
               dangerouslySetInnerHTML={{ __html: p.title.rendered }}
-
             />
             {(() => {
                 const meta = manualMeta[p.slug];
@@ -965,7 +1109,6 @@ export default async function BlogsPage() {
                                       <div className="card-std-body">
                                         <div className="chip chip-light"><span className="chip-dot" />Article</div>
                                         <h3 className="card-title card-title-md" dangerouslySetInnerHTML={{ __html: p.title.rendered }} />
-
                                         {(() => {
   const meta = manualMeta[p.slug];
   return meta && (
@@ -976,8 +1119,6 @@ export default async function BlogsPage() {
     </div>
   );
 })()}
-
-
                                         <div className="card-read card-read-light">
                                           Read Article
                                           <span className="card-read-icon">

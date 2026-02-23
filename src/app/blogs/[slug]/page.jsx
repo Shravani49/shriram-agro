@@ -32,7 +32,6 @@ export default async function BlogPost(props) {
     day: "numeric",
   });
 
-  // Estimate read time
   const wordCount = post.content.rendered.replace(/<[^>]+>/g, "").split(/\s+/).length;
   const readTime = Math.max(1, Math.ceil(wordCount / 200));
 
@@ -129,16 +128,16 @@ export default async function BlogPost(props) {
         }
 
         .category-tag {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1rem;      /* increased */
-            font-weight: 600;       /* slightly stronger */
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #4a7c2f;
-            background: #e8f3e0;
-            padding: 0.45rem 1rem;  /* slightly larger pill */
-            border-radius: 100px;
-            display: inline-block;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 1rem;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #4a7c2f;
+          background: #e8f3e0;
+          padding: 0.45rem 1rem;
+          border-radius: 100px;
+          display: inline-block;
         }
 
         .meta-text {
@@ -170,9 +169,79 @@ export default async function BlogPost(props) {
           line-height: 1.5;
         }
 
+        /* ─────────────────────────────────────────
+           RESPONSIVE — TABLET
+        ───────────────────────────────────────── */
         @media (max-width: 768px) {
           .hero-image-wrapper img { height: 280px; }
           .blog-article { font-size: 1rem; }
+        }
+
+        /* ─────────────────────────────────────────
+           RESPONSIVE — ANDROID / MOBILE
+        ───────────────────────────────────────── */
+        @media (max-width: 560px) {
+          /* Hero image */
+          .hero-image-wrapper {
+            border-radius: 14px;
+          }
+          .hero-image-wrapper img {
+            height: 220px;
+          }
+
+          /* Article body */
+          .blog-article {
+            font-size: 1rem;
+            line-height: 1.8;
+          }
+          .blog-article h2 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+          }
+          .blog-article h3 {
+            font-size: 1.25rem;
+            margin-top: 1.8rem;
+          }
+          .blog-article img {
+            max-height: 240px;
+            border-radius: 10px;
+            margin: 1.4rem 0;
+          }
+          .blog-article blockquote {
+            padding: 0.6rem 1rem;
+            margin: 1.4rem 0;
+          }
+
+          /* Category tag & meta */
+          .category-tag {
+            font-size: 0.78rem;
+            padding: 0.35rem 0.8rem;
+            letter-spacing: 0.08em;
+          }
+          .meta-text {
+            font-size: 0.76rem;
+          }
+
+          /* Pull quote */
+          .pull-quote {
+            font-size: 1.15rem;
+            padding: 1rem 0;
+            margin: 2rem 0;
+          }
+
+          /* Divider */
+          .divider-leaf {
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            letter-spacing: 0.8rem;
+          }
+
+          /* Tags/share strip */
+          .tags-share-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+          }
         }
       `}</style>
 
@@ -181,12 +250,12 @@ export default async function BlogPost(props) {
         {/* Top accent bar */}
         <div className="h-1 bg-gradient-to-r from-[#2d5016] via-[#4a7c2f] to-[#7ab648]" />
 
-        <div className="max-w-5xl xl:max-w-6xl mx-auto px-6 sm:px-10 lg:px-12 py-12 pb-20">
+        <div className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 sm:px-10 lg:px-12 py-8 sm:py-12 pb-16 sm:pb-20">
 
           {/* Back link */}
           <a
             href="/blogs"
-            className="inline-flex items-center gap-2 mb-10 text-[#5a7a3a] hover:text-[#2d5016] transition-colors"
+            className="inline-flex items-center gap-2 mb-7 sm:mb-10 text-[#5a7a3a] hover:text-[#2d5016] transition-colors"
             style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "1rem", fontWeight: 500 }}
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
@@ -196,7 +265,7 @@ export default async function BlogPost(props) {
           </a>
 
           {/* Category + meta */}
-          <div className="flex flex-wrap items-center gap-3 mb-5">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4 sm:mb-5">
             <span className="category-tag">Organic Farming</span>
             <span className="meta-text">·</span>
             <span className="meta-text">{dateFormatted}</span>
@@ -208,11 +277,11 @@ export default async function BlogPost(props) {
           <h1
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              fontSize: "clamp(3rem, 5vw, 4rem)",
+              fontSize: "clamp(2rem, 7vw, 4rem)",
               fontWeight: 700,
               color: "#1a3409",
               lineHeight: 1.25,
-              marginBottom: "1.5rem",
+              marginBottom: "1.2rem",
               letterSpacing: "-0.01em",
             }}
             dangerouslySetInnerHTML={{ __html: post.title.rendered }}
@@ -220,7 +289,7 @@ export default async function BlogPost(props) {
 
           {/* Author row */}
           {author && (
-            <div className="flex items-center gap-3 mb-10 pb-6 border-b border-[#d8e0cc]">
+            <div className="flex items-center gap-3 mb-8 sm:mb-10 pb-5 sm:pb-6 border-b border-[#d8e0cc]">
               <div
                 className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-semibold flex-shrink-0"
                 style={{ background: "linear-gradient(135deg, #2d5016, #4a7c2f)", fontFamily: "'DM Sans', sans-serif" }}
@@ -228,7 +297,7 @@ export default async function BlogPost(props) {
                 {author.name?.charAt(0) || "A"}
               </div>
               <div>
-                <p className="meta-text" style={{ color: "#3a5020", fontWeight: 500, fontSize: "1.5rem" }}>
+                <p className="meta-text" style={{ color: "#3a5020", fontWeight: 500, fontSize: "1.1rem" }}>
                   {author.name}
                 </p>
                 <p className="meta-text">Shri Ram Agro Industries</p>
@@ -238,7 +307,7 @@ export default async function BlogPost(props) {
 
           {/* Hero Image */}
           {image && (
-            <div className="hero-image-wrapper mb-12">
+            <div className="hero-image-wrapper mb-8 sm:mb-12">
               <img src={image} alt={post.title.rendered} />
             </div>
           )}
@@ -254,7 +323,7 @@ export default async function BlogPost(props) {
 
           {/* Tags / share strip */}
           <div
-            className="flex flex-wrap items-center justify-between gap-4 py-6 border-t border-b border-[#d8e0cc] mb-12"
+            className="tags-share-strip flex flex-wrap items-center justify-between gap-4 py-5 sm:py-6 border-t border-b border-[#d8e0cc] mb-10 sm:mb-12"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
             <div className="flex flex-wrap gap-2">
