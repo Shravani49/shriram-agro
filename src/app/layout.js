@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body className="font-body bg-offwhite overflow-x-hidden">
+  <body className="bg-[#FAFAF7] overflow-x-hidden">
     <ScrollToTop />
     <Navbar />
     {children}

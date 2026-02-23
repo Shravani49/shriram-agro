@@ -29,7 +29,7 @@ export default function Navbar() {
             alt="Shri Ram Agro Industries"
             className="w-12 h-12 lg:w-16 lg:h-16 rounded-full object-cover border-2 border-[#8aad5e]"
           />
-          <span className="hidden sm:block font-semibold text-lg lg:text-xl text-[#1F3D2B]">
+          <span className="hidden sm:block font-semibold text-base sm:text-lg lg:text-xl text-[#1F3D2B]">
             Shri Ram Agro Industries
           </span>
         </Link>
@@ -40,9 +40,11 @@ export default function Navbar() {
             <Link
               key={href}
               href={href}
-              className={`font-medium text-[#3a3a2e] hover:text-[#1F3D2B] ${
-                pathname === href ? "text-[#1F3D2B] font-semibold" : ""
-              }`}
+              className={`relative font-medium transition-colors ${
+                    pathname === href
+                      ? "text-[#1F3D2B] font-semibold"
+                      : "text-[#3a3a2e] hover:text-[#1F3D2B]"
+                  }`}
             >
               {label}
             </Link>

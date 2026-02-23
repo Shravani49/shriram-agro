@@ -286,17 +286,13 @@ export default function Home() {
             </p>
 
             <h1
-              className="fade-up delay-3"
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: "clamp(48px, 5vw, 72px)",
-                lineHeight: 1.05,
-                fontWeight: 900,
-                color: "#1F3D2B",
-                marginBottom: 32,
-                letterSpacing: "-0.01em",
-              }}
-            >
+                className="fade-up delay-3 text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  color: "#1F3D2B",
+                  letterSpacing: "-0.01em",
+                }}
+              >
               Turning Waste
               <br />
               <em style={{ color: "#5C7A3A", fontStyle: "italic" }}>Into Wealth</em>
@@ -305,15 +301,7 @@ export default function Home() {
             </h1>
 
             <p
-              className="fade-up delay-3"
-              style={{
-                fontSize: 20,
-                lineHeight: 1.75,
-                color: "#2E2E2E",
-                maxWidth: 770,
-                marginBottom: 40,
-                fontWeight: 300,
-              }}
+              className="fade-up delay-3 text-base sm:text-lg leading-relaxed text-[#2E2E2E] max-w-2xl mb-8"
             >
               We specialize in providing end-to-end solutions for the management and processing of municipal solid waste, industrial food waste, sugar factory waste, agricultural and dairy waste, cattle waste, and biogas digestate. <br/> <br/>
 
@@ -331,11 +319,17 @@ export default function Home() {
                 { value: "5+", label: "Waste Streams" },
                 { value: "FCO", label: "Approved Inputs" },
               ].map((s) => (
-                <div key={s.label}>
-                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 44, fontWeight: 700, color: "#1F3D2B" }}>
+               <div key={s.label}>
+                  <div
+                    className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1F3D2B]"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
                     {s.value}
                   </div>
-                  <div style={{ fontSize: 18, color: "rgba(31,61,43,0.6)", letterSpacing: "0.06em", marginTop: 2 }}>
+
+                  <div
+                    className="text-sm sm:text-base text-[#1F3D2B]/60 mt-1"
+                  >
                     {s.label}
                   </div>
                 </div>
@@ -480,10 +474,10 @@ export default function Home() {
 
           {/* Header */}
           <div className="max-w-xl mb-20">
-            <h2 className="section-title text-[62px] leading-tight font-bold text-[#1F3D2B] mb-6">
+            <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F3D2B] mb-4 leading-tight">
               What We Do
             </h2>
-          <p className="body-text text-[20px] text-[#2E2E2E] leading-relaxed mb-12 animate-fade-in">
+          <p className="body-text text-base sm:text-lg leading-relaxed text-[#2E2E2E]  mb-12 animate-fade-in">
 
              Transforming Food and Organic Waste into Organic fertilizers that Restore Soil and Empower Farmers
             </p>
@@ -665,13 +659,13 @@ export default function Home() {
       </section>
      
 {/* ================= WHY WASTE MANAGEMENT ================= */}
-<section className="py-28 px-6 sm:px-10 lg:px-20 bg-[#F1F3E0]">
+<section className="py-16 sm:py-20 lg:py-28 px-6 sm:px-10 lg:px-20 bg-[#F1F3E0]">
   <div className="container-page">
 
     {/* Header */}
     <div className="text-center max-w-3xl mx-auto mb-20">
       <h2 
-  className="text-[48px] font-bold text-[#1F3D2B] mb-6"
+  className="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#1F3D2B] mb-6"
   style={{
     fontFamily: "'Playfair Display', serif",
     letterSpacing: "-0.01em"
@@ -773,18 +767,18 @@ export default function Home() {
 
 
 {/* ================= OUR IMPACT ================= */}
-<section className="w-full bg-[#ffffff] py-28">
+<section className="w-full bg-[#ffffff] py-16 sm:py-20 lg:py-28">
   <div className="container-page mx-auto px-6 sm:px-10 lg:px-20">
     
     <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
       
       {/* LEFT CONTENT */}
       <div className="max-w-md">
-        <h2 className="section-title text-[52px] font-semibold text-[#1F3D2B] mb-6">
+        <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#1F3D2B] mb-6">
           Our Impact
         </h2>
 
-        <p className="body-text text-[20px] text-[#2E2E2E] leading-relaxed">
+        <p className="body-text text-base sm:text-lg leading-relaxed text-[#2E2E2E]">
           
           We transform waste into measurable environmental value.
 Through integrated waste management systems and regenerative agricultural solutions, we reduce landfill dependency, restore soil vitality, and promote climate-resilient farming models. <br/><br/>
@@ -812,7 +806,7 @@ Our work directly contributes to circular economy practices, sustainable resourc
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full px-12 text-white text-center">
 
                         <div>
-              <h3 className="text-[50px] text-white font-bold mb-2">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2">
                 150,000+
               </h3>
               <p className="text-[18px] opacity-90">
@@ -821,7 +815,7 @@ Our work directly contributes to circular economy practices, sustainable resourc
             </div>
 
             <div>
-              <h3 className="text-[50px] text-white font-bold mb-2">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2">
                 35+
               </h3>
               <p className="text-[18px] opacity-90">
@@ -830,7 +824,7 @@ Our work directly contributes to circular economy practices, sustainable resourc
             </div>
             
             <div className="text-white">
-              <h3 className="text-[50px] text-white font-bold mb-2">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2">
                 28,000+
               </h3>
               <p className="text-[18px] opacity-90">
