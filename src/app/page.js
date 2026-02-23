@@ -385,7 +385,7 @@ export default function Home() {
             <div className="stat-card" style={{ bottom: 36, left: 10, minWidth: 120, padding: "10px 13px", borderRadius: 14 }}>
               <div style={{ fontSize: 9, letterSpacing: "0.12em", color: "rgba(31,61,43,0.55)", textTransform: "uppercase", marginBottom: 4 }}>Our Services</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
-                {["PROM", "City Compost", "Poject Setup"].map((item) => (
+                {["Waste Management", "Project Setup", "Waste Audit", "Product Development"].map((item) => (
                   <div key={item} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, color: "#1F3D2B", fontWeight: 500 }}>
                     <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#A7C983", flexShrink: 0 }} />
                     {item}
@@ -403,17 +403,17 @@ export default function Home() {
           <p className="fade-up delay-3 hero-para text-sm sm:text-base leading-relaxed text-[#2E2E2E] max-w-xl" style={{ margin: 0 }}>
 
 
-            We provide end-to-end solutions for processing <strong style={{ fontWeight: 500, color: "#1F3D2B" }}> municipal, industrial, agricultural, dairy, and biogas </strong> waste into high-quality, FCO-approved organic inputs such as <strong style={{ fontWeight: 500, color: "#1F3D2B" }}>PROM, City Compost, FOM, and LFOM.</strong>
+            We provide end-to-end solutions for processing <strong style={{ fontWeight: 500, color: "#1F3D2B" }}> municipal, industrial, agricultural, dairy, biogas </strong> waste , etc. into high-quality, FCO, NPOP approved organic inputs such as <strong style={{ fontWeight: 500, color: "#1F3D2B" }}>Organic Fertilizer, PROM, City Compost, FOM, and LFOM.   </strong> 
 
-We also offer expert consultancy for  <strong style={{ fontWeight: 500, color: "#1F3D2B" }}> planning, designing, and establishing sustainable organic fertilizer production systems </strong> that are compliant, efficient, and commercially viable.
+We provide expert consultancy for  <strong style={{ fontWeight: 500, color: "#1F3D2B" }}> planning, designing, and establishing organic fertilizer production project setup </strong> that is compliant, efficient, and commercially viable.
           </p>
 
           {/* Stats */}
           <div className="fade-up delay-4 hero-stats hero-stats-row" style={{ display: "flex", gap: 24, flexWrap: "nowrap", margin: 0 }}>
             {[
-              { value: "1,00,000+", label: "MT Processed/Year" },
-              { value: "5+", label: "Waste Streams" },
-              { value: "FCO", label: "Approved Inputs" },
+              { value: "1,00,000+", label: "MT Processing/Year" },
+              { value: "10+", label: "Waste Streams" },
+              { value: "FCO / NPOP", label: "Approved Inputs" },
             ].map((s) => (
               <div key={s.label}>
                 <div className="stat-value font-bold text-[#1F3D2B]" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.4rem, 5vw, 2.5rem)" }}>{s.value}</div>
@@ -472,10 +472,10 @@ We also offer expert consultancy for  <strong style={{ fontWeight: 500, color: "
           {/* Header */}
           <div className="max-w-xl mb-10 sm:mb-16">
             <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F3D2B] mb-4 leading-tight">
-              What We Do
+              Our Strength
             </h2>
             <p className="body-text text-base sm:text-lg leading-relaxed text-[#2E2E2E] mb-8 sm:mb-12 animate-fade-in">
-              Transforming Food and Organic Waste into Organic fertilizers that Restore Soil and Empower Farmers
+              Transforming Municipal Food and Organic Waste into safe to use Organic fertilizers that restore Soil and Empower Farmers
             </p>
           </div>
 
@@ -493,10 +493,10 @@ We also offer expert consultancy for  <strong style={{ fontWeight: 500, color: "
                   <img src="/icons/waste.png" alt="" className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 <h3 className="text-lg sm:text-base font-bold text-white mb-2">
-                  End-to-End Wet Waste Processing & Composting Solutions
+                  End-to-End Wet Waste Processing & Odor Control
                 </h3>
                 <p className="text-sm sm:text-sm text-white/90 leading-relaxed text-left">
-                  We provide end-to-end solutions for the management and processing of municipal solid (wet) waste, transforming it into government-approved, high-quality, and safe-to-use compost fertilizer.
+                  We provide end-to-end solutions for the management and processing of Municipal solid (wet) waste, transforming it into government-approved, high-quality, and safe-to-use compost fertilizer.
                   <br /><br />
                   <span className="font-bold">Key Features:</span><br />
                   1. Advanced deodorization system ensuring effective odor control.<br />

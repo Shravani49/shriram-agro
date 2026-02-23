@@ -1024,7 +1024,7 @@ export default function FounderPage() {
         <div className="hero-right">
           <div className="hero-fade" />
           <img src="/images/rahul_Padwal.png" alt="Adv. Rahul Prataprao Padwal" />
-          <div className="hero-badge">FCO Certified Expert</div>
+          <div className="hero-badge">22+ Years Experience</div>
         </div>
       </section>
 
