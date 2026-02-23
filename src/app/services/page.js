@@ -11,18 +11,18 @@ export default function ServicesPage() {
         </svg>
       ),
       tag: "Core Service",
-      title: "Integrated Waste Management Systems",
+      title: "Municipal Wet Waste Management",
       intro:
-        "We design and implement comprehensive waste management systems that transform municipal, agricultural, and industrial waste into valuable organic resources.",
+        "We design and implement comprehensive Municipal Wet Waste Management Solutions that transform municipal, agricultural, and industrial waste into valuable organic resources.",
       items: [
-        "Municipal wet waste composting (Windrow, Aerobic & Bio-digestion systems)",
-        "Municipal Solid Waste (MSW) to compost projects",
-        "Sewage sludge treatment & wastewater bioremediation",
-        "Cattle, dairy & sugar factory waste composting",
-        "Resource recovery and recycling systems",
+        "Municipal wet waste management (Scientific, Rapid composting) Solutions",
+        "Quick Deodorization for Process Adoption",
+        "Sewage sludge treatment & waste bio-methanization",
+        "Cattle, dairy, industial organic & sugar factory waste to organic fertilizer",
+        "Resource recovery and circular economy model",
         "Decentralized waste management units",
         "Zero-waste model implementation",
-        "Waste-to-organic input transformation systems",
+
       ],
       footer:
         "Our systems ensure environmental compliance, odor control, nutrient recovery, and sustainable resource utilization.",
@@ -39,19 +39,19 @@ export default function ServicesPage() {
         </svg>
       ),
       tag: "Product Portfolio",
-      title: "Organic Fertilizer Production & Product Development",
+      title: "Organic Fertilizer Range & Product Development",
       intro:
-        "We specialize in development and production of specialized organic fertilizers compliant with regulatory standards and quality benchmarks.",
+        "We specialize in development of a wide range of organic fertilizers compliant with Fertilizer Control Order(FCO) 1985, NPOP Standards & Quality Benchamarks",
       products: [
         { name: "City Compost", desc: "Urban organic waste converted to certified compost" },
-        { name: "PROM", desc: "Phosphate Rich Organic Manure — high-yield soil enhancer" },
+        { name: "Organic Fertilizer", desc: "Restore Soil Fertlity and improves crop yeild sustainably." },
         { name: "FOM", desc: "Fermented Organic Manure with optimized microbial activity" },
         { name: "LFOM", desc: "Liquid Fermented Organic Manure for foliar & drip use" },
-        { name: "PDM", desc: "Potash Derived from Molasses — potassium-rich bio-input" },
+        { name: "PROM", desc: "Phosphate Rich Organic Manure — high-yield soil enhancer" },
         { name: "Bio-enriched Manure", desc: "Microbially fortified organic compost" },
       ],
       footer:
-        "All production systems align with FCO (1985) and NPOP specifications.",
+        "",
       accent: "#7d5835",
       accentLight: "#E5D9B6",
       img: "/images/core2.png",
@@ -67,15 +67,15 @@ export default function ServicesPage() {
       tag: "End-to-End Delivery",
       title: "Turnkey Project Implementation",
       intro:
-        "We provide complete end-to-end project execution for waste management and organic fertilizer production facilities.",
+        "We provide complete end-to-end project execution for waste management and organic fertilizer production projects.",
       steps: [
-        { phase: "Plan", items: ["Feasibility study & project planning", "Compost plant infrastructure design"] },
-        { phase: "Build", items: ["Organic fertilizer production unit setup", "Biogas & CBG integration with FOM by-products", "QC laboratory setup"] },
-        { phase: "Optimize", items: ["Production standardization & microbial optimization", "Regulatory documentation & compliance"] },
-        { phase: "Sustain", items: ["Monitoring, training & operational management"] },
+        { phase: "Plan", items: ["Feasibility study & project planning", "Plant and infrastructure layout"] },
+        { phase: "Build", items: ["Organic fertilizer processing unit setup", "Biogas & CBG integration with FOM by-products", "QC laboratory setup"] },
+        { phase: "Optimize", items: ["Production standardization & process efficiency", "Regulatory & Certification compliance"] },
+        { phase: "Sustain", items: ["Monitoring, training & operational support"] },
       ],
       footer:
-        "Our implementation model ensures projects are delivered efficiently, sustainably, and in compliance with government norms.",
+        "",
       accent: "#1F3D2B",
       accentLight: "#a7c983",
       img: "/images/core3.png",
@@ -90,8 +90,7 @@ export default function ServicesPage() {
       ),
       tag: "Advisory",
       title: "Consultancy, Certification & Compliance",
-      intro:
-        "We offer advisory and technical consultancy services to municipal corporations, private firms, agricultural cooperatives, CSR programs, NGOs, and development organizations.",
+      
       clients: [
         "Municipal Corporations",
         "Private Waste Management Firms",
@@ -100,9 +99,8 @@ export default function ServicesPage() {
         "NGOs & Development Organizations",
       ],
       advisory: [
-        "Organic input certification guidance",
+        "Organic (NPOP) certification guidance",
         "FCO compliance advisory",
-        "NPOP certification support",
         "Technical audits & project evaluation",
         "Waste-to-value strategic planning",
         "Policy-level advisory & sustainability presentations",
@@ -121,18 +119,18 @@ export default function ServicesPage() {
             d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
       ),
-      tag: "Innovation",
+      tag: "R and D",
       title: "Research & Innovation",
       intro:
-        "Under the leadership of Adv. Rahul Padwal, Adjunct Research Scientist at AICAD, Nairobi, our services are strengthened by active research and international collaboration.",
+        "Under the leadership of Our Founder Rahul Padwal, who serves as an Adjunct Research Scientist at AICAD, Nairobi, our services are strengthened by active research and international collaboration.",
       focusAreas: [
-        "Food & agricultural waste bio-processing",
+        "Municipal Food & agricultural waste bio-processing",
         "Soil health management",
         "Integrated nutrient management",
-        "Microbial CFU optimization",
+        "Sustainable Agriculture Practices",
         "Climate-resilient agriculture systems",
-        "Fermented Organic Manure development",
-        "Quality enhancement of organic fertilizers",
+        "Fermented Organic and Liquid Manure development",
+        "Enrichment of Organic fertilizers",
       ],
       footer:
         "Our international collaborations and academic engagements strengthen our project credibility and innovation capability.",
@@ -269,8 +267,8 @@ export default function ServicesPage() {
           </h1>
           
           <p className="text-base sm:text-xl md:text-2xl font-semibold text-[#474303] max-w-3xl mx-auto mb-8 sm:mb-12 body-text leading-relaxed animate-fade-in px-2" style={{animationDelay: '0.4s'}}>
-            Science-backed integrated waste management and organic fertilizer solutions 
-            that restore ecosystems and nourish the earth
+            Scientific integrated waste management and Organic Fertilizer solutions 
+            that restore ecosystems and nourish mother earth.
           </p>
           
           <div className="flex gap-4 sm:gap-6 justify-center flex-wrap animate-fade-in" style={{animationDelay: '0.6s'}}>
@@ -291,13 +289,7 @@ export default function ServicesPage() {
 
       {/* OUR SERVICES HEADING */}
       <div className="bg-[#FDFBF7] py-6 sm:py-20 flex flex-col items-center gap-0">
-        <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-6">
-          <div className="w-8 sm:w-12 h-px bg-[#7d5835] opacity-60" />
-          <span className="font-sans text-[13px] sm:text-[16px] font-bold tracking-[4px] sm:tracking-[6px] uppercase text-[#7d5835]">
-            What We Offer
-          </span>
-          <div className="w-8 sm:w-12 h-px bg-[#7d5835] opacity-60" />
-        </div>
+        
 
         <div className="flex flex-col items-center w-full max-w-3xl px-4 sm:px-6">
           <div className="w-full h-px"
@@ -414,7 +406,7 @@ export default function ServicesPage() {
                   </svg>
                 </div>
                 <p className="text-white text-[14px] sm:text-[16px]">
-                  All formulations develop optimized <strong>microbial CFU levels</strong> to enhance
+                Our Formulations and Product Development optimized to enhance
                   soil structure, nutrient availability, and long-term soil fertility.
                 </p>
               </div>
@@ -601,13 +593,7 @@ export default function ServicesPage() {
 
               {/* AICAD badge */}
               <div className="bg-[#F1F3E0] rounded-2xl px-4 sm:px-6 py-4 sm:py-5 flex items-center gap-3 sm:gap-4">
-                <div className="w-12 h-12 bg-[#1F3D2B] rounded-xl flex items-center justify-center shrink-0 text-white font-bold text-sm leading-tight text-center">
-                  AI<br />CAD
-                </div>
-                <div>
-                  <p className="font-bold text-[#1F3D2B] text-[15px] sm:text-[17px]">AICAD Nairobi</p>
-                  <p className="text-[#2E2E2E] text-[13px] sm:text-[15px]">International research collaboration & academic engagement</p>
-                </div>
+                
               </div>
             </div>
 

@@ -1011,12 +1011,12 @@ export default function FounderPage() {
               <div className="stat-l">Years</div>
             </div>
             <div>
-              <div className="stat-n">6+</div>
+              <div className="stat-n">10+</div>
               <div className="stat-l">Products</div>
             </div>
             <div>
-              <div className="stat-n">3</div>
-              <div className="stat-l">Global Roles</div>
+              <div className="stat-n">7</div>
+              <div className="stat-l">Global Assossiations</div>
             </div>
           </div>
         </div>
@@ -1024,7 +1024,7 @@ export default function FounderPage() {
         <div className="hero-right">
           <div className="hero-fade" />
           <img src="/images/rahul_Padwal.png" alt="Adv. Rahul Prataprao Padwal" />
-          <div className="hero-badge">22+ Years Experience</div>
+          <div className="hero-badge">Sustainability Leader</div>
         </div>
       </section>
 
@@ -1052,8 +1052,8 @@ export default function FounderPage() {
             </div>
             <div className="pos-card">
               <div className="pos-dot" />
-              <div className="pos-org">Makerere & PACBS</div>
-              <div className="pos-role">International Collaborator</div>
+              <div className="pos-org">Makerere & PACBS University Uganda</div>
+              <div className="pos-role">Joint Grat Applications</div>
               <div className="pos-desc">Makerere University and Pan African Chamber Business School — building sustainable agriculture networks.</div>
             </div>
           </div>
@@ -1062,34 +1062,7 @@ export default function FounderPage() {
         </div>
       </div>
 
-      {/* PRODUCTS */}
-      <div style={{ background: '#F4F1EB' }}>
-        <div className="wrap">
-          <div className="sh">
-            <span className="sh-tag">Innovation</span>
-            <div className="sh-line" />
-          </div>
-          <h2 className="sec-t">Product Development</h2>
-          <p className="sec-sub">All products comply with FCO (1985) & NPOP specifications</p>
-
-          <div className="prod-grid">
-            {[
-              { a: "CC",   n: "City Compost",                    d: "Municipal waste transformed into nutrient-rich soil amendment." },
-              { a: "PROM", n: "Phosphate Rich Organic Manure",   d: "Enhanced phosphorus availability for optimal plant growth." },
-              { a: "FOM",  n: "Fermented Organic Manure",        d: "Advanced fermentation for maximum nutrient bioavailability." },
-              { a: "LFOM", n: "Liquid Fermented Organic Manure", d: "Fast-acting liquid formulation for rapid nutrient uptake." },
-              { a: "PDM",  n: "Potash Derived from Molasses",    d: "Sustainable potassium source from industrial by-products." },
-              { a: "BEO",  n: "Bio-Enriched Organic Manure",     d: "Microbially enhanced formulation for soil health restoration." },
-            ].map(p => (
-              <div key={p.a} className="prod-card">
-                <div className="prod-abbr">{p.a}</div>
-                <div className="prod-name">{p.n}</div>
-                <div className="prod-desc">{p.d}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      
 
       {/* EDUCATION */}
       <div style={{ background: '#fff' }}>

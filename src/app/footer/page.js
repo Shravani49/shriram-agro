@@ -46,7 +46,7 @@ export default function Footer() {
               <h3 className="footer-logo-name text-lg sm:text-base text-white font-bold">Shri Ram Agro Industries</h3>
             </div>
             <p className="footer-about-text text-sm sm:text-base text-white/80">
-              Transforming food and organic waste into nutrient-rich compost and organic fertilizers through sustainable waste management solutions.
+              Transforming food and organic waste into nutrient-rich compost and wide range of organic fertilizers through sustainable waste management solutions.
             </p>
           </div>
 
@@ -81,11 +81,11 @@ export default function Footer() {
           <div>
             <h4 className="footer-col-heading text-lg font-semibold text-white mb-6">Our Services</h4>
             <ul className="space-y-3 text-base sm:text-lg">
-              <li className="footer-service-item text-white/80">Waste Management Systems</li>
-              <li className="footer-service-item text-white/80">Bio-Processing Solutions</li>
-              <li className="footer-service-item text-white/80">Organic Fertilizer Production</li>
-              <li className="footer-service-item text-white/80">Regenerative Agriculture</li>
-              <li className="footer-service-item text-white/80">Project Consultancy</li>
+              <li className="footer-service-item text-white/80">Waste Management Consultancy</li>
+              <li className="footer-service-item text-white/80">Quick Odor Control Solutions</li>
+              <li className="footer-service-item text-white/80">Organic Fertilizer Plant Setup</li>
+              <li className="footer-service-item text-white/80">Quality Control, Waste Audit and Certification</li>
+              <li className="footer-service-item text-white/80">Sustainable Agriculture Technologies</li>
             </ul>
           </div>
 

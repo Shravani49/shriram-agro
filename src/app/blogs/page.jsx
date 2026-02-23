@@ -973,7 +973,7 @@ export default async function BlogsPage() {
           <div className="hero-content">
             <div className="hero-pre">
               <div className="hero-pre-line" />
-              <span className="hero-pre-text">Shriram Agro · Knowledge Hub</span>
+              <span className="hero-pre-text">Shriram Agro <br></br> Knowledge Hub</span>
             </div>
 
             <h1 className="hero-title">
@@ -989,11 +989,11 @@ export default async function BlogsPage() {
 
               <div className="hero-stats-row">
                 <div className="hero-stat">
-                  <span className="hero-stat-n">15+</span>
+                  <span className="hero-stat-n">150+</span>
                   <span className="hero-stat-l">Articles</span>
                 </div>
                 <div className="hero-stat">
-                  <span className="hero-stat-n">5+</span>
+                  <span className="hero-stat-n">20+</span>
                   <span className="hero-stat-l">Topics</span>
                 </div>
                 <div className="hero-stat">

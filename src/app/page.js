@@ -493,7 +493,7 @@ We provide expert consultancy for  <strong style={{ fontWeight: 500, color: "#1F
                   <img src="/icons/waste.png" alt="" className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 <h3 className="text-lg sm:text-base font-bold text-white mb-2">
-                  End-to-End Wet Waste Processing & Odor Control
+                  End-to-End Municipal Wet Waste Processing & Odor Control
                 </h3>
                 <p className="text-sm sm:text-sm text-white/90 leading-relaxed text-left">
                   We provide end-to-end solutions for the management and processing of Municipal solid (wet) waste, transforming it into government-approved, high-quality, and safe-to-use compost fertilizer.
@@ -516,17 +516,17 @@ We provide expert consultancy for  <strong style={{ fontWeight: 500, color: "#1F
                   <img src="/icons/agro.png" alt="" className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 <h3 className="text-lg sm:text-base font-bold text-white mb-2">
-                  Advanced Biogas & Digestate Treatment Solutions
+                  Advanced Biogas Digestate Treatment Solutions
                 </h3>
                 <p className="text-sm sm:text-sm text-white/90 leading-relaxed text-left">
-                  Our science-driven treatment systems ensure the efficient processing of complex waste streams such as biogas and digestate, converting them into high-quality, commercial-grade Fermented Organic Manure (FOM) and Liquid Fermented Organic Manure (LFOM).
+                  Our science-driven treatment ensure the efficient processing of complex waste streams such as biogas digestate, converting them into high-quality, commercial-grade Fermented Organic Manure (FOM) and Liquid Fermented Organic Manure (LFOM).
                   <br /><br />
                   <span className="font-bold">Key Features:</span><br />
-                  1. Comprehensive end-to-end turnkey project execution — from DPR preparation to final product handover.<br />
+                  1. Comprehensive end-to-end turnkey project execution — from DPR to product handover.<br />
                   2. Professional waste audit and assessment services.<br />
                   3. Practical, implementation-focused solutions tailored to on-ground requirements.<br />
-                  4. Research-driven product development and formulation.<br />
-                  5. Production of FCO-approved, market-ready organic products.<br />
+                  4. Research-driven product development and formulation, Product Development, Formulation and Quality Control.<br />
+                  5. Production of FCO/ NPOP approved, market-ready organic products.<br />
                 </p>
               </div>
 
@@ -539,17 +539,16 @@ We provide expert consultancy for  <strong style={{ fontWeight: 500, color: "#1F
                   <img src="/icons/production.png" alt="" className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 <h3 className="text-lg sm:text-base font-bold text-white mb-2">
-                  Sustainable Organic Waste to Soil Solutions
+                  Industrial Food, Cattle, Diary Waste to Organic Fertilizers 
                 </h3>
                 <p className="text-sm sm:text-sm text-white/90 leading-relaxed text-left">
-                  We convert food waste, cattle waste, and agricultural residues into high-quality organic inputs that restore soil vitality, improve soil structure, and enhance crop productivity.
+                  We convert industrial food, cattle and Diary waste, and agricultural residues into high-quality organic fertilizer that restore soil fertility, improve soil structure, and enhance crop productivity.
                   <br /><br />
                   <span className="font-bold">Key Features:</span><br />
                   1. Microbial-based organic fertilizers for enhanced nutrient availability and soil health.<br />
-                  2. Nutrient-rich compost and Phosphate-Rich Organic Manure (PROM).<br />
-                  3. Granular organic fertilizers for ease of application and uniform nutrient distribution.<br />
+                  2. Nutrient-rich organic fertilizer and Phosphate-Rich Organic Manure (PROM).<br />
+                  3. Granular organic fertilizers for easy application and farmer adoption.<br />
                   4. Production of FCO-approved, market-ready organic products.<br />
-                  5. Sustainable processing methods that promote circular economy practices and long-term soil regeneration.<br />
                 </p>
               </div>
 
@@ -562,17 +561,17 @@ We provide expert consultancy for  <strong style={{ fontWeight: 500, color: "#1F
                   <img src="/icons/soil.png" alt="" className="h-10 w-10 sm:h-12 sm:w-12 transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 <h3 className="text-lg sm:text-base font-bold text-white mb-2">
-                  Regenerative Agriculture & Consultancy
+                  Waste Audit, Feasibility & Consultancy
                 </h3>
                 <p className="text-sm sm:text-sm text-white/90 leading-relaxed text-left">
                   Beyond waste conversion, we actively support farmers, municipalities, and organizations in developing sustainable and regenerative systems that promote long-term environmental, agricultural, and economic resilience.<br />
                   <br />
                   <span className="font-bold">Key Features:</span><br />
-                  1. Comprehensive waste audits and feasibility reports in accordance with international quality standards.<br />
+                  1. Comprehensive waste audits and feasibility reports in accordance with International Quality Standards.<br />
                   2. Structured training and consultancy programs for farmers, municipal staff, CSR initiatives, and startups.<br />
-                  3. End-to-end project setup and infrastructure planning support.<br />
-                  4. Technical advisory for regulatory compliance, policy alignment, and FCO certification processes.<br />
-                  5. Ongoing monitoring, performance optimization, and post-implementation support to ensure long-term project sustainability and operational efficiency.<br />
+                  3. End-to-end project setup consultancy.<br />
+                  4. Technical advisory for regulatory compliance, NPOP certification processes.<br />
+                  5. Ongoing monitoring, production optimization, and post-implementation support to ensure long-term project sustainability and operational efficiency.<br />
                 </p>
               </div>
 
@@ -606,9 +605,9 @@ We provide expert consultancy for  <strong style={{ fontWeight: 500, color: "#1F
                 fontWeight: 400
               }}
             >
-              Transforming food waste into organic fertilizer builds a circular
-              economy, restores soil health, and supports regenerative agriculture
-              for a sustainable future.
+              Transforming organic waste into certified fertilizers builds a circular
+              economy that restores soil health, reduces environmental pollution and supports regenerative agriculture
+              for sustainable future.
             </p>
           </div>
 
@@ -629,32 +628,28 @@ We provide expert consultancy for  <strong style={{ fontWeight: 500, color: "#1F
 
               <div className="bg-[#a7c983] p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <h3 className="text-m sm:text-2xl font-bold text-[#000000] mb-3">
-                  The Importance of Composting
+                  Solid Waste Management Rule, 2026
                 </h3>
                 <p className="text-sm sm:text-base text-[#2E2E2E]" style={{ fontFamily: "'DM Sans', sans-serif", lineHeight: 1.7 }}>
-                  Composting converts organic and food waste into nutrient-rich fertilizer
-                  through natural biological processes. Instead of generating methane in
-                  landfills, waste becomes a productive agricultural resource.
+                  As per Solid Waste Management Rules, 2026 effective from 1 April 2026, the rules clearly direct that wet waste must be composted or bio-methanated. Unregulated municipal wet waste leads to GHG emissions and environmental pollution, which adversely affects human health.
                 </p>
               </div>
 
               <div className="bg-[#a7c983] p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <h3 className="text-m sm:text-2xl font-bold text-[#000000] mb-3">
-                  Reducing Food Waste
+                  Urgent need of Municipal Waste Management
                 </h3>
                 <p className="text-sm sm:text-base text-[#000000] leading-relaxed">
-                  Converting food waste into organic fertilizer reduces greenhouse emissions,
-                  lowers landfill burden, and supports sustainable value creation for cities,
-                  industries, and farmers.
+                  Unregulated municipal wet waste leads to GHG emissions and environmental pollution, which adversely affects human health. Converting food waste to Organic Fertilizer reduces lanfill burden and supports sustainable value creation for cities, industries and farmers.
                 </p>
               </div>
 
               <div className="bg-[#a7c983] p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <h3 className="text-m sm:text-2xl font-bold text-[#000000] mb-3">
-                  Benefits to Soil Health
+                  Soil Health Restoration
                 </h3>
                 <p className="text-sm sm:text-base text-[#000000] leading-relaxed">
-                  Organic compost improves soil structure, enhances moisture retention,
+                  Organic fertilizer improves soil structure, enhances moisture retention,
                   restores organic carbon, and supports long-term crop productivity without
                   degrading the ecosystem.
                 </p>
@@ -662,11 +657,10 @@ We provide expert consultancy for  <strong style={{ fontWeight: 500, color: "#1F
 
               <div className="bg-[#a7c983] p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <h3 className="text-m sm:text-2xl font-bold text-[#000000] mb-3">
-                  Enhancing Soil Biodiversity
+                  Supports Organic Food Production
                 </h3>
                 <p className="text-sm sm:text-base text-[#000000] leading-relaxed">
-                  Healthy soil is a living ecosystem. Compost stimulates microbial activity,
-                  strengthens plant immunity, and contributes to regenerative agriculture systems.
+                 Organic Fertilizers improve soil fertlity and microbial activity creating a healthy soil environment that supports sustainable organic crop growth. By supplying nutrients in natural and slow - release form, they help produce safe, residue-free food while maintaining long term soil health.
                 </p>
               </div>
 

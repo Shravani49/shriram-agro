@@ -163,8 +163,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="about-hero-sub text-sm sm:text-base text-white/100 max-w-2xl font-light leading-relaxed">
-              22 years of expertise in sustainable agriculture and organic waste management,
-              creating science-backed solutions for a healthier planet.
+              22+ years of expertise in Organic Waste Management, Sustainable Agriculture practices, creating practical and science-backed solutions for a healthier planet.
             </p>
           </div>
         </div>
@@ -201,10 +200,10 @@ export default function AboutPage() {
           <div className="about-card-inner bg-white border border-[#E5D9B6]/40 rounded-2xl px-6 sm:px-20 py-8 sm:py-12 shadow-2xl">
             <div className="about-card-text space-y-4 sm:space-y-6 text-sm sm:text-base leading-relaxed text-black-100 font-semibold">
               <p>
-                Shriram Agro Industries, founded by Adv. Rahul Prataprao Padwal, is dedicated to advancing sustainable agriculture and integrated waste management solutions. With over 22 years of field expertise, the company delivers science-driven systems that transform organic waste into regenerative agricultural value.
+                Shriram Agro Industries, founded by Mr. Rahul Prataprao Padwal, is dedicated to integrated Waste Management and Sustainable Agriculture Solutions. With over 22 years of field expertise, the company delivers science-driven technologies to transform multiple organic waste streams into regenerative agricultural value.
               </p>
               <p>
-                What began as a soil restoration initiative has grown into a comprehensive enterprise working across municipal solid waste management, sewage sludge treatment, wastewater bioremediation, CBG-linked organic by-products, and high-quality organic fertilizer production.
+                What began as a soil restoration initiative has grown into a comprehensive enterprise working across municipal solid waste management, Industrial Organic waste treatment, Bio-methanation, CBG-linked organic by-products, and a wide range of high-quality organic fertilizer production.
               </p>
               <p>
                 The organization develops eco-friendly waste transformation systems including composting, bio-digestion, decentralized zero-waste models, and customized microbial technologies for agricultural applications.
@@ -325,9 +324,7 @@ export default function AboutPage() {
               </span>
               <div className="w-12 h-[2px] bg-[#7d5835]"></div>
             </div>
-            <h2 className="text-3xl md:text-5xl font-light font-serif text-[#2a2a2a]">
-              Our Core Members
-            </h2>
+            
           </div>
 
           {/* Founder Highlight Card */}
@@ -342,7 +339,7 @@ export default function AboutPage() {
                 Adv. Rahul Prataprao Padwal
               </h3>
               <p className="text-[#7d5835] text-base sm:text-lg font-medium mt-1">
-                Founder & Proprietor
+                Founder & CEO
               </p>
               <p className="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed">
                 Sustainability advocate, researcher, and environmental engineering
@@ -388,19 +385,19 @@ export default function AboutPage() {
     {[
       {
         name: "Dr. Anita Handa Corrign - UK",
-        role: " Technology Transfer and Gut Microbiome- Soil Health expert",
-        qualification: "PhD (Environmental Science), MSc Toxicology",
+        role: " Sr. Scientific Advisor & Director",
+        qualification: "PhD (Chemical Engineering), MSc BioTechnology",
         image: "/images/anita.png",
       },
       {
         name: "Vaibhav M Phalle",
-        role: "Planning & Operations",
+        role: "Planning & Operations- Advisor & Director",
         qualification: "MBA & BTech Mechanical",
         image: "/images/vaibhav.png",
       },
       {
         name: "Shridatt G. Khandagale",
-        role: "Creative Head",
+        role: "Director Creative Head",
         qualification: "B.E. Computer",
         image: "/images/shridatt.png",
       },
