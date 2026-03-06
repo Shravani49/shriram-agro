@@ -24,7 +24,9 @@ export default function RootLayout({ children }) {
   <body className="bg-[#FAFAF7] overflow-x-hidden">
     <ScrollToTop />
     <Navbar />
-    {children}
+<main className="pt-16">
+  {children}
+</main>
     <Footer />
   </body>
 </html>
