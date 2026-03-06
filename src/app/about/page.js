@@ -271,7 +271,7 @@ export default function AboutPage() {
 
             <div id="team-carousel" className="flex overflow-hidden flex-1 min-w-0">
               {[
-                { name: "Dr. Anita Handa Corrign - UK", role: "Sr. Scientific Advisor & Director", qualification: "PhD (Chemical Engineering), MSc BioTechnology. Climate Research Scientist, Technology Transfer and Gut Microbiome- Soil Health Expert", image: "/images/anita.png" },
+                { name: "Dr. Anita Handa Corrigan - UK", role: "Sr. Scientific Advisor & Director", qualification: "PhD (Chemical Engineering), MSc BioTechnology. Climate Research Scientist, Technology Transfer and Gut Microbiome- Soil Health Expert", image: "/images/anita.png" },
                 { name: "Vaibhav M Phalle", role: "Planning & Operations- Advisor & Director", qualification: "MBA & BTech Mechanical", image: "/images/vaibhav.png" },
                 { name: "Shridatt G. Khandagale", role: "Director Creative Head", qualification: "B.E. Computer", image: "/images/shridatt.png" },
                 { name: "Shravani Padwal", role: "IT & Digital Solutions Engineer", qualification: "BTech IT", image: "/images/shravani.png" },

@@ -141,7 +141,7 @@ export default function Navbar() {
             href="/contact"
             className="bg-[#253d18] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#1a2e10] transition"
           >
-            Consultancy
+            Request Consultancy
           </Link>
         </div>
 

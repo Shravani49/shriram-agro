@@ -63,12 +63,12 @@ const mediaItems = [
   },
   {
     n: "04",
-    title: "Sakal AgroVon — Feature Article 01",
+    title: "Sakal AgroVon — An Integrated Approach for Sustainable Agriculture",
     link: "https://drive.google.com/file/d/1AUOIblfjfLQ_JsepTcaOm_RdwuvHT3Vt/view?usp=sharing",
   },
   {
     n: "05",
-    title: "Sakal AgroVon — Feature Article 02",
+    title: "Sakal AgroVon — Protect Soil Health for Sustainable Agriculture",
     link: "https://drive.google.com/file/d/18M7Y87DybeUTEuxiwloWkEN_Sy9Y-YvN/view?usp=sharing",
   },
   {
