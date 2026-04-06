@@ -20,7 +20,7 @@ export default function AboutPage() {
         @media (max-width: 480px) {
           .about-company-label { font-size: 1.2rem !important; letter-spacing: 0.1em !important; }
           .about-card-inner { padding: 24px 16px !important; }
-          .about-card-text { font-size: 1rem !important; }
+          .about-card-text { font-size: 0.8rem !important; }
         }
 
         @media (max-width: 767px) {
@@ -124,7 +124,7 @@ export default function AboutPage() {
           </div>
 
           <div className="about-card-inner bg-white border border-[#E5D9B6]/40 rounded-2xl px-5 sm:px-10 py-6 sm:py-8 shadow-2xl">
-            <div className="about-card-text space-y-2 sm:space-y-3 text-[10px] sm:text-xs leading-relaxed text-black-60 font-normal">
+            <div className="about-card-text space-y-2 sm:space-y-3 lg:text-[14px] sm:text-[5px] leading-relaxed text-black-60">
               <p>
                 Shriram Agro Industries, founded by Mr. Rahul Prataprao Padwal, is dedicated to integrated Waste Management and Sustainable Agriculture Solutions. With over 22 years of field expertise, the company delivers science-driven technologies to transform multiple organic waste streams into regenerative agricultural value.
               </p>
@@ -214,98 +214,77 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="team-section py-12 bg-[#F1F3E0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+<section className="team-section py-12 bg-[#F1F3E0]">
+  <div className="max-w-2xl mx-auto px-4 sm:px-6">
 
-          <div className="mb-10 text-center">
-            <div className="flex justify-center items-center gap-3 sm:gap-4 mb-4 flex-wrap">
-              <div className="w-12 h-[2px] bg-[#7d5835]"></div>
-              <span className="team-header-label text-base sm:text-2xl tracking-[0.25em] text-[#7d5835] font-semibold">
-                LEADERSHIP & TEAM
-              </span>
-              <div className="w-12 h-[2px] bg-[#7d5835]"></div>
-            </div>
+    <div className="mb-8 text-center">
+      <div className="flex justify-center items-center gap-3 sm:gap-4 mb-4 flex-wrap">
+        <div className="w-12 h-[2px] bg-[#7d5835]"></div>
+        <span className="team-header-label text-base sm:text-2xl tracking-[0.25em] text-[#7d5835] font-semibold">
+          LEADERSHIP & TEAM
+        </span>
+        <div className="w-12 h-[2px] bg-[#7d5835]"></div>
+      </div>
+    </div>
+
+    {/* Founder Highlight Card */}
+    <div className="founder-card bg-white rounded-2xl shadow-xl border border-[#E5D9B6]/40 p-6 sm:p-8 w-full text-center mb-4">
+     <img
+  src="/images/rahul_Padwal.png"
+  alt="Adv. Rahul Prataprao Padwal"
+  className="w-32 h-32 sm:w-28 sm:h-28 lg:w-28 lg:h-28 object-cover rounded-full mx-auto mb-4 shadow-md"
+/>
+      <h3 className="text-md sm:text-lg lg:text-xl font-bold text-[#2a2a2a]">Adv. Rahul Prataprao Padwal</h3>
+      <p className="text-[#7d5835] text-base sm:text-sm lg:text-md  font-medium mt-1">Founder & CEO</p>
+      <p className="text-gray-600 text-xs sm:text-sm mt-3 leading-relaxed">
+        Sustainability advocate, researcher, and environmental engineering expert with over 22 years of experience in integrated waste management and regenerative agriculture systems.
+      </p>
+      <div className="mt-5 pt-4 border-t border-gray-200 flex justify-center">
+        <a
+          href="https://www.linkedin.com/in/rahul-padwal-6b240339/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-[#0A66C2] hover:scale-110 transition"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4 fill-white">
+            <path d="M100.28 448H7.4V148.9h92.88zm-46.44-340a53.54 53.54 0 1 1 53.54-53.54A53.54 53.54 0 0 1 53.84 108zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 0-55.7 37.7-55.7 76.8V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.4 61.9 111.4 142.3V448z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    {/* Team Members — compact stacked */}
+    <div className="flex flex-col gap-3">
+      {[
+        { name: "Prof. Dominic Byarugaba", role: "R & D Director & Sr Business Development Advisor, East Africa Region", qualification: "Director, Directorate of Higher Degrees and Research, Kampala International University, Uganda.", image: "/images/byrugaba.png" },
+        { name: "Dr. Anita Handa Corrigan", role: "Sr. Scientific Advisor & Director", qualification: "PhD (Chemical Engineering), MSc BioTechnology. Climate Research Scientist, Technology Transfer and Gut Microbiome- Soil Health Expert", image: "/images/anita.png" },
+        { name: "Vaibhav M Phalle", role: "Planning & Operations — Advisor & Director", qualification: "MBA & BTech Mechanical", image: "/images/vaibhav.png" },
+        { name: "Shridatt G. Khandagale", role: "Director Creative Head", qualification: "B.E. Computer", image: "/images/shridatt.png" },
+        { name: "Shravani Padwal", role: "IT & Digital Solutions Engineer", qualification: "BTech IT", image: "/images/shravani.png" },
+      ].map((member, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-xl shadow-sm border border-[#E5D9B6]/40 px-4 py-3 flex items-center gap-4 hover:shadow-md transition-all duration-300"
+        >
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-12 h-12 object-cover rounded-full shadow-sm flex-shrink-0"
+          />
+          <div className="min-w-0">
+            <h4 className="text-sm font-semibold text-[#2a2a2a] leading-tight">{member.name}</h4>
+            <p className="text-xs text-[#7d5835] mt-0.5 leading-snug">{member.role}</p>
+            {member.qualification && (
+              <p className="text-[11px] text-[#2d5016] leading-snug mt-0.5">{member.qualification}</p>
+            )}
           </div>
-
-          {/* Founder Highlight Card */}
-          <div className="flex justify-center mb-8">
-            <div className="founder-card bg-white rounded-2xl shadow-xl border border-[#E5D9B6]/40 p-6 sm:p-8 max-w-2xl w-full text-center">
-              <img
-                src="/images/rahul_Padwal.png"
-                alt="Adv. Rahul Prataprao Padwal"
-                className="w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-full mx-auto mb-4 shadow-md"
-              />
-              <h3 className="text-xl sm:text-2xl font-bold text-[#2a2a2a]">Adv. Rahul Prataprao Padwal</h3>
-              <p className="text-[#7d5835] text-base sm:text-lg font-medium mt-1">Founder & CEO</p>
-              <p className="text-gray-600 text-xs sm:text-sm mt-3 leading-relaxed">
-                Sustainability advocate, researcher, and environmental engineering expert with over 22 years of experience in integrated waste management and regenerative agriculture systems.
-              </p>
-              <div className="mt-5 pt-4 border-t border-gray-200 flex justify-center">
-                <a
-                  href="https://www.linkedin.com/in/rahul-padwal-6b240339/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0A66C2] hover:scale-110 transition"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4 fill-white">
-                    <path d="M100.28 448H7.4V148.9h92.88zm-46.44-340a53.54 53.54 0 1 1 53.54-53.54A53.54 53.54 0 0 1 53.84 108zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 0-55.7 37.7-55.7 76.8V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.4 61.9 111.4 142.3V448z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Team Carousel */}
-          <div className="relative flex items-center justify-center gap-2 w-full">
-            <button
-              onClick={() => {
-                const el = document.getElementById("team-carousel");
-                if (el) el.scrollBy({ left: -el.offsetWidth, behavior: "smooth" });
-              }}
-              className="flex-shrink-0 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#1F3D2B] text-white flex items-center justify-center shadow-lg hover:bg-[#7d5835] transition-colors z-10"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 18l-6-6 6-6"/>
-              </svg>
-            </button>
-
-            <div id="team-carousel" className="flex overflow-hidden flex-1 min-w-0">
-              {[
-                { name: "Dr. Anita Handa Corrigan - UK", role: "Sr. Scientific Advisor & Director", qualification: "PhD (Chemical Engineering), MSc BioTechnology. Climate Research Scientist, Technology Transfer and Gut Microbiome- Soil Health Expert", image: "/images/anita.png" },
-                { name: "Vaibhav M Phalle", role: "Planning & Operations- Advisor & Director", qualification: "MBA & BTech Mechanical", image: "/images/vaibhav.png" },
-                { name: "Shridatt G. Khandagale", role: "Director Creative Head", qualification: "B.E. Computer", image: "/images/shridatt.png" },
-                { name: "Shravani Padwal", role: "IT & Digital Solutions Engineer", qualification: "BTech IT", image: "/images/shravani.png" },
-              ].map((member, index) => (
-                <div
-                  key={index}
-                  className="team-slide flex-shrink-0 bg-white rounded-2xl shadow-md border border-[#E5D9B6]/40 p-5 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300"
-                  style={{ width: "100%" }}
-                >
-                  <img src={member.image} alt={member.name} className="w-16 h-16 object-cover rounded-full shadow-sm mb-3" />
-                  <h4 className="text-sm font-semibold text-[#2a2a2a] leading-tight">{member.name}</h4>
-                  <p className="text-xs text-[#7d5835] mt-1 leading-snug">{member.role}</p>
-                  {member.qualification && (
-                    <p className="text-xs text-[#2d5016] font-medium leading-snug mt-1">{member.qualification}</p>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            <button
-              onClick={() => {
-                const el = document.getElementById("team-carousel");
-                if (el) el.scrollBy({ left: el.offsetWidth, behavior: "smooth" });
-              }}
-              className="flex-shrink-0 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#1F3D2B] text-white flex items-center justify-center shadow-lg hover:bg-[#7d5835] transition-colors z-10"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 18l6-6-6-6"/>
-              </svg>
-            </button>
-          </div>
-
         </div>
-      </section>
+      ))}
+    </div>
+
+  </div>
+</section>
+  
 
       {/* CTA Section */}
       <section className="cta-section relative py-16 sm:py-20 md:py-32 bg-white overflow-hidden">

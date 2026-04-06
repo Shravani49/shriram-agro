@@ -420,18 +420,18 @@ export default function Home() {
 
           {/* IMAGE PANEL */}
           <div className="hero-image-panel fade-up delay-3 relative" style={{ width: "100%", height: 340 }}>
-            <div style={{ position: "absolute", top: 0, left: "5%", width: "88%", height: "88%", borderRadius: "28px 28px 120px 28px", overflow: "hidden", boxShadow: "0 24px 80px rgba(31,61,43,0.25), 0 4px 16px rgba(0,0,0,0.10)" }}>
+            <div style={{ position: "absolute", top: 0, left: "5%", width: "88%", height: "88%", borderRadius: "28px 28px 28px 28px", overflow: "hidden", boxShadow: "0 24px 80px rgba(31,61,43,0.25), 0 4px 16px rgba(0,0,0,0.10)" }}>
               <img src="/images/hero.png" alt="Composting facility" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               <div className="img-overlay" />
             </div>
 
-            {/* Small overlay hand image */}
-            <div style={{ position: "absolute", bottom: 0, right: 0, width: "clamp(26%, 35%, 42%)", height: "clamp(22%, 30%, 38%)", borderRadius: "20px 80px 20px 20px", overflow: "hidden", boxShadow: "0 12px 40px rgba(31,61,43,0.2)", border: "3px solid rgba(245,239,230,0.8)" }}>
-              <img src="/images/new.png" alt="Organic manure" style={{ width: "100%", height: "100%", objectFit: "cover", transform: "scale(0.85)", filter: "saturate(1.15)" }} />
+            {/* Small overlay hand image — border now matches image shape */}
+            <div style={{ position: "absolute", bottom: 0, right: 0, width: "clamp(26%, 35%, 42%)", height: "clamp(22%, 30%, 38%)", borderRadius: "20px", overflow: "hidden", boxShadow: "0 12px 40px rgba(31,61,43,0.2)", border: "3px solid rgba(245,239,230,0.8)" }}>
+              <img src="/images/new.png" alt="Organic manure" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "saturate(1.15)" }} />
             </div>
 
             {/* Waste Transformed card */}
-            <div className="stat-card" style={{ top: 16, left: 10, minWidth: 0, padding: "clamp(5px, 1.5vw, 10px) clamp(6px, 2vw, 13px)", borderRadius: 14 }}>
+            <div className="stat-card" style={{ top: 12, left: 2, minWidth: 0, padding: "clamp(5px, 1.5vw, 10px) clamp(6px, 2vw, 13px)", borderRadius: 14 }}>
               <div style={{ fontSize: "clamp(7px, 1.8vw, 9px)", letterSpacing: "0.12em", color: "rgba(31,61,43,0.55)", textTransform: "uppercase", marginBottom: "clamp(2px, 0.5vw, 4px)" }}>Waste Transformed</div>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(14px, 4vw, 22px)", fontWeight: 700, color: "#1F3D2B", lineHeight: 1 }}>100%</div>
               <div style={{ fontSize: "clamp(7px, 1.8vw, 10px)", color: "#5C7A3A", marginTop: "clamp(2px, 0.5vw, 3px)" }}>FCO/ NPOP certified output</div>
