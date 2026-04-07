@@ -476,7 +476,8 @@ export default function FounderPage() {
           .edu-e { font-size: 20px !important; }
           .edu-t { font-size: 15px !important; }
           .pub-eyebrow-label { font-size: 13px !important; letter-spacing: 0.12em !important; }
-          .pub-section-title { font-size: 26px !important; margin-bottom: 28px !important; }
+          .pub-section-title { font-size: 20px !important; margin-bottom: 28px !important; }
+          .pub-wrap h3 { font-size: 18px !important; margin-bottom: 24px !important; line-height: 1.35 !important; }
           .media-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
           .media-card { padding: 20px 18px !important; gap: 10px !important; }
           .media-card-num { font-size: 18px !important; }
@@ -502,7 +503,8 @@ export default function FounderPage() {
           .hero-name { font-size: 27px !important; }
           .wrap { padding: 36px 14px !important; }
           .pub-wrap { padding: 36px 14px !important; }
-          .pub-section-title { font-size: 22px !important; }
+          .pub-section-title { font-size: 17px !important; }
+          .pub-wrap h3 { font-size: 16px !important; }
           .sec-t { font-size: 22px !important; }
           .hero-right { height: auto !important; }
           .stat-n { font-size: 24px !important; }
@@ -590,7 +592,7 @@ export default function FounderPage() {
               { e: "🥇", t: "Agri Business Management", s: "Gold Medal" },
               { e: "🌿", t: "Diploma in Horticulture" },
               { e: "📰", t: "Diploma in Agro Journalism" },
-              { e: <img src="/images/microbe.png" alt="microbe" style={{width:"24px",height:"24px",objectFit:"contain"}} />, t: "Bio Pharmacy Certification" },
+              { e: <img src="/images/microbe.png" alt="microbe" style={{width:"24px",height:"24px",objectFit:"contain"}} />, t: "Bio Pharmacy" },
               { e: "⚖️", t: "LLB — Law" },
             ].map(c => (
               <div key={c.t} className="edu-card">
@@ -643,7 +645,7 @@ export default function FounderPage() {
     </h3>
     <div className="media-grid">
       {[
-        { n: "01", title: "Full Research Paper (PDF)", link: "/pdf/Rahul_Padwal_Paper.pdf", cta: "Download PDF →" },
+        { n: "01", title: "Full Research Paper (PDF)", link: "/pdf/Rahul_Padwal_Paper.pdf", cta: "View PDF →" },
       
       ].map(m => (
         <a key={m.n} href={m.link} target="_blank" rel="noopener noreferrer" className="media-card">
