@@ -25,7 +25,7 @@ const safeMessage = message?.replace(/</g, "&lt;").replace(/>/g, "&gt;");
       },
     });
 
-    // Send mail
+  // Send mail
 await transporter.sendMail({
   from: `"Shriram Agro Website" <${process.env.EMAIL_USER}>`,
   to: process.env.EMAIL_USER,

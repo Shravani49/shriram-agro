@@ -606,33 +606,55 @@ export default function FounderPage() {
       </div>
 
       {/* RESEARCH PUBLICATIONS */}
-      <div style={{ background: '#F4F1EB' }}>
-        <div className="pub-wrap pub-root-inner">
-          <div className="pub-eyebrow">
-            <div className="pub-eyebrow-dot" />
-            <span className="pub-eyebrow-label">Academic Research</span>
-          </div>
-          
-          <h3 style={{ fontFamily: "Playfair Display, serif", fontSize: "26px", color: "#1C3829", marginBottom: "36px", lineHeight: "1.4" }}>
-            A Study on Conversion of Raw Cow Manure into Nutritious Organic Fertilizer for Quality Enhancement
-          </h3>
-          <div className="media-grid">
-            {[
-              { n: "01", title: "DOI – Official Publication Record", link: "https://doi.org/10.29121/shodhkosh.v5.i6.2024.4800", cta: "View Source →" },
-              { n: "02", title: "ShodhKosh Journal Page", link: "https://www.granthaalayahpublication.org/Arts-Journal/ShodhKosh/article/view/4800", cta: "View Journal →" },
-              { n: "03", title: "ResearchGate Publication", link: "https://www.researchgate.net/publication/390607175_A_STUDY_ON_CONVERSION_OF_RAW_COW_MANURE_INTO_NUTRITIOUS_ORGANIC_FERTILIZER_FOR_QUALITY_ENHANCEMENT", cta: "View Paper →" },
-              { n: "04", title: "Semantic Scholar Index", link: "https://www.semanticscholar.org/paper/A-STUDY-ON-CONVERSION-OF-RAW-COW-MANURE-INTO-FOR-Padwal-Kulkarni/caedb1e5f39e22f35dbaae7b95f8144540b91a44", cta: "View Record →" },
-              { n: "05", title: "Academia.edu Publication", link: "https://www.academia.edu/128714053/A_STUDY_ON_CONVERSION_OF_RAW_COW_MANURE_INTO_NUTRITIOUS_ORGANIC_FERTILIZER_FOR_QUALITY_ENHANCEMENT", cta: "View Article →" },
-            ].map(m => (
-              <a key={m.n} href={m.link} target="_blank" rel="noopener noreferrer" className="media-card">
-                <div className="media-card-num">{m.n}</div>
-                <p className="media-card-title">{m.title}</p>
-                <div className="media-card-cta">{m.cta}</div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* RESEARCH PUBLICATIONS */}
+<div style={{ background: '#F4F1EB' }}>
+  <div className="pub-wrap pub-root-inner">
+    <div className="pub-eyebrow">
+      <div className="pub-eyebrow-dot" />
+      <span className="pub-eyebrow-label">Academic Research</span>
+    </div>
+    
+    {/* FIRST RESEARCH PAPER */}
+    <h3 style={{ fontFamily: "Playfair Display, serif", fontSize: "26px", color: "#1C3829", marginBottom: "36px", lineHeight: "1.4" }}>
+      1. A Study on Conversion of Raw Cow Manure into Nutritious Organic Fertilizer for Quality Enhancement
+    </h3>
+    <div className="media-grid">
+      {[
+        { n: "01", title: "DOI – Official Publication Record", link: "https://doi.org/10.29121/shodhkosh.v5.i6.2024.4800", cta: "View Source →" },
+        { n: "02", title: "ShodhKosh Journal Page", link: "https://www.granthaalayahpublication.org/Arts-Journal/ShodhKosh/article/view/4800", cta: "View Journal →" },
+        { n: "03", title: "ResearchGate Publication", link: "https://www.researchgate.net/publication/390607175_A_STUDY_ON_CONVERSION_OF_RAW_COW_MANURE_INTO_NUTRITIOUS_ORGANIC_FERTILIZER_FOR_QUALITY_ENHANCEMENT", cta: "View Paper →" },
+        { n: "04", title: "Semantic Scholar Index", link: "https://www.semanticscholar.org/paper/A-STUDY-ON-CONVERSION-OF-RAW-COW-MANURE-INTO-FOR-Padwal-Kulkarni/caedb1e5f39e22f35dbaae7b95f8144540b91a44", cta: "View Record →" },
+        { n: "05", title: "Academia.edu Publication", link: "https://www.academia.edu/128714053/A_STUDY_ON_CONVERSION_OF_RAW_COW_MANURE_INTO_NUTRITIOUS_ORGANIC_FERTILIZER_FOR_QUALITY_ENHANCEMENT", cta: "View Article →" },
+      ].map(m => (
+        <a key={m.n} href={m.link} target="_blank" rel="noopener noreferrer" className="media-card">
+          <div className="media-card-num">{m.n}</div>
+          <p className="media-card-title">{m.title}</p>
+          <div className="media-card-cta">{m.cta}</div>
+        </a>
+      ))}
+    </div>
+
+    {/* DIVIDER */}
+    <div style={{ height: "80px" }} />
+
+    {/* SECOND RESEARCH PAPER - NEW */}
+    <h3 style={{ fontFamily: "Playfair Display, serif", fontSize: "26px", color: "#1C3829", marginBottom: "36px", lineHeight: "1.4" }}>
+      2. Life Cycle Assessment and Process Optimization of Urban Organic Waste-Based Fertilizers
+    </h3>
+    <div className="media-grid">
+      {[
+        { n: "01", title: "Full Research Paper (PDF)", link: "/pdf/Rahul_Padwal_Paper.pdf", cta: "Download PDF →" },
+      
+      ].map(m => (
+        <a key={m.n} href={m.link} target="_blank" rel="noopener noreferrer" className="media-card">
+          <div className="media-card-num">{m.n}</div>
+          <p className="media-card-title">{m.title}</p>
+          <div className="media-card-cta">{m.cta}</div>
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
 
       {/* INTERNATIONAL ARTICLES */}
       <div style={{ background: '#fff' }}>
