@@ -83,8 +83,8 @@ export default function AboutPage() {
           <div className="space-y-8">
             <div className="inline-block">
               <div className="text-sm tracking-[0.15em] text-[#E5D9B6] font-bold mb-6 uppercase whitespace-nowrap">
-  Shriram Agro Industries
-</div>
+                Shriram Agro Industries
+              </div>
               <div className="w-20 h-1 bg-[#E5D9B6]"></div>
             </div>
             <h1
@@ -139,7 +139,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission & Vision — COMPACT */}
+      {/* Mission & Vision */}
       <section className="mission-section py-10 sm:py-14 bg-white">
         <div className="mx-auto px-4 sm:px-6">
 
@@ -214,77 +214,69 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-<section className="team-section py-12 bg-[#F1F3E0]">
-  <div className="max-w-2xl mx-auto px-4 sm:px-6">
+      <section className="team-section py-12 bg-[#F1F3E0]">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
 
-    <div className="mb-8 text-center">
-      <div className="flex justify-center items-center gap-3 sm:gap-4 mb-4 flex-wrap">
-        <div className="w-12 h-[2px] bg-[#7d5835]"></div>
-        <span className="team-header-label text-base sm:text-2xl tracking-[0.25em] text-[#7d5835] font-semibold">
-          LEADERSHIP & TEAM
-        </span>
-        <div className="w-12 h-[2px] bg-[#7d5835]"></div>
-      </div>
-    </div>
-
-    {/* Founder Highlight Card */}
-    <div className="founder-card bg-white rounded-2xl shadow-xl border border-[#E5D9B6]/40 p-6 sm:p-8 w-full text-center mb-4">
-     <img
-  src="/images/rahul_Padwal.png"
-  alt="Adv. Rahul Prataprao Padwal"
-  className="w-32 h-32 sm:w-28 sm:h-28 lg:w-28 lg:h-28 object-cover rounded-full mx-auto mb-4 shadow-md"
-/>
-      <h3 className="text-md sm:text-lg lg:text-xl font-bold text-[#2a2a2a]">Adv. Rahul Prataprao Padwal</h3>
-      <p className="text-[#7d5835] text-base sm:text-sm lg:text-md  font-medium mt-1">Founder & CEO</p>
-      <p className="text-gray-600 text-xs sm:text-sm mt-3 leading-relaxed">
-        Sustainability advocate, researcher, and environmental engineering expert with over 22 years of experience in integrated waste management and regenerative agriculture systems.
-      </p>
-      <div className="mt-5 pt-4 border-t border-gray-200 flex justify-center">
-        <a
-          href="https://www.linkedin.com/in/rahul-padwal-6b240339/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-[#0A66C2] hover:scale-110 transition"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4 fill-white">
-            <path d="M100.28 448H7.4V148.9h92.88zm-46.44-340a53.54 53.54 0 1 1 53.54-53.54A53.54 53.54 0 0 1 53.84 108zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 0-55.7 37.7-55.7 76.8V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.4 61.9 111.4 142.3V448z"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    {/* Team Members — compact stacked */}
-    <div className="flex flex-col gap-3">
-      {[
-        { name: "Prof. Dominic Byarugaba", role: "R & D Director & Sr Business Development Advisor, East Africa Region", qualification: "Director, Directorate of Higher Degrees and Research, Kampala International University, Uganda.", image: "/images/byrugaba.png" },
-        { name: "Dr. Anita Handa Corrigan", role: "Sr. Scientific Advisor & Director", qualification: "PhD (Chemical Engineering), MSc BioTechnology. Climate Research Scientist, Technology Transfer and Gut Microbiome- Soil Health Expert", image: "/images/anita.png" },
-        { name: "Vaibhav M Phalle", role: "Planning & Operations — Advisor & Director", qualification: "MBA & BTech Mechanical", image: "/images/vaibhav.png" },
-        { name: "Shridatt G. Khandagale", role: "Director Creative Head", qualification: "B.E. Computer", image: "/images/shridatt.png" },
-        { name: "Shravani Padwal", role: "IT & Digital Solutions Engineer", qualification: "BTech IT", image: "/images/shravani.png" },
-      ].map((member, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-xl shadow-sm border border-[#E5D9B6]/40 px-4 py-3 flex items-center gap-4 hover:shadow-md transition-all duration-300"
-        >
-          <img
-            src={member.image}
-            alt={member.name}
-            className="w-12 h-12 object-cover rounded-full shadow-sm flex-shrink-0"
-          />
-          <div className="min-w-0">
-            <h4 className="text-sm font-semibold text-[#2a2a2a] leading-tight">{member.name}</h4>
-            <p className="text-xs text-[#7d5835] mt-0.5 leading-snug">{member.role}</p>
-            {member.qualification && (
-              <p className="text-[11px] text-[#2d5016] leading-snug mt-0.5">{member.qualification}</p>
-            )}
+          <div className="mb-8 text-center">
+            <div className="flex justify-center items-center gap-3 sm:gap-4 mb-4 flex-wrap">
+              <div className="w-12 h-[2px] bg-[#7d5835]"></div>
+              <span className="team-header-label text-base sm:text-2xl tracking-[0.25em] text-[#7d5835] font-semibold">
+                LEADERSHIP & TEAM
+              </span>
+              <div className="w-12 h-[2px] bg-[#7d5835]"></div>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
 
-  </div>
-</section>
-  
+          {/* All Team Members — uniform card style */}
+          <div className="flex flex-col gap-3">
+            {[
+              {
+                name: "Adv. Rahul Prataprao Padwal",
+                role: "Founder & CEO",
+                qualification: "Sustainability advocate, researcher, and environmental engineering expert with over 22 years of experience in integrated waste management and regenerative agriculture systems.",
+                image: "/images/rahul_Padwal.png",
+                linkedin: "https://www.linkedin.com/in/rahul-padwal-6b240339/",
+              },
+              { name: "Prof. Dominic Byarugaba", role: "R & D Director & Sr Business Development Advisor, East Africa Region", qualification: "Director, Directorate of Higher Degrees and Research, Kampala International University, Uganda.", image: "/images/byrugaba.png" },
+              { name: "Dr. Anita Handa Corrigan", role: "Sr. Scientific Advisor & Director", qualification: "PhD (Chemical Engineering), MSc BioTechnology. Climate Research Scientist, Technology Transfer and Gut Microbiome- Soil Health Expert", image: "/images/anita.png" },
+              { name: "Vaibhav M Phalle", role: "Planning & Operations — Advisor & Director", qualification: "MBA & BTech Mechanical", image: "/images/vaibhav.png" },
+              { name: "Shridatt G. Khandagale", role: "Director Creative Head", qualification: "B.E. Computer", image: "/images/shridatt.png" },
+              { name: "Shravani Padwal", role: "IT & Digital Solutions Engineer", qualification: "BTech IT", image: "/images/shravani.png" },
+            ].map((member, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-sm border border-[#E5D9B6]/40 px-4 py-3 flex items-center gap-4 hover:shadow-md transition-all duration-300"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-12 h-12 object-cover rounded-full shadow-sm flex-shrink-0"
+                />
+                <div className="min-w-0 flex-1">
+                  <h4 className="text-sm font-semibold text-[#2a2a2a] leading-tight">{member.name}</h4>
+                  <p className="text-xs text-[#7d5835] mt-0.5 leading-snug">{member.role}</p>
+                  {member.qualification && (
+                    <p className="text-[11px] text-[#2d5016] leading-snug mt-0.5">{member.qualification}</p>
+                  )}
+                </div>
+                {member.linkedin && (
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-[#0A66C2] hover:scale-110 transition flex-shrink-0"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4 fill-white">
+                      <path d="M100.28 448H7.4V148.9h92.88zm-46.44-340a53.54 53.54 0 1 1 53.54-53.54A53.54 53.54 0 0 1 53.84 108zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 0-55.7 37.7-55.7 76.8V448h-92.7V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.4 61.9 111.4 142.3V448z"/>
+                    </svg>
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="cta-section relative py-16 sm:py-20 md:py-32 bg-white overflow-hidden">
