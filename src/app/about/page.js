@@ -233,9 +233,9 @@ export default function AboutPage() {
               {
                 name: "Adv. Rahul Prataprao Padwal",
                 role: "Founder & CEO",
-                qualification: "Sustainability advocate, researcher, and environmental engineering expert with over 22 years of experience in integrated waste management and regenerative agriculture systems.",
+                qualification: "Waste Management, Municipal Waste, CBG Digestate to Compost - PROM & Organic Fertilizer Project Consultant. Adjunct Research Scientist at AICAD, Nairobi. Organic Fertilizer Innovator. ",
                 image: "/images/rahul_Padwal.png",
-                linkedin: "https://www.linkedin.com/in/rahul-padwal-6b240339/",
+    
               },
               { name: "Prof. Dominic Byarugaba", role: "R & D Director & Sr Business Development Advisor, East Africa Region", qualification: "Director, Directorate of Higher Degrees and Research, Kampala International University, Uganda.", image: "/images/byrugaba.png" },
               { name: "Dr. Anita Handa Corrigan", role: "Sr. Scientific Advisor & Director", qualification: "PhD (Chemical Engineering), MSc BioTechnology. Climate Research Scientist, Technology Transfer and Gut Microbiome- Soil Health Expert", image: "/images/anita.png" },
