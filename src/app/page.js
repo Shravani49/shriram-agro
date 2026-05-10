@@ -411,12 +411,17 @@ export default function Home() {
 
           {/* Heading */}
           <h1
-            className="fade-up delay-3 hero-heading font-bold leading-tight"
-            style={{ fontFamily: "'Playfair Display', serif", color: "#1F3D2B", letterSpacing: "-0.01em", fontSize: "clamp(2rem, 8vw, 3.75rem)", margin: 0 }}
-          >
-            Turning Waste<br />
-            <em style={{ color: "#5C7A3A", fontStyle: "italic" }}>Into Wealth</em>
-          </h1>
+  className="fade-up delay-3 hero-heading font-bold leading-tight whitespace-nowrap"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    color: "#1F3D2B",
+    letterSpacing: "-0.01em",
+    fontSize: "clamp(1.6rem, 6vw, 3.75rem)",
+    margin: 0
+  }}
+>
+  Turning Waste Into Wealth
+</h1>
 
           {/* IMAGE PANEL */}
           <div className="hero-image-panel fade-up delay-3 relative" style={{ width: "100%", height: 340 }}>

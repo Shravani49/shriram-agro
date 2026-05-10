@@ -213,6 +213,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+
       {/* Team Section */}
       <section className="team-section py-12 bg-[#F1F3E0]">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
