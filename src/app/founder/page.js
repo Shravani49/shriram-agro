@@ -646,7 +646,7 @@ export default function FounderPage() {
     </h3>
     <div className="media-grid">
       {[
-        { n: "01", title: "Full Research Paper (PDF)", link: "/pdf/Rahul_Padwal_Paper.pdf", cta: "View PDF →" },
+        { n: "01", title: "  ShodhKosh: Journal of Visual and Performing Arts - Full Research Paper (PDF)", link: "/pdf/Rahul_Padwal_Paper.pdf", cta: "View PDF →" },
       ].map(m => (
         <a key={m.n} href={m.link} target="_blank" rel="noopener noreferrer" className="media-card">
           <div className="media-card-num">{m.n}</div>
@@ -665,7 +665,7 @@ export default function FounderPage() {
     </h3>
     <div className="media-grid">
       {[
-        { n: "01", title: "Full Research Paper (PDF)", link: "https://drive.google.com/file/d/1Th5vJHjPdsf6406Wm1X15VJts2ZvQZpX/view?usp=sharing", cta: "View PDF →" },
+        { n: "01", title: "  ShodhKosh: Journal of Visual and Performing Arts - Full Research Paper (PDF)", link: "https://drive.google.com/file/d/1Th5vJHjPdsf6406Wm1X15VJts2ZvQZpX/view?usp=sharing", cta: "View PDF →" },
       ].map(m => (
         <a key={m.n} href={m.link} target="_blank" rel="noopener noreferrer" className="media-card">
           <div className="media-card-num">{m.n}</div>
