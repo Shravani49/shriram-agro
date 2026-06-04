@@ -609,6 +609,7 @@ export default function FounderPage() {
 
       {/* RESEARCH PUBLICATIONS */}
       {/* RESEARCH PUBLICATIONS */}
+{/* RESEARCH PUBLICATIONS */}
 <div style={{ background: '#F4F1EB' }}>
   <div className="pub-wrap pub-root-inner">
     <div className="pub-eyebrow">
@@ -639,14 +640,13 @@ export default function FounderPage() {
     {/* DIVIDER */}
     <div style={{ height: "80px" }} />
 
-    {/* SECOND RESEARCH PAPER - NEW */}
+    {/* SECOND RESEARCH PAPER */}
     <h3 style={{ fontFamily: "Playfair Display, serif", fontSize: "26px", color: "#1C3829", marginBottom: "36px", lineHeight: "1.4" }}>
       2. Life Cycle Assessment and Process Optimization of Urban Organic Waste-Based Fertilizers
     </h3>
     <div className="media-grid">
       {[
         { n: "01", title: "Full Research Paper (PDF)", link: "/pdf/Rahul_Padwal_Paper.pdf", cta: "View PDF →" },
-      
       ].map(m => (
         <a key={m.n} href={m.link} target="_blank" rel="noopener noreferrer" className="media-card">
           <div className="media-card-num">{m.n}</div>
@@ -655,6 +655,26 @@ export default function FounderPage() {
         </a>
       ))}
     </div>
+
+    {/* DIVIDER */}
+    <div style={{ height: "80px" }} />
+
+    {/* THIRD RESEARCH PAPER */}
+    <h3 style={{ fontFamily: "Playfair Display, serif", fontSize: "26px", color: "#1C3829", marginBottom: "36px", lineHeight: "1.4" }}>
+      3. Process Optimization of Microbial Consortium-Assisted Windrow Composting for Enhanced Nutrient Recovery and Safe Organic Fertilizer Production
+    </h3>
+    <div className="media-grid">
+      {[
+        { n: "01", title: "Full Research Paper (PDF)", link: "https://drive.google.com/file/d/1Th5vJHjPdsf6406Wm1X15VJts2ZvQZpX/view?usp=sharing", cta: "View PDF →" },
+      ].map(m => (
+        <a key={m.n} href={m.link} target="_blank" rel="noopener noreferrer" className="media-card">
+          <div className="media-card-num">{m.n}</div>
+          <p className="media-card-title">{m.title}</p>
+          <div className="media-card-cta">{m.cta}</div>
+        </a>
+      ))}
+    </div>
+
   </div>
 </div>
 
